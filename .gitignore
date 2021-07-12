@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NP.MultiPlaformWindowDemo/.vs/NP.MultiPlaformWindowDemo/v16
+/NP.MultiPlaformWindowDemo/bin/Debug/net5.0
+/NP.MultiPlaformWindowDemo/obj
