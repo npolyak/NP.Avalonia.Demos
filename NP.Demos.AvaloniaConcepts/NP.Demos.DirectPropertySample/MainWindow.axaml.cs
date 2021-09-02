@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using System;
 
-namespace NP.Demos.AttachedPropertySample
+namespace NP.Demos.DirectPropertySample
 {
     public partial class MainWindow : Window
     {
@@ -40,25 +40,27 @@ namespace NP.Demos.AttachedPropertySample
         }
 
 
-        #region RectangleStrokeThickness Styled Avalonia Property
+        #region RectangleStrokeThickness Direct Avalonia Property
+        private double _RectangleStrokeThickness = default;
+
+        public static readonly DirectProperty<MainWindow, double> RectangleStrokeThicknessProperty =
+            AvaloniaProperty.RegisterDirect<MainWindow, double>
+            (
+                nameof(RectangleStrokeThickness),
+                o => o.RectangleStrokeThickness,
+                (o, v) => o.RectangleStrokeThickness = v
+            );
+
         public double RectangleStrokeThickness
         {
-            // getter 
-            get { return GetValue(RectangleStrokeThicknessProperty); }
-
-            // setter
-            set { SetValue(RectangleStrokeThicknessProperty, value); }
+            get => _RectangleStrokeThickness;
+            set
+            {
+                SetAndRaise(RectangleStrokeThicknessProperty, ref _RectangleStrokeThickness, value);
+            }
         }
 
-        // the static field that contains the hashtable mapping the 
-        // object of type MainWindow into double and also containing the 
-        // information about the default value
-        public static readonly StyledProperty<double> RectangleStrokeThicknessProperty =
-            AvaloniaProperty.Register<MainWindow, double>
-            (
-                nameof(RectangleStrokeThickness)
-            );
-        #endregion RectangleStrokeThickness Styled Avalonia Property
+        #endregion RectangleStrokeThickness Direct Avalonia Property
 
 
         private void InitializeComponent()

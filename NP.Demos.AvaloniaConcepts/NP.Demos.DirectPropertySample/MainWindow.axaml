@@ -1,8 +1,8 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:NP.Demos.AttachedPropertySample"
-        x:Class="NP.Demos.AttachedPropertySample.MainWindow"
-        Title="NP.Demos.AttachedPropertySample"
+        xmlns:local="clr-namespace:NP.Demos.DirectPropertySample"
+        x:Class="NP.Demos.DirectPropertySample.MainWindow"
+        Title="NP.Demos.DirectPropertySample"
         RectangleStrokeThickness="7"
         Width="300"
         Height="300">

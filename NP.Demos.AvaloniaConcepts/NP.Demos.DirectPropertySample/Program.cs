@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
-namespace NP.Demos.AttachedPropertySample
+namespace NP.Demos.DirectPropertySample
 {
     class Program
     {

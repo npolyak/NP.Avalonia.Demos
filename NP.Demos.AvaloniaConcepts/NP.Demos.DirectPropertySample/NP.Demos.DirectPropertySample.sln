@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NP.Demos.StylePropertySample", "NP.Demos.StylePropertySample.csproj", "{7AF5450A-8CFF-4466-88EF-95CF998B7E5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NP.Demos.DirectPropertySample", "NP.Demos.DirectPropertySample.csproj", "{7AF5450A-8CFF-4466-88EF-95CF998B7E5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
