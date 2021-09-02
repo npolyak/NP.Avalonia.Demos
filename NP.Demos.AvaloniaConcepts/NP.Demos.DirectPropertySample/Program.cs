@@ -1,6 +1,9 @@
 using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Controls.ApplicationLifetimes;
+using System;
 
-namespace NP.Demos.StylePropertySample
+namespace NP.Demos.AttachedPropertySample
 {
     class Program
     {

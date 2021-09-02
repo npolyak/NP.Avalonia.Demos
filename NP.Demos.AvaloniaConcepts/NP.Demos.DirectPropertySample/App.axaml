@@ -1,6 +1,6 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="NP.Demos.StylePropertySample.App">
+             x:Class="NP.Demos.AttachedPropertySample.App">
     <Application.Styles>
         <FluentTheme Mode="Light"/>
     </Application.Styles>

@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace NP.Demos.StylePropertySample
+namespace NP.Demos.AttachedPropertySample
 {
     public class App : Application
     {

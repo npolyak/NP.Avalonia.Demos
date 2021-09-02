@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using System;
 
-namespace NP.Demos.StylePropertySample
+namespace NP.Demos.AttachedPropertySample
 {
     public partial class MainWindow : Window
     {
