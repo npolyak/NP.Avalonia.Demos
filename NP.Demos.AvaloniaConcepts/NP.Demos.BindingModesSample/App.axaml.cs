@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace NP.Demos.XamlBindingsSample
+namespace NP.Demos.BindingModesSample
 {
     public class App : Application
     {

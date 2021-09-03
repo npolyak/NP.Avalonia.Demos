@@ -1,8 +1,8 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:NP.Demos.XamlBindingsSample"
-        x:Class="NP.Demos.XamlBindingsSample.MainWindow"
-        Title="NP.Demos.XamlBindingsSample"
+        xmlns:local="clr-namespace:NP.Demos.BindingModesSample"
+        x:Class="NP.Demos.BindingModesSample.MainWindow"
+        Title="NP.Demos.BindingModesSample"
         x:Name="TheWindow"
         Tag="Hello World!"
         Width="500"
@@ -46,7 +46,7 @@
     <Grid RowDefinitions="Auto, Auto, Auto"
           Margin="0,30,0,0"
           Grid.Row="3"
-          Tag="This is a OneWayToSource GridTag">
+          Tag="This is a OneWayToSource Grid Tag">
       <TextBlock Text="BindingMode=OneWayToSource"
                  FontWeight="Bold"
                  HorizontalAlignment="Left"

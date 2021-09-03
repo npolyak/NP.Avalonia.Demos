@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace NP.Demos.XamlBindingsSample
+namespace NP.Demos.BindingModesSample
 {
     public partial class MainWindow : Window
     {
