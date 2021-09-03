@@ -1,0 +1,297 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.Demos.XamlBindingsSample"
+        x:Class="NP.Demos.XamlBindingsSample.MainWindow"
+        Title="NP.Demos.XamlBindingsSample"
+        DataContext="This is the Window's DataContext"
+        Tag="This is the Window's Tag"
+        x:Name="TheWindow"
+        Width="750"
+        Height="600">
+  <Window.Resources>
+    <x:String x:Key="TheResource">This is the Window's resource</x:String>
+  </Window.Resources>
+  <Grid ColumnDefinitions="*, *"
+        RowDefinitions="*,*,*,*,*">
+
+    <Grid RowDefinitions="Auto, Auto, *"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="DataContext (default) Binding Source:"
+                 HorizontalAlignment="Left"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding}"
+                 FontSize="11"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <TextBlock Text="{Binding}"
+                 Grid.Row="2"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Margin="0,0,0,20"/>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Column="1"
+      Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding.Source:"
+                 HorizontalAlignment="Left"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding Source={StaticResource TheResource}}"
+                 FontSize="11"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <TextBlock Text="{Binding Source={StaticResource TheResource}}"
+                 Grid.Row="2"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Margin="0,0,0,20"/>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="1"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding by ElementName:"
+                 TextWrapping="WrapWithOverflow"
+                 HorizontalAlignment="Left"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <StackPanel Grid.Row="1"
+                   Margin="10,3">
+      <TextBlock Text="{}Text={Binding #TheWindow.Tag} or"
+                 FontSize="11"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Text="{}Text={Binding Path=Tag, ElementName=TheWindow}"
+                   FontSize="11"
+                   HorizontalAlignment="Left"/>
+      </StackPanel>
+      <TextBlock Text="{Binding #TheWindow.Tag}"
+                 Grid.Row="2"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Margin="0,0,0,20"/>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="1"
+          Grid.Column="2"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding with RelativeSource Mode=Self"
+                 HorizontalAlignment="Left"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding Path=Tag, RelativeSource={RelativeSource Self}}"
+                 FontSize="10"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <TextBlock Text="{Binding Path=Tag, RelativeSource={RelativeSource Self}}"
+                 Tag="This is my own (TextBox'es) Tag"
+                 Grid.Row="2"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Margin="0,0,0,20"/>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="2"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding with RelativeSource Mode=TemplatedParent"
+                 HorizontalAlignment="Left"
+                 FontSize="12"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding Path=Tag, RelativeSource={RelativeSource TemplatedParent}}"
+                 FontSize="8.5"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <TemplatedControl Tag="This is Control's Tag"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Margin="0,0,0,20">
+        <TemplatedControl.Template>
+          <ControlTemplate>
+            <TextBlock Text="{Binding Path=Tag, RelativeSource={RelativeSource TemplatedParent}}"/>
+          </ControlTemplate>
+        </TemplatedControl.Template>
+      </TemplatedControl>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="2"
+          Grid.Column="1"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding with RelativeSource Mode=FindAncestor and AncestorType"
+                 HorizontalAlignment="Left"
+                 FontSize="10"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Grid}}"
+                 FontSize="8.5"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <Grid Grid.Row="2"
+            Tag="This is the first Grid ancestor tag"
+            HorizontalAlignment="Center"
+                     VerticalAlignment="Bottom"
+                     Margin="0,0,0,20">
+        <StackPanel>
+          <TextBlock Text="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Grid}}"/>
+        </StackPanel>
+      </Grid>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="3"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding with RelativeSource Mode=FindAncestor, AncestorType and AncestorLevel"
+                 HorizontalAlignment="Left"
+                 FontSize="8"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Grid, AncestorLevel=2}}"
+                 FontSize="7"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <Grid HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,20"
+            Grid.Row="2"
+            Tag="This is the second Grid ancestor tag">
+        <StackPanel>
+          <Grid Tag="This is the first Grid ancestor tag">
+            <StackPanel>
+              <TextBlock Text="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=Grid, AncestorLevel=2}}"/>
+            </StackPanel>
+          </Grid>
+        </StackPanel>
+      </Grid>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="3"
+          Grid.Column="1"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding with RelativeSource Mode=FindAncestor in Logical Tree"
+                 HorizontalAlignment="Left"
+                 FontSize="8"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding $parent.Tag}"
+                 FontSize="9"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <ContentControl Tag="This is the second logical tree ancestor tag"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Bottom"
+                      Margin="0,0,0,20"
+                      Grid.Row="2">
+        <Grid Tag="This is the second Grid ancestor tag">
+          <StackPanel>
+            <Grid Tag="This is the first Grid ancestor tag">
+              <StackPanel Tag="This is the immediate ancestor tag">
+                  <TextBlock Text="{Binding $parent.Tag}"/>
+              </StackPanel>
+            </Grid>
+          </StackPanel>
+        </Grid>
+      </ContentControl>
+    </Grid>
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="4"
+          Grid.Column="0"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding with RelativeSource Mode=FindAncestor in Logical Tree"
+                 HorizontalAlignment="Left"
+                 FontSize="10"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding $parent[Grid].Tag}"
+                 FontSize="11"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <ContentControl Tag="This is the second logical tree ancestor tag"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Bottom"
+                      Margin="0,0,0,20"
+                      Grid.Row="2">
+        <Grid Tag="This is the second Grid ancestor tag">
+          <StackPanel>
+            <Grid Tag="This is the first Grid ancestor tag">
+              <StackPanel Tag="this is the immediate ancestor tag">
+                <Button Tag="This is the first logical tree ancestor tag">
+                  <TextBlock Text="{Binding $parent[Grid].Tag}"/>
+                </Button>
+              </StackPanel>
+            </Grid>
+          </StackPanel>
+        </Grid>
+      </ContentControl>
+    </Grid>
+
+    <Grid RowDefinitions="Auto, Auto, *"
+          Grid.Row="4"
+          Grid.Column="1"
+          Margin="5">
+      <Border BorderBrush="Gray"
+              Grid.RowSpan="3"
+              BorderThickness="1"/>
+      <TextBlock Text="Binding with RelativeSource Mode=FindAncestor in Logical Tree"
+                 HorizontalAlignment="Left"
+                 FontSize="10"
+                 Margin="10,3"
+                 FontWeight="Bold"/>
+      <TextBlock Text="{}Text={Binding $parent[Grid,1].Tag}"
+                 FontSize="11"
+                 Grid.Row="1"
+                 Margin="10,3"
+                 HorizontalAlignment="Left"/>
+      <ContentControl Tag="This is the second logical tree ancestor tag"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Bottom"
+                      Margin="0,0,0,20"
+                      Grid.Row="2">
+        <Grid Tag="This is the second Grid ancestor tag">
+          <StackPanel>
+            <Grid Tag="This is the first Grid ancestor tag">
+              <StackPanel Tag="this is the immediate ancestor tag">
+                <Button Tag="This is the first logical tree ancestor tag">
+                  <TextBlock Text="{Binding $parent[Grid;1].Tag}"/>
+                </Button>
+              </StackPanel>
+            </Grid>
+          </StackPanel>
+        </Grid>
+      </ContentControl>
+    </Grid>
+  </Grid>
+</Window>
