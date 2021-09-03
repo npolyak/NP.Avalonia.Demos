@@ -1,6 +1,6 @@
 using Avalonia;
 
-namespace NP.Demos.XamlBindingsSample
+namespace NP.Demos.BindingSourcesSample
 {
     class Program
     {
