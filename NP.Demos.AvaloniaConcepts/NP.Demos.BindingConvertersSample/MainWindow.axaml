@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.Demos.BindingConvertersSample"
+        x:Class="NP.Demos.BindingConvertersSample.MainWindow"
+        Title="NP.Demos.BindingConvertersSample"
+        x:Name="TheWindow"
+        Width="500"
+        Height="400">
+  <Window.Resources>
+    <local:ReverseStringConverter x:Key="TheReverseConverter"/>
+  </Window.Resources>
+  <Grid Margin="5"
+        RowDefinitions="Auto, Auto">
+    <Grid RowDefinitions="Auto, Auto, 30, 30, 30">
+      <TextBlock Text="Converters:"
+                 FontWeight="Bold"
+                 HorizontalAlignment="Left"
+                 Margin="10,5"/>
+      <TextBox  x:Name="TheTextBox" 
+                Grid.Row="1"
+                Margin="20,2,10,2"
+                Text="Hello World!"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top"/>
+      <TextBlock Text="This text shows when the text in the TextBox is empty"
+                 IsVisible="{Binding #TheTextBox.Text, Converter={x:Static StringConverters.IsNullOrEmpty}}"
+                 Foreground="Red"
+                 Grid.Row="2"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="20,2,10,2"/>
+      <TextBlock Text="This text shows when the text in the TextBox is NOT empty"
+                 IsVisible="{Binding #TheTextBox.Text, Converter={x:Static StringConverters.IsNotNullOrEmpty}}"
+                 Foreground="Green"
+                 Grid.Row="3"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Margin="20,2,10,2"/>
+      <TextBox  Grid.Row="4"
+                Margin="20,2,10,2"
+                Text="{Binding #TheTextBox.Text, Mode=TwoWay, Converter={StaticResource TheReverseConverter}}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top"/>
+    </Grid>
+  </Grid>
+</Window>
