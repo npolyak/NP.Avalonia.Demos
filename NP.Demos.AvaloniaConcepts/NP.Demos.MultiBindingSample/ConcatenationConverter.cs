@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace NP.Demos.MultiBindingSample
 {
-    public class ConcatinationConverter : IMultiValueConverter
+    public class ConcatenationConverter : IMultiValueConverter
     {
         // static instance to reference
-        public static ConcatinationConverter Instance { get; } =
-            new ConcatinationConverter();
+        public static ConcatenationConverter Instance { get; } =
+            new ConcatenationConverter();
 
         public object? Convert(IList<object> values, Type targetType, object parameter, CultureInfo culture)
         {

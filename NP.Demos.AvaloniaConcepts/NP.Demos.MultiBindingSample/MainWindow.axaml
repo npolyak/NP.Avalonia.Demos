@@ -6,9 +6,6 @@
         x:Name="TheWindow"
         Width="750"
         Height="300">
-  <Window.Resources>
-    <x:String x:Key="TheResource">This is the Window's resource</x:String>
-  </Window.Resources>
   <Grid RowDefinitions="Auto,Auto,Auto"
         Margin="5">
     <StackPanel Margin="0,20,0,0">
@@ -30,12 +27,12 @@
     </StackPanel>
     <StackPanel Grid.Row="2"
                 Margin="0,20,0,0">
-      <TextBlock Text="Concatination: String1 + String2"/>
+      <TextBlock Text="Concatenation: String1 + String2"/>
       <TextBlock HorizontalAlignment="Stretch"
                  VerticalAlignment="Top"
                  Margin="30,3,10,3">
         <TextBlock.Text>
-          <MultiBinding Converter="{x:Static local:ConcatinationConverter.Instance}">
+          <MultiBinding Converter="{x:Static local:ConcatenationConverter.Instance}">
             <Binding Path="#Str1.Text"/>
             <Binding Path="#Str2.Text"/>
           </MultiBinding>
