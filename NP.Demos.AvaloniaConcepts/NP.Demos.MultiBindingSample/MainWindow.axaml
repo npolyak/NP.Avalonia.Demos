@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.Demos.MultiBindingSample"
+        x:Class="NP.Demos.MultiBindingSample.MainWindow"
+        Title="NP.Demos.MultiBindingSample"
+        x:Name="TheWindow"
+        Width="750"
+        Height="300">
+  <Window.Resources>
+    <x:String x:Key="TheResource">This is the Window's resource</x:String>
+  </Window.Resources>
+  <Grid RowDefinitions="Auto,Auto,Auto"
+        Margin="5">
+    <StackPanel Margin="0,20,0,0">
+      <TextBlock Text="Enter String1"/>
+      <TextBox x:Name="Str1"
+               Text="Hi"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Top"
+               Margin="30,3,10,3"/>
+    </StackPanel>
+    <StackPanel Grid.Row="1"
+                Margin="0,20,0,0">
+      <TextBlock Text="Enter String2"/>
+      <TextBox x:Name="Str2" 
+               Text="Hello"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Top"
+               Margin="30,3,10,3"/>
+    </StackPanel>
+    <StackPanel Grid.Row="2"
+                Margin="0,20,0,0">
+      <TextBlock Text="Concatination: String1 + String2"/>
+      <TextBlock HorizontalAlignment="Stretch"
+                 VerticalAlignment="Top"
+                 Margin="30,3,10,3">
+        <TextBlock.Text>
+          <MultiBinding Converter="{x:Static local:ConcatinationConverter.Instance}">
+            <Binding Path="#Str1.Text"/>
+            <Binding Path="#Str2.Text"/>
+          </MultiBinding>
+        </TextBlock.Text>
+      </TextBlock>
+    </StackPanel>
+  </Grid>
+</Window>
