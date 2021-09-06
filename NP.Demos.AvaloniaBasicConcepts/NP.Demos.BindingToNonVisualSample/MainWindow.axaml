@@ -18,17 +18,21 @@
   </Window.DataContext>
   <Grid RowDefinitions="*, Auto"
         Margin="10">
+    <!-- Binding the Items of ItemsControl to the Names collection -->
     <ItemsControl Items="{Binding Path=Names}"
                   HorizontalAlignment="Center"
                   Margin="0,20,0,0"/>
 
     <Grid Grid.Row="1">
+      <!-- Binding Text to NamesCount-->
       <TextBlock Text="{Binding Path=NamesCount, StringFormat='Number of Items: {0}'}"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Center"/>
+
+      <!-- Binding Button.IsEnabled to HasItems-->
       <Button x:Name="RemoveLastItemButton"
-              Content="Remove Last Item"
               IsEnabled="{Binding Path=HasItems}"
+              Content="Remove Last Item"
               HorizontalAlignment="Right"
               Padding="10,5"/>
     </Grid>

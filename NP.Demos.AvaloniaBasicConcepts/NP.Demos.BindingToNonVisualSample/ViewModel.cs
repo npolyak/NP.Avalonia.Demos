@@ -27,6 +27,7 @@ namespace NP.Demos.BindingToNonVisualSample
             Names.CollectionChanged += Names_CollectionChanged;
         }
 
+        // fire then notifications every time Names collection changes.
         private void Names_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
             // Change Notification for Avalonia for properties
