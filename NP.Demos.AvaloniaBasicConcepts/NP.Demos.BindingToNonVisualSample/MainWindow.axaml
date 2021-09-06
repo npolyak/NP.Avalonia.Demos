@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.Demos.BindingToNonVisualSample"
+        x:Class="NP.Demos.BindingToNonVisualSample.MainWindow"
+        Title="NP.Demos.BindingToNonVisualSample"
+        x:Name="TheWindow"
+        Width="350"
+        Height="150">
+  <!-- Define the DataContext of the Window-->
+  <Window.DataContext>
+    <local:ViewModel>
+      <local:ViewModel.Names>
+        <x:String>Tom</x:String>
+        <x:String>Jack</x:String>
+        <x:String>Harry</x:String>
+      </local:ViewModel.Names>
+    </local:ViewModel>
+  </Window.DataContext>
+  <Grid RowDefinitions="*, Auto"
+        Margin="10">
+    <ItemsControl Items="{Binding Path=Names}"
+                  HorizontalAlignment="Center"
+                  Margin="0,20,0,0"/>
+
+    <Grid Grid.Row="1">
+      <TextBlock Text="{Binding Path=NamesCount, StringFormat='Number of Items: {0}'}"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"/>
+      <Button x:Name="RemoveLastItemButton"
+              Content="Remove Last Item"
+              IsEnabled="{Binding Path=HasItems}"
+              HorizontalAlignment="Right"
+              Padding="10,5"/>
+    </Grid>
+  </Grid>
+</Window>
