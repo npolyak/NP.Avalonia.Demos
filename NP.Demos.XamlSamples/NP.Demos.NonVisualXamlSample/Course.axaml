@@ -1,0 +1,7 @@
+<x:Object xmlns="https://github.com/avaloniaui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:local="clr-namespace:NP.Demos.NonVisualXamlSample"
+          x:Class="NP.Demos.NonVisualXamlSample.Course"
+          NumberStudents="5">
+    <local:Person FirstName="Joe" LastName="Doe" Age="100" />
+</x:Object>

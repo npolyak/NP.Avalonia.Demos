@@ -101,3 +101,6 @@
 /NP.Demos.AvaloniaBasicConcepts/NP.Demos.VisualTreeSample/obj/Debug/net5.0
 /NP.Demos.AvaloniaBasicConcepts/NP.Demos.VisualTreeSample/obj/Release/net5.0
 /NP.Demos.AvaloniaBasicConcepts/NP.Demos.VisualTreeSample/obj
+/NP.Demos.XamlSamples/NP.Demos.NonVisualXamlSample/bin
+/NP.Demos.XamlSamples/NP.Demos.NonVisualXamlSample/.vs
+/NP.Demos.XamlSamples/NP.Demos.NonVisualXamlSample/obj
