@@ -20,8 +20,12 @@ namespace NP.Demos.StaticVsDynamicXamlResourcesSample
 
         private void Button_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
+            // getting a Window resource by its name
             var statusBrush = this.FindResource("StatusBrush");
-            this.Resources["StatusBrush"] = new SolidColorBrush(Colors.Red);
+
+            // setting the window resource to a new value
+            this.Resources["StatusBrush"] = 
+                             new SolidColorBrush(Colors.Red);
         }
 
         private void InitializeComponent()

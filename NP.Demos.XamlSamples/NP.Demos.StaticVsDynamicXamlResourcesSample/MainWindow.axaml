@@ -6,6 +6,7 @@
         Height="200">
   <Window.Resources>
     <ResourceDictionary>
+      <!--We set the XAML resource-->
       <SolidColorBrush x:Key="StatusBrush" 
                        Color="Green"/>
     </ResourceDictionary>
@@ -17,11 +18,14 @@
     </Grid.RowDefinitions>
     <StackPanel x:Name="ElementsPanel" 
                 Orientation="Vertical">
+      <!--Refer to xaml resource using StaticResource Markup Expression -->
       <Border x:Name="Border1"
               Background="{StaticResource StatusBrush}"
               Height="30"
               Width="80"
               Margin="0,5"/>
+
+      <!--Refer to xaml resource using StaticResource (without markup expression) -->
       <Border x:Name="Border2"
               Height="30"
               Width="80"
@@ -30,6 +34,8 @@
           <StaticResource ResourceKey="StatusBrush"/>
         </Border.Background>
       </Border>
+
+      <!--Refer to xaml resource using DynamicResource Markup Expression -->
       <Border x:Name="StatusChangingBorder"
               Background="{DynamicResource StatusBrush}"
               Height="30"
