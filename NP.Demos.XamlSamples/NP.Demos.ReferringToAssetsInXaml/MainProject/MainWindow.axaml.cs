@@ -19,13 +19,17 @@ namespace NP.Demos.ReferringToAssetsInXaml
 
             Image linuxIconImage2 = this.FindControl<Image>("LinuxIconImage2");
             linuxIconImage2.Source = 
-                new Bitmap(assetsLoader.Open
-                           (new Uri("avares://NP.Demos.ReferringToAssetsInXaml/Assets/LinuxIcon.jpg")));
+                new Bitmap
+                (
+                    assetsLoader.Open(
+                        new Uri("/Assets/LinuxIcon.jpg", UriKind.Absolute)));
 
             Image avaloniaIconImage2 = this.FindControl<Image>("AvaloniaIconImage2");
             avaloniaIconImage2.Source =
-                new Bitmap(assetsLoader.Open
-                           (new Uri("avares://Dependency1Proj/Assets/avalonia-32.png")));
+                new Bitmap
+                (
+                    assetsLoader.Open(
+                        new Uri("avares://Dependency1Proj/Assets/avalonia-32.png")));
         }
 
         private void InitializeComponent()
