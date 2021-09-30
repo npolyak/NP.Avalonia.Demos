@@ -122,3 +122,9 @@
 /NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/Dependencies/Dependency1Proj/obj
 /NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/MainProject/bin/Debug/net5.0
 /NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/MainProject/obj
+/NP.Demos.XamlSamples/NP.Demos.ReferringToAssetsInXaml/.vs
+/NP.Demos.XamlSamples/NP.Demos.ReferringToAssetsInXaml/Dependencies/Dependency1Proj/bin/Debug/net5.0
+/NP.Demos.XamlSamples/NP.Demos.ReferringToAssetsInXaml/Dependencies/Dependency1Proj/obj
+/NP.Demos.XamlSamples/NP.Demos.ReferringToAssetsInXaml/MainProject/bin/Debug/net5.0
+/NP.Demos.XamlSamples/NP.Demos.ReferringToAssetsInXaml/MainProject/obj
+/NP.Demos.XamlSamples/NP.Demos.ReferringToAssetsInXaml/Dependencies/Dependency1Proj/Dependency1Proj.csproj.user

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NP.Demos.ReferringToAssetsInXaml", "MainProject\NP.Demos.ReferringToAssetsInXaml.csproj", "{0B21DD47-E534-4CD1-A5E3-EB6172DAD0DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{464DA2C6-A7BB-4FA1-802E-8ABB861D7009}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependency1Proj", "Dependencies\Dependency1Proj\Dependency1Proj.csproj", "{D67AD6C9-3449-4256-B7A0-D120D2385B86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B21DD47-E534-4CD1-A5E3-EB6172DAD0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B21DD47-E534-4CD1-A5E3-EB6172DAD0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B21DD47-E534-4CD1-A5E3-EB6172DAD0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B21DD47-E534-4CD1-A5E3-EB6172DAD0DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67AD6C9-3449-4256-B7A0-D120D2385B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67AD6C9-3449-4256-B7A0-D120D2385B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67AD6C9-3449-4256-B7A0-D120D2385B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67AD6C9-3449-4256-B7A0-D120D2385B86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D67AD6C9-3449-4256-B7A0-D120D2385B86} = {464DA2C6-A7BB-4FA1-802E-8ABB861D7009}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {775553F3-18D1-49B8-8AC8-1DE999F0E79A}
+	EndGlobalSection
+EndGlobal

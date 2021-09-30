@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.ReferringToAssetsInXaml.MainWindow"
+        Title="NP.Demos.ReferringToAssetsInXaml"
+        Width="100"
+        Height="300">
+  <StackPanel HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+    <Image Source="/Assets/LinuxIcon.jpg" 
+           Width="50"
+           Height="50"
+           Margin="5"/>
+    <Image Source="avares://Dependency1Proj/Assets/avalonia-32.png"
+           Width="50"
+           Height="50"
+           Margin="5"/>
+    <Image x:Name="LinuxIconImage2"
+           Width="50"
+           Height="50"
+           Margin="5"/>
+    <Image x:Name="AvaloniaIconImage2"
+           Width="50"
+           Height="50"
+           Margin="5"/>
+  </StackPanel>
+</Window>
