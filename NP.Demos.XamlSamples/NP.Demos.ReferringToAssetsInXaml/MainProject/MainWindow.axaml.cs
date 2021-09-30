@@ -26,7 +26,7 @@ namespace NP.Demos.ReferringToAssetsInXaml
                 new Bitmap
                 (
                     assetLoader.Open(
-                        new Uri("/Assets/LinuxIcon.jpg", UriKind.Absolute)));
+                        new Uri("avares://NP.Demos.ReferringToAssetsInXaml/Assets/LinuxIcon.jpg")));
 
             // get the Image control from XAML
             Image avaloniaIconImage2 = this.FindControl<Image>("AvaloniaIconImage2");
