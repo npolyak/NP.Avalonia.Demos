@@ -117,3 +117,8 @@
 /NP.Demos.XamlSamples/NP.Demos.StaticVsDynamicXamlResourcesSample/.vs
 /NP.Demos.XamlSamples/NP.Demos.StaticVsDynamicXamlResourcesSample/bin/Debug/net5.0
 /NP.Demos.XamlSamples/NP.Demos.StaticVsDynamicXamlResourcesSample/obj
+/NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/.vs
+/NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/Dependencies/Dependency1Proj/bin/Debug/net5.0
+/NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/Dependencies/Dependency1Proj/obj
+/NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/MainProject/bin/Debug/net5.0
+/NP.Demos.XamlSamples/NP.Demos.XamlResourcesInMultipleProjects/MainProject/obj
