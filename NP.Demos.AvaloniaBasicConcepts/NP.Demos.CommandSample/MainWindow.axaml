@@ -1,0 +1,35 @@
+<Window x:Name="TheWindow" 
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.CommandSample.MainWindow"
+        Title="NP.Demos.CommandSample"
+        Width="200"
+        Height="300">
+  <Grid x:Name="TheRootPanel" 
+        RowDefinitions="*, *, *, *"
+        Margin="20">
+    <CheckBox IsChecked="{Binding Path=CanToggleStatus, Mode=TwoWay}"
+              Content="Can Toggle Status"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Center"/>
+    
+    <TextBlock Text="{Binding Path=Status, StringFormat='Status={0}'}"
+               Grid.Row="1"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"/>
+    
+    <Button  Content="Toggle Status"
+             Grid.Row="2"
+             HorizontalAlignment="Right"
+             VerticalAlignment="Center"
+             IsEnabled="{Binding Path=CanToggleStatus}"
+             Command="{Binding Path=ToggleStatus}"/>
+
+    <Button  Content="Set Status to True"
+             Grid.Row="3"
+             HorizontalAlignment="Right"
+             VerticalAlignment="Center"
+             Command="{Binding Path=SetStatus}"
+             CommandParameter="True"/>
+  </Grid>
+</Window>
