@@ -8,6 +8,10 @@ namespace NP.Demos.CustomRoutedEventSample
         /// define the MyCustomRoutedEvent
         /// </summary>
         public static readonly RoutedEvent<RoutedEventArgs> MyCustomRoutedEvent =
-            RoutedEvent.Register<object, RoutedEventArgs>("MyCustomRouted", RoutingStrategies.Tunnel);
+            RoutedEvent.Register<object, RoutedEventArgs>
+            (
+                "MyCustomRouted", 
+                RoutingStrategies.Tunnel //| RoutingStrategies.Bubble
+            );
     }
 }
