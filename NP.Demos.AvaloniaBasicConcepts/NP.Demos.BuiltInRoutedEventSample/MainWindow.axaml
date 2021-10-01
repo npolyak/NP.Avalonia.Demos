@@ -1,0 +1,16 @@
+<Window x:Name="TheWindow" 
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.BuiltInRoutedEventSample.MainWindow"
+        Title="NP.Demos.BuiltInRoutedEventSample"
+        Background="Red"
+        Width="200"
+        Height="200">
+  <Grid x:Name="RootPanel"
+        Background="Green"
+        Margin="35">
+      <Border x:Name="TheBorder"
+              Background="Blue"
+              Margin="35"/>
+  </Grid>
+</Window>
