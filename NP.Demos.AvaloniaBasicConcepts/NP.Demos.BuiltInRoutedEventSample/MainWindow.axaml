@@ -6,7 +6,7 @@
         Background="Red"
         Width="200"
         Height="200">
-  <Grid x:Name="RootPanel"
+  <Grid x:Name="TheRootPanel"
         Background="Green"
         Margin="35">
       <Border x:Name="TheBorder"

@@ -14,42 +14,46 @@ namespace NP.Demos.BuiltInRoutedEventSample
 #if DEBUG
             this.AttachDevTools();
 #endif
+            // add event handler for the Window
             this.AddHandler
             (
-                Control.PointerPressedEvent,
-                HandleClickEventOnGrid,
-                RoutingStrategies.Bubble | RoutingStrategies.Tunnel);
+                Control.PointerPressedEvent, //routed event
+                HandleClickEvent, // event handler
+                RoutingStrategies.Bubble | RoutingStrategies.Tunnel // routing strategy filter
+                //,true // uncomment if you want to test that the event still propagates event after being handled
+            );
 
-            Grid rootPanel = this.FindControl<Grid>("RootPanel");
+            Grid rootPanel = this.FindControl<Grid>("TheRootPanel");
 
+            // add event handler for the Grid
             rootPanel.AddHandler
             (
                 Control.PointerPressedEvent, 
-                HandleClickEventOnGrid,
+                HandleClickEvent,
                 RoutingStrategies.Bubble | RoutingStrategies.Tunnel);
 
             Border border = this.FindControl<Border>("TheBorder");
 
+            // add event handler for the Blue Border in the middle
             border.AddHandler(
                 Control.PointerPressedEvent,
-                HandleClickEventOnGrid,
+                HandleClickEvent,
                 RoutingStrategies.Bubble | RoutingStrategies.Tunnel
-                //,true // uncomment if you want to test that the event still propagates event after being handled
                 );
         }
 
-        private void HandleClickEventOnGrid(object? sender, RoutedEventArgs e)
+        private void HandleClickEvent(object? sender, RoutedEventArgs e)
         {
             Control senderControl = (Control) sender!;
 
-            string eventType = e.Route switch
+            string eventTypeStr = e.Route switch
             {
                 RoutingStrategies.Bubble => "Bubbling",
                 RoutingStrategies.Tunnel => "Tunneling",
                 _ => "Direct"
             };
 
-            Debug.WriteLine($"{eventType} Routed Event {e.RoutedEvent!.Name} raised on {senderControl.Name}; Event Source is {(e.Source as Control)!.Name}");
+            Debug.WriteLine($"{eventTypeStr} Routed Event {e.RoutedEvent!.Name} raised on {senderControl.Name}; Event Source is {(e.Source as Control)!.Name}");
 
             // uncomment if you want to test handling the event
             //if (e.Route == RoutingStrategies.Bubble && senderControl.Name == "TheBorder")
