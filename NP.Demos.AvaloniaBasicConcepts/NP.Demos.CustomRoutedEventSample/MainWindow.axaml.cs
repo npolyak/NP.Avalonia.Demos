@@ -19,7 +19,7 @@ namespace NP.Demos.CustomRoutedEventSample
             this.AddHandler
             (
                 StaticRoutedEvents.MyCustomRoutedEvent, //routed event
-                HandleClickEvent, // event handler
+                HandleCustomEvent, // event handler
                 RoutingStrategies.Bubble | RoutingStrategies.Tunnel // routing strategy filter
             );
 
@@ -29,7 +29,7 @@ namespace NP.Demos.CustomRoutedEventSample
             rootPanel.AddHandler
             (
                 StaticRoutedEvents.MyCustomRoutedEvent, 
-                HandleClickEvent,
+                HandleCustomEvent,
                 RoutingStrategies.Bubble | RoutingStrategies.Tunnel);
 
             Border border = this.FindControl<Border>("TheBorder");
@@ -37,7 +37,7 @@ namespace NP.Demos.CustomRoutedEventSample
             // add event handler for the Blue Border in the middle
             border.AddHandler(
                 StaticRoutedEvents.MyCustomRoutedEvent,
-                HandleClickEvent,
+                HandleCustomEvent,
                 RoutingStrategies.Bubble | RoutingStrategies.Tunnel
                 );
 
@@ -46,6 +46,8 @@ namespace NP.Demos.CustomRoutedEventSample
             border.PointerPressed += Border_PointerPressed;
         }
 
+
+        /// PointerPressed handler that raises MyCustomRoutedEvent
         private void Border_PointerPressed(object? sender, PointerPressedEventArgs e)
         {
             Control control = (Control)sender!;
@@ -54,7 +56,7 @@ namespace NP.Demos.CustomRoutedEventSample
             control.RaiseEvent(new RoutedEventArgs(StaticRoutedEvents.MyCustomRoutedEvent));
         }
 
-        private void HandleClickEvent(object? sender, RoutedEventArgs e)
+        private void HandleCustomEvent(object? sender, RoutedEventArgs e)
         {
             Control senderControl = (Control) sender!;
 
