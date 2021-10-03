@@ -57,7 +57,9 @@ namespace NP.Demos.CustomControlSample
 
         #endregion CanSave Direct Avalonia Property
 
-        private void SetCanSave(object? obj)
+        // CanSave is set to true when SavedValue is not the same as NewView
+        // false otherwise
+        private void SetCanSave(object? _)
         {
             CanSave = SavedValue != NewValue;
         }

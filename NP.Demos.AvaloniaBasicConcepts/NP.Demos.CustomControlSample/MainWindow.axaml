@@ -32,16 +32,16 @@
           <StackPanel Orientation="Horizontal"
                       HorizontalAlignment="Right"
                       Grid.Row="3">
-            <Button x:Name="CancelButton"
-                    Content="Cancel"
-                    Margin="5,0"
-                    IsEnabled="{TemplateBinding CanSave}"
-                    Command="{Binding Path=Cancel, RelativeSource={RelativeSource TemplatedParent}}"/>
-            <Button x:Name="SaveButton"
-                    Content="Save"
-                    Margin="5,0"
-                    IsEnabled="{TemplateBinding CanSave}"
-                    Command="{Binding Path=Save, RelativeSource={RelativeSource TemplatedParent}}"/>
+          <Button x:Name="CancelButton"
+                  Content="Cancel"
+                  Margin="5,0"
+                  IsEnabled="{TemplateBinding CanSave}"
+                  Command="{Binding Path=Cancel, RelativeSource={RelativeSource TemplatedParent}}"/>
+          <Button x:Name="SaveButton"
+                  Content="Save"
+                  Margin="5,0"
+                  IsEnabled="{TemplateBinding CanSave}"
+                  Command="{Binding Path=Save, RelativeSource={RelativeSource TemplatedParent}}"/>
           </StackPanel>
         </Grid>
       </ControlTemplate>
