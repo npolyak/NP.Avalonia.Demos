@@ -1,0 +1,23 @@
+<Window x:Name="TheWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.DifferentVisualsForCustomControlSample.MainWindow"
+        xmlns:local="clr-namespace:NP.Demos.DifferentVisualsForCustomControlSample"
+        Title="NP.Demos.DifferentVisualsForCustomControlSample"
+        Width="300"
+        Height="600">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceInclude Source="avares://NP.Demos.DifferentVisualsForCustomControlSample/Themes/Resources.axaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Grid RowDefinitions="*, *">
+    <local:MyCustomControl Margin="20"
+                           Template="{StaticResource CustomControlTemplate1}"/>
+    <local:MyCustomControl Margin="20"
+                           Grid.Row="1"
+                           Template="{StaticResource CustomControlTemplate2}"/>
+  </Grid>
+</Window>
