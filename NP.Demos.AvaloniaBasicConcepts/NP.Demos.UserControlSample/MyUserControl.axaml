@@ -1,8 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="NP.Demos.UserControlSample.MyUserControl">
-  <Grid Margin="10"
-        RowDefinitions="Auto, Auto, *, Auto">
+  <Grid RowDefinitions="Auto, Auto, *, Auto">
     <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
