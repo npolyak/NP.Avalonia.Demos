@@ -12,7 +12,7 @@ namespace NP.Demos.UserControlSample
         private Button _cancelButton;
         private Button _saveButton;
 
-        private string? _oldValue = null;
+        private string? _savedValue = null;
 
         private string? NewValue
         {
@@ -38,17 +38,17 @@ namespace NP.Demos.UserControlSample
 
         private void _cancelButton_Click(object? sender, RoutedEventArgs e)
         {
-            NewValue = _oldValue;
+            NewValue = _savedValue;
         }
 
         private void _saveButton_Click(object? sender, RoutedEventArgs e)
         {
-            _oldValue = NewValue;
+            _savedValue = NewValue;
         }
 
         private void OnTextChanged(string obj)
         {
-            bool canSave = NewValue != _oldValue;
+            bool canSave = NewValue != _savedValue;
             _cancelButton.IsEnabled = canSave;
             _saveButton.IsEnabled = canSave;
         }
