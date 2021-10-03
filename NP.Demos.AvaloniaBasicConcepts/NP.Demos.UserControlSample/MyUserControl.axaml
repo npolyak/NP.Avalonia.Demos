@@ -2,17 +2,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="NP.Demos.UserControlSample.MyUserControl">
   <Grid Margin="10"
-        RowDefinitions="*, Auto">
+        RowDefinitions="Auto, Auto, *, Auto">
     <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center">
       <TextBlock Text="Enter Text: "
                  VerticalAlignment="Center"/>
-      <TextBox x:Name="TheTextBox"/>
+      <TextBox x:Name="TheTextBox"
+                 MinWidth="150"/>
+    </StackPanel>
+    <StackPanel Orientation="Horizontal"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Grid.Row="1"
+                Margin="0,10">
+      <TextBlock Text="Saved Text: "
+                 VerticalAlignment="Center"/>
+      <TextBlock x:Name="SavedTextBlock"/>
     </StackPanel>
     <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Right"
-                Grid.Row="1">
+                Grid.Row="3">
       <Button x:Name="CancelButton"
               Content="Cancel"
               Margin="5,0"/>

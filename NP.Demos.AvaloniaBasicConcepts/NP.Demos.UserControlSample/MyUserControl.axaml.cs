@@ -9,10 +9,15 @@ namespace NP.Demos.UserControlSample
     public partial class MyUserControl : UserControl
     {
         private TextBox _textBox;
+        private TextBlock _savedTextBlock;
         private Button _cancelButton;
         private Button _saveButton;
 
-        private string? _savedValue = null;
+        private string? SavedValue
+        {
+            get => _savedTextBlock.Text;
+            set => _savedTextBlock.Text = value;
+        }
 
         private string? NewValue
         {
@@ -31,24 +36,30 @@ namespace NP.Demos.UserControlSample
             _saveButton.Click += _saveButton_Click;
 
 
+            _savedTextBlock = this.FindControl<TextBlock>("SavedTextBlock");
+
             _textBox = this.FindControl<TextBox>("TheTextBox");
+
+            NewValue = SavedValue;
 
             _textBox.GetObservable(TextBox.TextProperty).Subscribe(OnTextChanged);
         }
 
         private void _cancelButton_Click(object? sender, RoutedEventArgs e)
         {
-            NewValue = _savedValue;
+            NewValue = SavedValue;
         }
 
         private void _saveButton_Click(object? sender, RoutedEventArgs e)
         {
-            _savedValue = NewValue;
+            SavedValue = NewValue;
+
+            OnTextChanged(null);
         }
 
-        private void OnTextChanged(string obj)
+        private void OnTextChanged(string? obj)
         {
-            bool canSave = NewValue != _savedValue;
+            bool canSave = NewValue != SavedValue;
             _cancelButton.IsEnabled = canSave;
             _saveButton.IsEnabled = canSave;
         }
