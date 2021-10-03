@@ -6,6 +6,9 @@ namespace NP.Demos.CommandSample
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        /// <summary>
+        /// fires INotifyPropertyChanged.PropertyChanged event
+        /// </summary>
         private void OnPropertyChanged(string propName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
@@ -14,6 +17,9 @@ namespace NP.Demos.CommandSample
 
         #region Status Property
         private bool _status;
+        /// <summary>
+        /// notifiable Boolean property - Status
+        /// </summary>
         public bool Status
         {
             get
@@ -33,14 +39,11 @@ namespace NP.Demos.CommandSample
         }
         #endregion Status Property
 
-        public void ToggleStatus()
-        {
-            Status = !Status;
-        }
-
-
         #region CanToggleStatus Property
         private bool _canToggleStatus = true;
+        /// <summary>
+        /// Controls whether Toggle Status button is enabled or not
+        /// </summary>
         public bool CanToggleStatus
         {
             get
@@ -60,6 +63,17 @@ namespace NP.Demos.CommandSample
         }
         #endregion CanToggleStatus Property
 
+        /// <summary>
+        /// Toggles the status
+        /// </summary>
+        public void ToggleStatus()
+        {
+            Status = !Status;
+        }
+
+        /// <summary>
+        /// Set the Status to whatever 'status' is passed
+        /// </summary>
         public void SetStatus(bool status)
         {
             Status = status;
