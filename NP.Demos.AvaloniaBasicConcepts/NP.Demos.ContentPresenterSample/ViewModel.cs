@@ -57,6 +57,8 @@ namespace NP.Demos.ContentPresenterSample
         }
         #endregion NewValue Property
 
+        // CanSave is set to true when SavedValue is not the same as NewView
+        // false otherwise
         public bool CanSave => NewValue != SavedValue;
 
         public void Save()
