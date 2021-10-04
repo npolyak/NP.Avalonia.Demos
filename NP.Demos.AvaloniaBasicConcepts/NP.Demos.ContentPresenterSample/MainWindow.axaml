@@ -1,0 +1,52 @@
+<Window x:Name="TheWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.ContentPresenterSample.MainWindow"
+        xmlns:local="clr-namespace:NP.Demos.ContentPresenterSample"
+        Title="NP.Demos.ContentPresenterSample"
+        Width="300"
+        Height="300">
+  <Window.Resources>
+    <local:ViewModel x:Key="TheViewModel"/>
+    <DataTemplate x:Key="TheDataTemplate">
+      <Grid RowDefinitions="Auto, Auto, *, Auto">
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+          <TextBlock Text="Enter Text: "
+                     VerticalAlignment="Center"/>
+          <TextBox x:Name="TheTextBox"
+                   Text="{Binding Path=NewValue, Mode=TwoWay}"
+                   MinWidth="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Grid.Row="1"
+                    Margin="0,10">
+          <TextBlock Text="Saved Text: "
+                     VerticalAlignment="Center"/>
+          <TextBlock x:Name="SavedTextBlock"
+                     Text="{Binding Path=SavedValue}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Grid.Row="3">
+          <Button x:Name="CancelButton"
+                  Content="Cancel"
+                  Margin="5,0"
+                  IsEnabled="{Binding Path=CanSave}"
+                  Command="{Binding Path=Cancel}"/>
+          <Button x:Name="SaveButton"
+                  Content="Save"
+                  Margin="5,0"
+                  IsEnabled="{Binding Path=CanSave}"
+                  Command="{Binding Path=Save}"/>
+        </StackPanel>
+      </Grid>
+    </DataTemplate>
+  </Window.Resources>
+  <ContentPresenter Margin="20"
+                    Content="{StaticResource TheViewModel}"
+                    ContentTemplate="{StaticResource TheDataTemplate}"/>
+</Window>
