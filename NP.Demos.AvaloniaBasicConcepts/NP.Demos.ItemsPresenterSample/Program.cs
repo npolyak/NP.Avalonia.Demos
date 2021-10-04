@@ -1,6 +1,6 @@
 using Avalonia;
 
-namespace NP.Demos.ContentPresenterSample
+namespace NP.Demos.ItemsPresenterSample
 {
     class Program
     {

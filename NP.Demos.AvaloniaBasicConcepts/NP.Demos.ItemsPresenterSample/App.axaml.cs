@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace NP.Demos.ContentPresenterSample
+namespace NP.Demos.ItemsPresenterSample
 {
     public class App : Application
     {

@@ -1,9 +1,10 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Presenters;
 using Avalonia.Markup.Xaml;
 using System.Windows.Input;
 
-namespace NP.Demos.ContentPresenterSample
+namespace NP.Demos.ItemsPresenterSample
 {
     public partial class MainWindow : Window
     {
@@ -13,7 +14,6 @@ namespace NP.Demos.ContentPresenterSample
 #if DEBUG
             this.AttachDevTools();
 #endif
-            this.DataContext = new ViewModel();
         }
 
         private void InitializeComponent()
