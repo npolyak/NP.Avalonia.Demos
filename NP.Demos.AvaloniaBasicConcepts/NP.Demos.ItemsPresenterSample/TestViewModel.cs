@@ -8,6 +8,7 @@ namespace NP.Demos.ItemsPresenterSample
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        // fires notification if a property changes
         private void OnPropertyChanged(string propName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));

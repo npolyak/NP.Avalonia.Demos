@@ -8,20 +8,20 @@
         Height="300">
   <Window.Resources>
     <local:TestViewModel x:Key="TheViewModel"/>
-    
+
+    <DataTemplate x:Key="PersonDataTemplate">
+      <Grid RowDefinitions="Auto, Auto"
+            Margin="10">
+        <TextBlock Text="{Binding Path=FirstName, StringFormat='FirstName: {0}'}"/>
+        <TextBlock Text="{Binding Path=LastName, StringFormat='LastName: {0}'}"
+                   Grid.Row="1"/>
+      </Grid>
+    </DataTemplate>
+
     <DataTemplate x:Key="TestViewModelDataTemplate">
       <Grid RowDefinitions="*, Auto, Auto">
-        <ItemsPresenter Items="{Binding Path=People}">
-          <ItemsPresenter.ItemTemplate>
-            <DataTemplate>
-              <Grid RowDefinitions="Auto, Auto" 
-                    Margin="10">
-                <TextBlock Text="{Binding Path=FirstName, StringFormat='FirstName: {0}'}"/>
-                <TextBlock Text="{Binding Path=LastName, StringFormat='LastName: {0}'}"
-                           Grid.Row="1"/>
-              </Grid>
-            </DataTemplate>
-          </ItemsPresenter.ItemTemplate>
+        <ItemsPresenter Items="{Binding Path=People}"
+                        ItemTemplate="{StaticResource PersonDataTemplate}">
           <ItemsPresenter.ItemsPanel>
             <ItemsPanelTemplate>
               <WrapPanel Orientation="Horizontal"/>
