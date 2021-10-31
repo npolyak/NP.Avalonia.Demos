@@ -3,14 +3,19 @@
         x:Class="NP.Demos.DockingToWindowSidesDemo.MainWindow"
         Title="NP.Demos.DockingToWindowSidesDemo"
         xmlns:np="https://np.com/visuals"
-        Width="800"
-        Height="600">
+        Width="600"
+        Height="400">
   <Window.Resources>
+    <!-- Define the dock manager-->
     <np:DockManager x:Key="TheDockManager"/>
   </Window.Resources>
   <Grid>
+    <!-- top level group should reference the dock manager-->
     <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}">
+      <!-- Second Level group arranges the top and the bottom parts 
+           vertically-->
       <np:StackDockGroup TheOrientation="Vertical">
+        <!-- top group arranges two top Dock Panes horizontally-->
         <np:StackDockGroup TheOrientation="Horizontal">
           <np:DockItem Header="Hi">
             <TextBlock Text="Hi World!"/>
@@ -19,6 +24,8 @@
             <TextBlock Text="Hello World!"/>
           </np:DockItem>
         </np:StackDockGroup>
+
+        <!-- Tabbed group at the bottom -->
         <np:TabbedDockGroup>
           <np:DockItem Header="Tab1">
             <TextBlock Text="This is tab1"/>
@@ -33,5 +40,4 @@
       </np:StackDockGroup>
     </np:RootDockGroup>
   </Grid>
-  
 </Window>
