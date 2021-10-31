@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.DockingToWindowSidesDemo.MainWindow"
+        Title="NP.Demos.DockingToWindowSidesDemo"
+        xmlns:np="https://np.com/visuals"
+        Width="800"
+        Height="600">
+  <Window.Resources>
+    <np:DockManager x:Key="TheDockManager"/>
+  </Window.Resources>
+  <Grid>
+    <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}">
+      <np:StackDockGroup TheOrientation="Vertical">
+        <np:StackDockGroup TheOrientation="Horizontal">
+          <np:DockItem Header="Hi">
+            <TextBlock Text="Hi World!"/>
+          </np:DockItem>
+          <np:DockItem Header="Hello">
+            <TextBlock Text="Hello World!"/>
+          </np:DockItem>
+        </np:StackDockGroup>
+        <np:TabbedDockGroup>
+          <np:DockItem Header="Tab1">
+            <TextBlock Text="This is tab1"/>
+          </np:DockItem>
+          <np:DockItem Header="Tab2">
+            <TextBlock Text="Tab2 is here"/>
+          </np:DockItem>
+          <np:DockItem Header="Tab3">
+            <TextBlock Text="Finally - Tab3"/>
+          </np:DockItem>
+        </np:TabbedDockGroup>
+      </np:StackDockGroup>
+    </np:RootDockGroup>
+  </Grid>
+  
+</Window>
