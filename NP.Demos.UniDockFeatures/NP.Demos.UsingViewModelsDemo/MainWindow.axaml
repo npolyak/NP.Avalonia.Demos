@@ -6,21 +6,21 @@
         np:DockAttachedProperties.TheDockManager="{DynamicResource TheDockManager}"
         Width="600"
         Height="400">
-  <Window.Resources>
-    <!-- Define the dock manager-->
-    <np:DockManager x:Key="TheDockManager"/>
-  </Window.Resources>
-  <Grid RowDefinitions="Auto, *, Auto"
-        Margin="5">
-    <ListBox Items="{Binding Path=DockItemsViewModels, Source={StaticResource TheDockManager}}"
-             Height="70">
-      <ListBox.ItemTemplate>
-        <DataTemplate>
-          <CheckBox IsChecked="{Binding Path=IsDockVisible, Mode=TwoWay}"
-                    Content="{Binding DockId}"/>
-        </DataTemplate>
-      </ListBox.ItemTemplate>
-    </ListBox>
+<Window.Resources>
+  <!-- Define the dock manager-->
+  <np:DockManager x:Key="TheDockManager"/>
+</Window.Resources>
+<Grid RowDefinitions="Auto, *, Auto"
+      Margin="5">
+  <ListBox Items="{Binding Path=DockItemsViewModels, Source={StaticResource TheDockManager}}"
+            Height="70">
+    <ListBox.ItemTemplate>
+      <DataTemplate>
+        <CheckBox IsChecked="{Binding Path=IsDockVisible, Mode=TwoWay}"
+                  Content="{Binding DockId}"/>
+      </DataTemplate>
+    </ListBox.ItemTemplate>
+  </ListBox>
     <!-- top level group should reference the dock manager-->
     <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}"
                       Grid.Row="1">
@@ -47,7 +47,7 @@
                 Grid.Row="2"
                 HorizontalAlignment="Right">
       <Button x:Name="AddTabButton"
-              Content="AddTab"
+              Content="Add Tab"
               Padding="10,5"
               Margin="5"/>
 

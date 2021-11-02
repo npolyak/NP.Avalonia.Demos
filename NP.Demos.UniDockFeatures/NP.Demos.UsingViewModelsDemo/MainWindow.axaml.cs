@@ -10,6 +10,7 @@ namespace NP.Demos.UsingViewModelsDemo
 {
     public partial class MainWindow : Window
     {
+        // non-visual interface to the DockManager
         public IUniDockService _uniDockService;
 
         public MainWindow()
@@ -18,13 +19,18 @@ namespace NP.Demos.UsingViewModelsDemo
 #if DEBUG
             this.AttachDevTools();
 #endif
+            // set the uniDockService interface to contain the reference to the
+            // dock manager defined as a resource.
             _uniDockService = (IUniDockService) this.FindResource("TheDockManager")!;
 
+            // set the DockItemsViewModels collection to an observable
+            // collection of DockItemViewModelBase items.
             _uniDockService.DockItemsViewModels = 
                 new ObservableCollection<DockItemViewModelBase>();
 
-            Button addTabButton = this.FindControl<Button>("AddTabButton");
+            // set the Click handlers on the AddTab, Save and Restore buttons
 
+            Button addTabButton = this.FindControl<Button>("AddTabButton");
             addTabButton.Click += AddTabButton_Click;
 
             Button saveButton = this.FindControl<Button>("SaveButton");
