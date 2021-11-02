@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.DefineFloatingWindowInXamlDemo.MainWindow"
+        Title="NP.Demos.DefineFloatingWindowInXamlDemo"
+        xmlns:np="https://np.com/visuals"
+        Width="600"
+        Height="400">
+  <Window.Resources>
+    <!-- Define the dock manager-->
+    <np:DockManager x:Key="TheDockManager"
+                    IsInEditableState="True"/>
+  </Window.Resources>
+  <Grid RowDefinitions="*, Auto"
+        Margin="5">
+    <!-- top level group should reference the dock manager-->
+    <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}">
+        <np:RootDockGroup.FloatingWindows>
+          <np:FloatingWindowContainer WindowSize ="400, 200"
+                                      WindowRelativePosition="800,100"
+                                      WindowId="AnotherWindow"
+                                      Title="My Floating Window">
+            <np:StackDockGroup TheOrientation="Vertical"
+                               DockId="TopLevelGroup"
+                               IsStableGroup="True">
+              <!-- top group arranges two top Dock Panes horizontally-->
+              <np:StackDockGroup TheOrientation="Horizontal"
+                                 DockId="TopStackGroup"
+                                 DefaultDockGroupId="TopLevelGroup"
+                                 IsStableGroup="True">
+                <np:DockItem Header="Hi"
+                             DefaultDockGroupId="TopStackGroup"
+                             DefaultDockOrderInGroup="1">
+                  <TextBlock Text="Hi World!"/>
+                </np:DockItem>
+                <np:DockItem Header="Hello"
+                             DefaultDockGroupId="TopStackGroup"
+                             DefaultDockOrderInGroup="1">
+                  <TextBlock Text="Hello World!"/>
+                </np:DockItem>
+              </np:StackDockGroup>
+            </np:StackDockGroup>
+          </np:FloatingWindowContainer>
+        </np:RootDockGroup.FloatingWindows>
+      
+        <!-- Tabbed group at the bottom -->
+        <np:TabbedDockGroup IsStableGroup="True"
+                            DockId="BottomTabGroup"
+                            DefaultDockGroupId="TopLevelGroup"
+                            DefaultDockOrderInGroup="2">
+          <np:DockItem Header="Tab1"
+                       DefaultDockGroupId="BottomTabGroup">
+            <TextBlock Text="This is tab1"/>
+          </np:DockItem>
+          <np:DockItem Header="Tab2"
+                       DefaultDockGroupId="BottomTabGroup"
+                       DefaultDockOrderInGroup="2">
+            <TextBlock Text="Tab2 is here"/>
+          </np:DockItem>
+          <np:DockItem Header="Tab3">
+            <TextBlock Text="Finally - Tab3"/>
+          </np:DockItem>
+        </np:TabbedDockGroup>
+    </np:RootDockGroup>
+
+    <ToggleButton Classes="WindowIconButton IconButton IconToggleButton"
+                  np:AttachedProperties.IconData="{StaticResource Pencil}"
+                  IsChecked="{Binding Path=$parent[Window].(np:DockAttachedProperties.IsInDockEditableState), Mode=TwoWay}"
+                  Margin="5,0"
+                  Grid.Row="1"
+                  HorizontalAlignment="Right"/>
+  </Grid>
+</Window>
