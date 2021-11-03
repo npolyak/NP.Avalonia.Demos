@@ -116,6 +116,8 @@ namespace NP.Demos.CustomViewModelsDemo
 
             // select the first tab.
             _uniDockService.DockItemsViewModels?.FirstOrDefault()?.Select();
+
+            _stockNumber = _uniDockService?.DockItemsViewModels?.OfType<StockDockItemViewModel>()?.Count() ?? 0;
         }
 
         private void InitializeComponent()
