@@ -3,6 +3,7 @@
         x:Class="NP.Demos.DefineFloatingWindowInXamlDemo.MainWindow"
         Title="NP.Demos.DefineFloatingWindowInXamlDemo"
         xmlns:np="https://np.com/visuals"
+        np:DockAttachedProperties.DockChildWindowOwner="{Binding RelativeSource={RelativeSource Self}}"
         Width="600"
         Height="400">
   <Window.Resources>

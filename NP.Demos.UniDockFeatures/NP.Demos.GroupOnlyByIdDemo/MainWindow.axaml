@@ -19,7 +19,8 @@
       <np:StackDockGroup TheOrientation="Vertical">
         <!-- top group arranges two top Dock Panes horizontally-->
         <np:StackDockGroup TheOrientation="Horizontal"
-                           IsStableGroup="True">
+                           IsStableGroup="True"
+                           AutoInvisible="False">
           <np:DockItem Header="Hi">
             <TextBlock Text="Hi World!"/>
           </np:DockItem>
