@@ -37,7 +37,7 @@
                   Margin="0,5">
         <TextBlock Text="Ask: "/>
         <TextBlock Text="{Binding Path=Ask, StringFormat='\{0:0.00\}'}"
-                   Foreground="Green"/>
+                   Foreground="{DynamicResource SellBrush}"/>
       </StackPanel>
       <StackPanel Orientation="Horizontal"
                   HorizontalAlignment="Left"
@@ -45,7 +45,7 @@
                   Margin="0,5">
         <TextBlock Text="Bid: "/>
         <TextBlock Text="{Binding Path=Bid, StringFormat='\{0:0.00\}'}"
-                   Foreground="Red"/>
+                   Foreground="{DynamicResource BuyBrush}"/>
       </StackPanel>
     </Grid>
   </DataTemplate>
