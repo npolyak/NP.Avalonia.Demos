@@ -18,7 +18,8 @@
         <!-- top group arranges two top Dock Panes horizontally-->
         <np:StackDockGroup TheOrientation="Horizontal">
           <np:DockItem Header="Hi">
-            <TextBlock Text="Hi World!"/>
+            <TextBlock Text="Hi World!"
+                       Foreground="{DynamicResource MyForeground}"/>
           </np:DockItem>
           <np:DockItem Header="Hello">
             <TextBlock Text="Hello World!"/>
@@ -28,7 +29,8 @@
         <!-- Tabbed group at the bottom -->
         <np:TabbedDockGroup>
           <np:DockItem Header="Tab1">
-            <TextBlock Text="This is tab1"/>
+            <TextBlock Text="This is tab1"
+                       Foreground="{DynamicResource MyForeground}"/>
           </np:DockItem>
           <np:DockItem Header="Tab2">
             <TextBlock Text="Tab2 is here"/>
