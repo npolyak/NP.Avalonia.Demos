@@ -128,10 +128,10 @@
                             Orientation="Horizontal"
                             IsVisible="{Binding HasSelectedStock}">
                   <Button Content="Sell 100 Shares"
-                          Background="Green"
+                          Background="LightGreen"
                           Margin="5,0"/>
                   <Button Content="Buy 100 Shares"
-                          Background="Red" 
+                          Background="LightPink" 
                           Margin="5,0"/>
                 </StackPanel>
               </Grid>
