@@ -102,10 +102,48 @@
         <np:FloatingWindowContainer Title="Create Trade"
                                     WindowId="NewTrade"
                                     WindowRelativePosition="800, 300"
-                                    WindowSize="300, 200">
-          <np:StackDockGroup>
-            <np:DockItem>
-
+                                    WindowSize="500, 200">
+          <np:StackDockGroup TheOrientation="Horizontal">
+            <np:DockItem DockDataContextBinding="{Binding Source={StaticResource TheViewModel}}"
+                         Header="Create Trade">
+              <Grid DataContext="{Binding $parent[np:IDockDataContextContainer].DockDataContext.CreateTradeViewModel}"
+                    Margin="5">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                  <TextBlock Text="Choose Symbol: "
+                             VerticalAlignment="Center"/>
+                  <ComboBox Items="{Binding Stocks}"
+                            Width="70"
+                            SelectedItem="{Binding Path=SelectedStock, Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                      <DataTemplate>
+                        <TextBlock Text="{Binding Symbol}"/>
+                      </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                  </ComboBox>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"
+                            Orientation="Horizontal"
+                            IsVisible="{Binding HasSelectedStock}">
+                  <Button Content="Sell 100 Shares"
+                          Background="Green"
+                          Margin="5,0"/>
+                  <Button Content="Buy 100 Shares"
+                          Background="Red" 
+                          Margin="5,0"/>
+                </StackPanel>
+              </Grid>
+            </np:DockItem>
+            <np:DockItem Header="Selected Stock Info"
+                         DockDataContextBinding="{Binding Source={StaticResource TheViewModel}}">
+              <Grid DataContext="{Binding $parent[np:IDockDataContextContainer].DockDataContext.CreateTradeViewModel}"
+                    Margin="5"
+                    IsVisible="{Binding HasSelectedStock}">
+                <ContentPresenter Content="{Binding Path=DataContext.SelectedStock, RelativeSource={RelativeSource AncestorType=Panel}}"
+                                  ContentTemplate="{StaticResource StockDataTemplate}"/>
+              </Grid>
             </np:DockItem>
           </np:StackDockGroup>
         </np:FloatingWindowContainer>

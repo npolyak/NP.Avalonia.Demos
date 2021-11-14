@@ -72,6 +72,8 @@ namespace NP.Demos.LargeDemoForShow
             TESLA
         };
 
+        public CreateTradeVM CreateTradeViewModel { get; } = new CreateTradeVM() { Stocks = Stocks };
+
         // non-visual interface to the DockManager
         private IUniDockService? _uniDockService;
         public IUniDockService? UniDockService
