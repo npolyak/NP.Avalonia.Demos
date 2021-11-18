@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <AvaloniaXaml Remove="Color\**" />
+    <Compile Remove="Color\**" />
+    <EmbeddedResource Remove="Color\**" />
+    <None Remove="Color\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ColorThemes\DarkResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.SimpleThemingSample.MainWindow"
+        Title="NP.Demos.SimpleThemingSample"
+        Background="{DynamicResource BackgroundBrush}"
+        Width="300"
+        Height="200">
+  <Grid RowDefinitions="Auto, *"
+        Margin="10">
+    <StackPanel Orientation="Horizontal">
+      <!-- this button switches to light theme -->
+      <Button x:Name="LightButton"
+              Content="Light Theme"
+              Margin="0,0,10,0"/>
+
+
+      <!-- this button switches to dark theme -->
+      <Button x:Name="DarkButton"
+              Content="Dark Theme"
+              Margin="0,0,0,0"/>
+    </StackPanel>
+    <TextBlock Text="Hello World for Avalonia !!!"
+               Grid.Row="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="20"
+               Foreground="{DynamicResource ForegroundBrush}"/>
+  </Grid>
+</Window>
