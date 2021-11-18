@@ -1,4 +1,4 @@
-#Examples demonstrating Theming and Localization capabilities of NP.Avalonia.Visual package
+# Examples demonstrating Theming and Localization capabilities of NP.Avalonia.Visual package
 
 The examples are described in detail in [Theming and Localization functionality for Multiplaform Avalonia UI Framework](https://www.codeproject.com/Articles/5317972/Theming-and-Localization-functionality-for-Multipl)
 article.
