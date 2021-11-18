@@ -1,6 +1,6 @@
 # Examples demonstrating Theming and Localization capabilities of NP.Avalonia.Visual package
 
-The examples are described in detail in [Theming and Localization functionality for Multiplaform Avalonia UI Framework](https://www.codeproject.com/Articles/5317972/Theming-and-Localization-functionality-for-Multipl)
+These examples are described in detail in [Theming and Localization functionality for Multiplaform Avalonia UI Framework](https://www.codeproject.com/Articles/5317972/Theming-and-Localization-functionality-for-Multipl)
 article.
 
 These capabilities were inspired by a great localization and theming package for WPF created by [Tomer Shamam](https://www.linkedin.com/in/tomershamam/?originalSubdomain=il).
