@@ -16,15 +16,18 @@ namespace NP.Demos.SimpleThemingSample
 #if DEBUG
             this.AttachDevTools();
 #endif
-            Button lightButton = this.FindControl<Button>("LightButton");
-            lightButton.Click += LightButton_Click;
-
-            Button darkButton = this.FindControl<Button>("DarkButton");
-            darkButton.Click += DarkButton_Click;
-
             // find the theme loader by name
             _themeLoader =
                 Application.Current.Resources.GetThemeLoader("ColorThemeLoader")!;
+
+            // set the handler for lightButton's click event
+            Button lightButton = this.FindControl<Button>("LightButton");
+            lightButton.Click += LightButton_Click;
+
+            // set the handler for darkButton's click event
+            Button darkButton = this.FindControl<Button>("DarkButton");
+            darkButton.Click += DarkButton_Click;
+
         }
 
         private void LightButton_Click(object? sender, global::Avalonia.Interactivity.RoutedEventArgs e)
