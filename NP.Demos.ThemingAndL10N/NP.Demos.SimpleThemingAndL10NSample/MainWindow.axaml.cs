@@ -18,9 +18,11 @@ namespace NP.Demos.SimpleThemingAndL10NSample
 #if DEBUG
             this.AttachDevTools();
 #endif
-            // find the theme loader by name
+            // find the color theme loader by name
             _colorThemeLoader =
                 Application.Current.Resources.GetThemeLoader("ColorThemeLoader")!;
+
+            // find the language theme loader by name
             _languageThemeLoader =
                 Application.Current.Resources.GetThemeLoader("LanguageLoader")!;
 
