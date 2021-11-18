@@ -3,7 +3,7 @@
 These examples are described in detail in [Theming and Localization functionality for Multiplaform Avalonia UI Framework](https://www.codeproject.com/Articles/5317972/Theming-and-Localization-functionality-for-Multipl)
 article.
 
-These capabilities were inspired by a great localization and theming package for WPF created by [Tomer Shamam](https://www.linkedin.com/in/tomershamam/?originalSubdomain=il).
+This new functionality were inspired by a great localization and theming package for WPF created by [Tomer Shamam](https://www.linkedin.com/in/tomershamam/?originalSubdomain=il).
 The code for his package is now published with his kind permission at [WPFLocalizationPackage](https://github.com/npolyak/WPFLocalizationPackage).
 
 The functionality of my package is different - unlike Tomer, I am using a DynamicResource Avalonia extension and not a custom markup extension. 
