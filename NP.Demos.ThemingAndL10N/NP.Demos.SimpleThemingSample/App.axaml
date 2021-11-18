@@ -1,0 +1,25 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:np="https://np.com/visuals"
+             x:Class="NP.Demos.SimpleThemingSample.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <!-- define the Theme loader with two themes - Dark and Light -->
+        <np:ThemeLoader Name="ColorThemeLoader"
+                        SelectedThemeId="Light"> <!-- Set original theme to Light -->
+          <np:ThemeInfo Id="Dark"
+                        ResourceUrl="/ColorThemes/DarkResources.axaml"/>
+          <np:ThemeInfo Id="Light"
+                        ResourceUrl="/ColorThemes/LightResources.axaml"/>
+        </np:ThemeLoader>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+
+  <!-- Default Avalonia Styles -->
+  <Application.Styles>
+    <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseDark.xaml"/>
+    <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
+  </Application.Styles>
+</Application>

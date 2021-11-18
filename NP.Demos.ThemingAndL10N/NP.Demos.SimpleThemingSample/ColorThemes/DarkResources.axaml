@@ -1,0 +1,8 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- Defing Background and Foreground brushes for dark theme -->
+  <SolidColorBrush x:Key="BackgroundBrush"
+                   Color="Black"/>
+  <SolidColorBrush x:Key="ForegroundBrush"
+                 Color="White"/>
+</ResourceDictionary>
