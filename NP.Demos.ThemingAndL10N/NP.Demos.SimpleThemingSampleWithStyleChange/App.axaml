@@ -20,9 +20,11 @@
     </ResourceDictionary>
   </Application.Resources>
 
-  <!-- Default Avalonia Styles -->
   <Application.Styles>
+    <!-- reference to the theme dependent style defined within the ThemeLoader-->
     <np:StyleReference TheStyle="{StaticResource ColorLoaderStyles}"/>
+    
+    <!-- Default Avalonia Style -->
     <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
   </Application.Styles>
 </Application>
