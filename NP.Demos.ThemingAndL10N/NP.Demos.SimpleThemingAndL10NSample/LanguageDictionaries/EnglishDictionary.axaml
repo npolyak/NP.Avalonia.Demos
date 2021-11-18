@@ -1,0 +1,6 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:String x:Key="WindowTitle">Theming Demo</x:String>
+  <x:String x:Key="WelcomeText">Hello World from Avalonia !!!</x:String>
+  <x:String x:Key="WindowTitleText">Window Title is '{0}'</x:String>
+</ResourceDictionary>

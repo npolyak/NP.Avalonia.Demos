@@ -1,0 +1,6 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:String x:Key="WindowTitle">הדגמת לוקליזציה</x:String>
+  <x:String x:Key="WelcomeText">שלום עולמ מאבולוניה!!!</x:String>
+  <x:String x:Key="WindowTitleText">כותרת החלון היא '{0}'</x:String>
+</ResourceDictionary>
