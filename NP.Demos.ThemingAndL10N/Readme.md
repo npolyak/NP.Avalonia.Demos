@@ -4,7 +4,7 @@ The examples are described in detail in [Theming and Localization functionality 
 article.
 
 These capabilities were inspired by a great localization and theming package for WPF created by [Tomer Shamam](https://www.linkedin.com/in/tomershamam/?originalSubdomain=il).
-The code for his package is now published with his kind permission at [WPFLocalizationPackage](https://github.com/npolyak/WPFLocalizationPackage)
+The code for his package is now published with his kind permission at [WPFLocalizationPackage](https://github.com/npolyak/WPFLocalizationPackage).
 
 The functionality of my package is different - unlike Tomer, I am using a DynamicResource Avalonia extension and not a custom markup extension. 
 Also my functionality allows switching themes and localization along so to say multiple coordinates - e.g. one can switch between different languages along one coordinate
