@@ -4,7 +4,7 @@
         x:Class="NP.Demos.SimpleThemingAndL10NSample.MainWindow"
         Title="{DynamicResource WindowTitle}"
         Background="{DynamicResource BackgroundBrush}"
-        Width="300"
+        Width="400"
         Height="200">
   <Grid RowDefinitions="Auto, *"
         Margin="10">
