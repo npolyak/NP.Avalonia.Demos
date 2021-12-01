@@ -1,0 +1,118 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.Demos.XamlGenericsSamples"
+		xmlns:collections="clr-namespace:System.Collections.Generic;assembly=System.Collections"
+        x:Class="NP.Demos.XamlGenericsSamples.MainWindow"
+        Title="NP.Demos.XamlGenericsSamples"
+        Width="350"
+        Height="400">
+	<StackPanel HorizontalAlignment="Stretch"
+				VerticalAlignment="Center">
+		<Border BorderThickness="1"
+				BorderBrush="Black"
+				HorizontalAlignment="Stretch"
+				Margin="10,5"
+				Padding="5">
+			<Grid RowDefinitions="Auto, Auto">
+				<Grid.DataContext>
+					<local:ValuesContainer x:TypeArguments="x:Double, x:String"
+										   Value1="300"
+										   Value2="Hello 1"/>
+				</Grid.DataContext>
+				<TextBlock Text="ValuesContainer Generics Sample:"
+						   FontWeight="Bold"/>
+				<Grid Background="Yellow"
+					  Grid.Row="1"
+					  RowDefinitions="Auto, Auto"
+					  Width ="{Binding Path=Value1}">
+					<TextBlock Text="{Binding Path=Value1, StringFormat='Width of Yellow Rectangle=Value1=\{0\}'}"
+							   Margin="5"/>
+					<TextBlock Text="{Binding Path=Value2, StringFormat='Value2=\'\{0\}\''}"
+							   Grid.Row="1"
+							   Margin="5,0,5,5"/>
+				</Grid>
+			</Grid>
+		</Border>
+		<Border BorderThickness="1"
+				BorderBrush="Black"
+				HorizontalAlignment="Stretch"
+				Margin="10,5"
+				Padding="5">
+			<Grid RowDefinitions="Auto, Auto">
+				<Grid.DataContext>
+					<collections:List x:TypeArguments="local:ValuesContainer(x:Int32, x:String)">
+						<local:ValuesContainer x:TypeArguments="x:Int32, x:String"
+											   Value1="1"
+											   Value2="Hello 1"/>
+						<local:ValuesContainer x:TypeArguments="x:Int32, x:String"
+											   Value1="2"
+											   Value2="Hello 2"/>
+						<local:ValuesContainer x:TypeArguments="x:Int32, x:String"
+											   Value1="3"
+											   Value2="Hello 3"/>
+					</collections:List>
+				</Grid.DataContext>
+				<TextBlock Text="List of ValuesContainer Generics Sample:"
+						   FontWeight="Bold"/>
+				<ItemsControl Items="{Binding}"
+							  Grid.Row="1">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="{Binding Path=Value1,
+														  StringFormat='Value1=\{0\}'}"/>
+								<TextBlock Text="{Binding Path=Value2,
+														  StringFormat='Value2=\'\{0\}\''}"
+										   Margin="10,0,0,0"/>
+							</StackPanel>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</Grid>
+		</Border>
+
+		<Border BorderThickness="1"
+				BorderBrush="Black"
+				HorizontalAlignment="Stretch"
+				Margin="10,5"
+				Padding="5">
+			<Grid RowDefinitions="Auto, Auto">
+				<Grid.DataContext>
+					<collections:Dictionary x:TypeArguments="x:String, local:ValuesContainer(x:Int32, x:String)">
+						<local:ValuesContainer x:TypeArguments="x:Int32, x:String"
+											   x:Key="Key1"
+											   Value1="1"
+											   Value2="Hello 1"/>
+						<local:ValuesContainer x:TypeArguments="x:Int32, x:String"
+											   x:Key="Key2"
+											   Value1="2"
+											   Value2="Hello 2"/>
+						<local:ValuesContainer x:TypeArguments="x:Int32, x:String"
+											   x:Key="Key3"
+											   Value1="3"
+											   Value2="Hello 3"/>
+					</collections:Dictionary>
+				</Grid.DataContext>
+				<TextBlock Text="Dictionary of ValuesContainer Generics Sample:"
+						   FontWeight="Bold"/>
+				<ItemsControl Items="{Binding}"
+							  Grid.Row="1">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text="{Binding Path=Key,
+														  StringFormat='Key=\'\{0\}\''}"/>
+								<TextBlock Text="{Binding Path=Value.Value1,
+														  StringFormat='Value1=\{0\}'}"
+										   Margin="10,0,0,0"/>
+								<TextBlock Text="{Binding Path=Value.Value2,
+														  StringFormat='Value2=\'\{0\}\''}"
+										   Margin="10,0,0,0"/>
+							</StackPanel>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</Grid>
+		</Border>
+	</StackPanel>
+</Window>
