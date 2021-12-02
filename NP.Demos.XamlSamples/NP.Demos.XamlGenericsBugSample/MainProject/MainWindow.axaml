@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.Demos.XamlGenericsBugSample"
+		xmlns:collections="clr-namespace:System.Collections.Generic;assembly=System.Collections"
+        x:Class="NP.Demos.XamlGenericsBugSample.MainWindow"
+        Title="NP.Demos.XamlGenericsBugSample"
+        Width="400"
+        Height="150">
+	<Grid>
+		<Grid.DataContext>
+			<!-- works! -->
+			<!--<collections:Dictionary x:TypeArguments="x:Int32, x:String">
+				<x:String x:Key="1">str 1</x:String>
+			</collections:Dictionary>-->
+			
+			<!-- Does not work!!!-->
+			<local:IntToStrDictionary>
+				<x:String x:Key="1">str 1</x:String>
+			</local:IntToStrDictionary>
+		</Grid.DataContext>
+	</Grid>
+</Window>

@@ -4,8 +4,8 @@
 		xmlns:collections="clr-namespace:System.Collections.Generic;assembly=System.Collections"
         x:Class="NP.Demos.XamlGenericsSamples.MainWindow"
         Title="NP.Demos.XamlGenericsSamples"
-        Width="350"
-        Height="400">
+        Width="400"
+        Height="300">
 	<StackPanel HorizontalAlignment="Stretch"
 				VerticalAlignment="Center">
 		<Border BorderThickness="1"
@@ -24,7 +24,8 @@
 				<Grid Background="Yellow"
 					  Grid.Row="1"
 					  RowDefinitions="Auto, Auto"
-					  Width ="{Binding Path=Value1}">
+					  Width ="{Binding Path=Value1}"
+					  HorizontalAlignment="Left">
 					<TextBlock Text="{Binding Path=Value1, StringFormat='Width of Yellow Rectangle=Value1=\{0\}'}"
 							   Margin="5"/>
 					<TextBlock Text="{Binding Path=Value2, StringFormat='Value2=\'\{0\}\''}"
