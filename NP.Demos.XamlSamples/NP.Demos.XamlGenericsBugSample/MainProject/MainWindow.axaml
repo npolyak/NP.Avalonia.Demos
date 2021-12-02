@@ -18,7 +18,7 @@
 				<x:String x:Key="1">str 1</x:String>
 			</local:StrToStrDictionary>-->
 
-			<!-- Does not work!!!-->
+			<!-- Does not work - throws a NullReferenceException !!!-->
 			<!--<local:IntToStrDictionary>
 				<x:String x:Key="1">str 1</x:String>
 			</local:IntToStrDictionary>-->
@@ -33,7 +33,7 @@
 				<x:String>str 1</x:String>
 			</local:ListOfStrs>-->
 
-			<!-- Does not work either !!!-->
+			<!-- Does not work either - throws a NullReferenceException !!!-->
 			<local:ListOfInts>
 				<x:Int32>1</x:Int32>
 			</local:ListOfInts>
