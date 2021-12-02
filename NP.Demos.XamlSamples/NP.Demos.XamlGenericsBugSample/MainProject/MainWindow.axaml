@@ -8,15 +8,35 @@
         Height="150">
 	<Grid>
 		<Grid.DataContext>
-			<!-- works! -->
+			<!-- works fine ! -->
 			<!--<collections:Dictionary x:TypeArguments="x:Int32, x:String">
 				<x:String x:Key="1">str 1</x:String>
 			</collections:Dictionary>-->
-			
-			<!-- Does not work!!!-->
-			<local:IntToStrDictionary>
+
+			<!-- works fine ! -->
+			<!--<local:StrToStrDictionary>
 				<x:String x:Key="1">str 1</x:String>
-			</local:IntToStrDictionary>
+			</local:StrToStrDictionary>-->
+
+			<!-- Does not work!!!-->
+			<!--<local:IntToStrDictionary>
+				<x:String x:Key="1">str 1</x:String>
+			</local:IntToStrDictionary>-->
+
+			<!-- works fine ! -->
+			<!--<collections:List x:TypeArguments="x:Int32">
+				<x:Int32>1</x:Int32>
+			</collections:List>-->
+			
+			<!-- works fine ! -->
+			<!--<local:ListOfStrs>
+				<x:String>str 1</x:String>
+			</local:ListOfStrs>-->
+
+			<!-- Does not work either !!!-->
+			<local:ListOfInts>
+				<x:Int32>1</x:Int32>
+			</local:ListOfInts>
 		</Grid.DataContext>
 	</Grid>
 </Window>
