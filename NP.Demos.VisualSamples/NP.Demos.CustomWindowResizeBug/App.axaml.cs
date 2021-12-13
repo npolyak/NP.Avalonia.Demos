@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace NP.Demos.CustomWindowResizeBug
+namespace NP.Demos.CustomWindowSamples
 {
     public class App : Application
     {
