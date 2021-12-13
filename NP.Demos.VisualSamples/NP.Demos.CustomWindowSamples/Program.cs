@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
-namespace NP.Demos.CustomWindowResizeBug
+namespace NP.Demos.CustomWindowSamples
 {
     class Program
     {
