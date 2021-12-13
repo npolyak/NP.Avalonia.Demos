@@ -3,7 +3,6 @@
 		xmlns:np="https://np.com/visuals"
         x:Class="NP.Demos.CustomWindowResizeBug.MainWindow"
         Title="NP.Demos.CustomWindowResizeBug"
-		Classes="PlainCustomWindow"
 		SystemDecorations="None"
 		Background="LightGray"
 		Width="400"
