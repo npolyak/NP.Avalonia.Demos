@@ -1,10 +1,20 @@
-<np:CustomWindow xmlns="https://github.com/avaloniaui"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		         xmlns:np="https://np.com/visuals"
-                 x:Class="NP.Demos.CustomWindowSamples.MainWindow"
-                 Title="NP.Demos.CustomWindowSamples"
-				 Classes="PlainCustomWindow"
-				 Cursor="SizeWestEast"
-				 Width="800"
-				 Height="500">
-</np:CustomWindow>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:np="https://np.com/visuals"
+        x:Class="NP.Demos.CustomWindowResizeBug.MainWindow"
+        Title="NP.Demos.CustomWindowResizeBug"
+		SystemDecorations="None"
+		Background="LightGray"
+		Width="400"
+		Height="300">
+	<VisualLayerManager>
+		<Grid RowDefinitions="*">
+			<Border Name="Right" 
+					Background="Red"  
+					Width="20"
+					Cursor="SizeWestEast"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Stretch"/>
+		</Grid>
+	</VisualLayerManager>
+</Window>
