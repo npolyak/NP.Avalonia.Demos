@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net5.0-Windows;net5.0</TargetFrameworks>
+	  <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <AvaloniaXaml Remove="PlatformSpecific\**" />
+    <Compile Remove="PlatformSpecific\**" />
+    <EmbeddedResource Remove="PlatformSpecific\**" />
+    <None Remove="PlatformSpecific\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.10" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Condition="'$(TargetFramework)'=='net5.0-Windows'" Include="PlatformSpecific\WinFormsControl\WinFormsControl.csproj" />
+  </ItemGroup>
+</Project>
