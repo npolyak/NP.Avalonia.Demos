@@ -5,7 +5,7 @@ using Avalonia.Platform;
 using WinFormsControl;
 #endif
 
-namespace NP.Demos.EmbedFormSample
+namespace NP.Demos.EmbedWinFormsSample
 {
     public class EmbeddedNativeControls : NativeControlHost
     {

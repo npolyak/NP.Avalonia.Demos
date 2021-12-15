@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
 
-namespace NP.Demos.EmbedFormSample
+namespace NP.Demos.EmbedWinFormsSample
 {
     public partial class MainWindow : Window
     {

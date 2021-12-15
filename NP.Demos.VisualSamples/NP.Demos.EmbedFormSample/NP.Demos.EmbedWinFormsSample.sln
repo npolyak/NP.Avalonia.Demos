@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NP.Demos.EmbedFormSample", "NP.Demos.EmbedFormSample.csproj", "{222ACFE4-BC90-4267-A6B0-242205C290CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NP.Demos.EmbedWinFormsSample", "NP.Demos.EmbedWinFormsSample.csproj", "{222ACFE4-BC90-4267-A6B0-242205C290CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PlatformSpecific", "PlatformSpecific", "{C9F9AE8A-37AD-4AAC-9FEA-836CAB37B901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsControl", "PlatformSpecific\WinFormsControl\WinFormsControl.csproj", "{218BF396-E7B2-4118-9140-A375E03DEDDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsControl", "PlatformSpecific\WinFormsControl\WinFormsControl.csproj", "{218BF396-E7B2-4118-9140-A375E03DEDDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

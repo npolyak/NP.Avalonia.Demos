@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
-namespace NP.Demos.EmbedFormSample
+namespace NP.Demos.EmbedWinFormsSample
 {
     class Program
     {

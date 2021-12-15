@@ -1,9 +1,9 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:np="https://np.com/visuals"
-		xmlns:local="clr-namespace:NP.Demos.EmbedFormSample"
-        x:Class="NP.Demos.EmbedFormSample.MainWindow"
-        Title="NP.Demos.EmbedFormSample"
+		xmlns:local="clr-namespace:NP.Demos.EmbedWinFormsSample"
+        x:Class="NP.Demos.EmbedWinFormsSample.MainWindow"
+        Title="NP.Demos.EmbedWinFormsSample"
 		Width="400"
 		Height="300">
 	<local:EmbeddedNativeControls Width="200"
