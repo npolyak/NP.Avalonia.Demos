@@ -1,12 +1,11 @@
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Input;
 using Avalonia.Markup.Xaml;
 using NP.Avalonia.Visuals.Controls;
 
-namespace NP.Demos.CustomWindowSamples
+namespace NP.Demos.CustomWindowSample
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : CustomWindow
     {
         public MainWindow()
         {

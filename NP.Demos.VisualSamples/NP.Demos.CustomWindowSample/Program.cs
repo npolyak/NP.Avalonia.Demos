@@ -1,9 +1,7 @@
 using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
-namespace NP.Demos.CustomWindowSamples
+namespace NP.Demos.CustomWindowSample
 {
     class Program
     {

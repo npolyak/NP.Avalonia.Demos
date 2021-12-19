@@ -2,12 +2,143 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <Nullable>enable</Nullable>
+	<TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
   </PropertyGroup>
   <ItemGroup>
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.4" />
+    <Reference Include="Avalonia">
+      <HintPath>dlls\Avalonia.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Animation">
+      <HintPath>dlls\Avalonia.Animation.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Base">
+      <HintPath>dlls\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>dlls\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Controls.DataGrid">
+      <HintPath>dlls\Avalonia.Controls.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.DesignerSupport">
+      <HintPath>dlls\Avalonia.DesignerSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Desktop">
+      <HintPath>dlls\Avalonia.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.DesktopRuntime">
+      <HintPath>dlls\Avalonia.DesktopRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Diagnostics">
+      <HintPath>dlls\Avalonia.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Dialogs">
+      <HintPath>dlls\Avalonia.Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.FreeDesktop">
+      <HintPath>dlls\Avalonia.FreeDesktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Headless">
+      <HintPath>dlls\Avalonia.Headless.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Headless.Vnc">
+      <HintPath>dlls\Avalonia.Headless.Vnc.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Input">
+      <HintPath>dlls\Avalonia.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Interactivity">
+      <HintPath>dlls\Avalonia.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Layout">
+      <HintPath>dlls\Avalonia.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.LinuxFramebuffer">
+      <HintPath>dlls\Avalonia.LinuxFramebuffer.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup">
+      <HintPath>dlls\Avalonia.Markup.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup.Xaml">
+      <HintPath>dlls\Avalonia.Markup.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.MicroCom">
+      <HintPath>dlls\Avalonia.MicroCom.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Native">
+      <HintPath>dlls\Avalonia.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.OpenGL">
+      <HintPath>dlls\Avalonia.OpenGL.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Remote.Protocol">
+      <HintPath>dlls\Avalonia.Remote.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Skia">
+      <HintPath>dlls\Avalonia.Skia.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Styling">
+      <HintPath>dlls\Avalonia.Styling.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Themes.Default">
+      <HintPath>dlls\Avalonia.Themes.Default.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Themes.Fluent">
+      <HintPath>dlls\Avalonia.Themes.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Visuals">
+      <HintPath>dlls\Avalonia.Visuals.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Win32">
+      <HintPath>dlls\Avalonia.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.X11">
+      <HintPath>dlls\Avalonia.X11.dll</HintPath>
+    </Reference>
+    <Reference Include="HarfBuzzSharp">
+      <HintPath>dlls\HarfBuzzSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations">
+      <HintPath>dlls\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>dlls\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>dlls\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
+      <HintPath>dlls\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Scripting">
+      <HintPath>dlls\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>dlls\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.SystemEvents">
+      <HintPath>dlls\Microsoft.Win32.SystemEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniMvvm">
+      <HintPath>dlls\MiniMvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="RemoteViewing">
+      <HintPath>dlls\RemoteViewing.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>dlls\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>dlls\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+      <HintPath>dlls\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="Tmds.DBus">
+      <HintPath>dlls\Tmds.DBus.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

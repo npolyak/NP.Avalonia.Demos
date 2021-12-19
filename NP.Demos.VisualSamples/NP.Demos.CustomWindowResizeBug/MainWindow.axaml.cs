@@ -2,7 +2,6 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
-using NP.Avalonia.Visuals.Controls;
 
 namespace NP.Demos.CustomWindowResizeBug
 {
@@ -11,9 +10,6 @@ namespace NP.Demos.CustomWindowResizeBug
         public MainWindow()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
 
             Border b = this.FindControl<Border>("Right");
 
