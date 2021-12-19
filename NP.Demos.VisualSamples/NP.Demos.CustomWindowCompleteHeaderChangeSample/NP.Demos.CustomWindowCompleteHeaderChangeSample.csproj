@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="Assets\LinuxIcon.jpg" />
+    <None Remove="Assets\LinuxIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\LinuxIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.4" />
+  </ItemGroup>
+</Project>
