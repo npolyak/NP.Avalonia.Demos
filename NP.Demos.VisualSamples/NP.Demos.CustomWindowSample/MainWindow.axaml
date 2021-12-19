@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+<np:CustomWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:np="https://np.com/visuals"
         x:Class="NP.Demos.CustomWindowSample.MainWindow"
@@ -8,4 +8,4 @@
         Title="Plain Custom Window Sample"
 		Width="600"
 		Height="400">
-</Window>
+</np:CustomWindow>

@@ -1,0 +1,30 @@
+<np:CustomWindow xmlns="https://github.com/avaloniaui"
+				 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				 xmlns:np="https://np.com/visuals"
+				 xmlns:local="clr-namespace:NP.Demos.CustomWindowHeaderContentSample"
+				 x:Class="NP.Demos.CustomWindowHeaderContentSample.MainWindow"
+				 Classes="PlainCustomWindow"
+				 CustomHeaderIcon="/Assets/LinuxIcon.png"
+				 HeaderHeight="50"
+				 Title="Plain Custom Window Sample"
+				 Width="600"
+				 Height="400"
+				 HeaderContent="{DynamicResource TheViewModel}">
+	<np:CustomWindow.HeaderContentTemplate>
+		<DataTemplate>
+			<TextBox Width="120"
+					 Text="{Binding Text, Mode=TwoWay}"
+					 ScrollViewer.VerticalScrollBarVisibility="Disabled"
+					 Height="25"/>
+		</DataTemplate>
+	</np:CustomWindow.HeaderContentTemplate>
+	<np:CustomWindow.Resources>
+		<local:MyTestViewModel x:Key="TheViewModel"/>
+	</np:CustomWindow.Resources>
+	<Grid DataContext="{StaticResource TheViewModel}">
+		<TextBlock HorizontalAlignment="Center"
+				   VerticalAlignment="Center"
+				   Text="{Binding Text}"
+				   FontSize="34"/>
+	</Grid>
+</np:CustomWindow>
