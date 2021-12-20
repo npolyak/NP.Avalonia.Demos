@@ -1,0 +1,137 @@
+<np:CustomWindow xmlns="https://github.com/avaloniaui"
+				 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+				 xmlns:np="https://np.com/visuals"
+				 x:Class="NP.Demos.CustomWindowSample.MainWindow"
+				 Classes="PlainCustomWindow"
+				 CustomHeaderIcon="/Assets/LinuxIcon.png"
+				 HeaderHeight="50"
+				 Title="Labeled Control Samples"
+				 Width="400"
+				 Height="400"
+				 Foreground="Black">
+	<np:AutoGrid>
+		<np:AutoGrid>
+			<np:AutoGrid.Styles>
+				<Style Selector="np|LabeledControl">
+					<Setter Property="ControlRow"
+							Value="0"/>
+					<Setter Property="ControlColumn"
+							Value="1"/>
+					<Setter Property="VerticalTextAlignment"
+							Value="Center"/>
+					<Setter Property="Padding"
+							Value="5,0,0,0"/>
+					<Setter Property="Margin"
+							Value="5,5,20,5"/>
+				</Style>
+			</np:AutoGrid.Styles>
+
+			<TextBlock Text="Horizontal Labels:"
+					   Grid.ColumnSpan="10"
+					   FontSize="18"
+					   Margin="5"/>
+			<np:LabeledControl Text="Enter Text:"
+							   np:AutoGrid.Row="1">
+				<np:LabeledControl.ContainedControlTemplate>
+					<ControlTemplate>
+						<TextBox Width="100"/>
+					</ControlTemplate>
+				</np:LabeledControl.ContainedControlTemplate>
+			</np:LabeledControl>
+			<np:LabeledControl Text="Choose Option:"
+				   np:AutoGrid.Row="1"
+				   np:AutoGrid.Column="1">
+				<np:LabeledControl.ContainedControlTemplate>
+					<ControlTemplate>
+						<ComboBox Width="100"
+								  SelectedIndex="1">
+							<ComboBoxItem>Item1</ComboBoxItem>
+							<ComboBoxItem>Item2</ComboBoxItem>
+							<ComboBoxItem>Item3</ComboBoxItem>
+						</ComboBox>
+					</ControlTemplate>
+				</np:LabeledControl.ContainedControlTemplate>
+			</np:LabeledControl>
+		</np:AutoGrid>
+		<Border Background="Black"
+				np:AutoGrid.Row="1"
+				Height="1"
+				Opacity="0.5"
+				Margin="5,10"/>
+		<np:AutoGrid.Styles>
+			<Style Selector="np|LabeledControl">
+				<Setter Property="ControlRow"
+						Value="1"/>
+				<Setter Property="VerticalTextAlignment"
+						Value="Center"/>
+				<Setter Property="Padding"
+						Value="15,0,0,0"/>
+				<Setter Property="Margin"
+						Value="5,5,20,5"/>
+			</Style>
+		</np:AutoGrid.Styles>
+		<np:AutoGrid np:AutoGrid.Row="2">
+			<TextBlock Text="Vertical Labels:"
+					   Grid.ColumnSpan="10"
+					   FontSize="18"
+					   Margin="5"/>
+
+			<np:LabeledControl Text="Enter Text:"
+							   np:AutoGrid.Row="1">
+				<np:LabeledControl.ContainedControlTemplate>
+					<ControlTemplate>
+						<TextBox Width="100"/>
+					</ControlTemplate>
+				</np:LabeledControl.ContainedControlTemplate>
+			</np:LabeledControl>
+			<np:LabeledControl Text="Choose Option:"
+							   np:AutoGrid.Row="1"
+							   np:AutoGrid.Column="1"
+							   Margin="49,5,0,5">
+				<np:LabeledControl.ContainedControlTemplate>
+					<ControlTemplate>
+						<ComboBox Width="100"
+								  SelectedIndex="1">
+							<ComboBoxItem>Item1</ComboBoxItem>
+							<ComboBoxItem>Item2</ComboBoxItem>
+							<ComboBoxItem>Item3</ComboBoxItem>
+						</ComboBox>
+					</ControlTemplate>
+				</np:LabeledControl.ContainedControlTemplate>
+			</np:LabeledControl>
+		</np:AutoGrid>
+		<Border Background="Black"
+				np:AutoGrid.Row="3"
+				Height="1"
+				Opacity="0.5"
+				Margin="5,10"/>
+		<np:AutoGrid np:AutoGrid.Row="4">
+			<np:AutoGrid.Styles>
+				<Style Selector="TextBlock.FancyStyle">
+					<Setter Property="FontWeight"
+							Value="Bold"/>
+					<Setter Property="FontFamily"
+							Value="Lucida Calligraphy"/>
+				</Style>
+			</np:AutoGrid.Styles>
+			<TextBlock Text="Fancy Label Wrap Sample:"
+					   Grid.ColumnSpan="10"
+					   FontSize="18"
+					   Margin="5"/>
+			<np:LabeledControl Text="Please, enter text:"
+							   MaxTextWidth="70"
+							   TheTextWrapping="WrapWithOverflow"
+							   TextClasses="FancyStyle"
+							   VerticalTextAlignment="Center"
+							   ControlColumn="1"
+							   ControlRow="0"
+							   np:AutoGrid.Row="1">
+				<np:LabeledControl.ContainedControlTemplate>
+					<ControlTemplate>
+						<TextBox Width="100"/>
+					</ControlTemplate>
+				</np:LabeledControl.ContainedControlTemplate>
+			</np:LabeledControl>
+		</np:AutoGrid>
+	</np:AutoGrid>
+</np:CustomWindow>
