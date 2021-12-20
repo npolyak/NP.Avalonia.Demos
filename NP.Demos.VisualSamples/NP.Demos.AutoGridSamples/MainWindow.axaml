@@ -1,0 +1,43 @@
+<np:CustomWindow xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:np="https://np.com/visuals"
+        x:Class="NP.Demos.AutoGridSamples.MainWindow"
+		Classes="PlainCustomWindow"
+		CustomHeaderIcon="/Assets/LinuxIcon.png"
+		HeaderHeight="50"
+        Title="Plain Custom Window Sample"
+		Width="600"
+		Height="400">
+	<Grid RowDefinitions="*,Auto"
+		  Margin="10">
+		<np:AutoGrid x:Name="MyAutoGrid"
+					 Width="200"
+					 HorizontalAlignment="Center"
+					 VerticalAlignment="Center"
+					 ShowGridLines="True">
+			<np:AutoGrid.RowsHeights>
+				<GridLength x:Key="1">100</GridLength>
+			</np:AutoGrid.RowsHeights>
+			<np:AutoGrid.ColumnsWidths>
+				<GridLength x:Key="0">*</GridLength>
+			</np:AutoGrid.ColumnsWidths>
+			<Border Width="50"
+					Height="50"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Top"
+					Background="Yellow"/>
+			<Button Content="Button 2"
+					np:AutoGrid.Row="1"
+					np:AutoGrid.Column="1"/>
+			<Button x:Name="Button3"
+					Content="Button 3"
+					np:AutoGrid.Row="2"
+					np:AutoGrid.Column="1"/>
+		</np:AutoGrid>
+		<Button x:Name="ChangeLayoutButton"
+				Content="Change Layout"
+				Grid.Row="1"
+				HorizontalAlignment="Right"/>
+	</Grid>
+
+</np:CustomWindow>
