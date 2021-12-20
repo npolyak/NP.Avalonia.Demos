@@ -2,9 +2,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:np="https://np.com/visuals"
         x:Class="NP.Demos.CustomWindowIconAndTitleCustomizationSample.MainWindow"
+		
 		Classes="PlainCustomWindow"
 		CustomHeaderIcon="/Assets/LinuxIcon.png"
-		
 		HeaderHeight="50"
 		CustomHeaderIconHeight="30"
 		CustomHeaderIconWidth="30"
@@ -17,15 +17,24 @@
 		Width="600"
 		Height="400">
 	<Window.Styles>
+		<!-- creates the TitleText style for the test of the title-->
 		<Style Selector="TextBlock.TitleText">
+			<!-- bold -->
 			<Setter Property="FontWeight"
 					Value="Bold"/>
+			<!-- Green -->
 			<Setter Property="Foreground"
 					Value="Green"/>
+
+			<!-- large -->
 			<Setter Property="FontSize"
 					Value="18"/>
+
+			<!-- fancy -->
 			<Setter Property="FontFamily"
 					Value="Lucida Calligraphy"/>
+
+			<!-- underlined -->
 			<Setter Property="TextDecorations"
 					Value="Underline"/>
 		</Style>
