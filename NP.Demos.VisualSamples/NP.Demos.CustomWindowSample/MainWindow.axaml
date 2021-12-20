@@ -3,9 +3,9 @@
 		xmlns:np="https://np.com/visuals"
         x:Class="NP.Demos.CustomWindowSample.MainWindow"
 		Classes="PlainCustomWindow"
+				 
 		CustomHeaderIcon="/Assets/LinuxIcon.png"
 		HeaderHeight="50"
         Title="Plain Custom Window Sample"
 		Width="600"
-		Height="400">
-</np:CustomWindow>
+		Height="400"/>
