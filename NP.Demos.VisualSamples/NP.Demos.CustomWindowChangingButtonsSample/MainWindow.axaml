@@ -12,16 +12,20 @@
 		<ControlTemplate>
 			<StackPanel x:Name="FloatingWindowButtonsPanel"
 						Orientation="Horizontal">
+				<!-- Edit toggle button -->
 				<ToggleButton Classes="WindowIconButton IconButton IconToggleButton"
-							  Foreground="Black"
 							  Opacity="0.5"
 							  np:AttachedProperties.IconData="{StaticResource Pencil}"
 							  ToolTip.Tip="Edit"
 							  IsChecked="{Binding Path=$parent[Window].CanEditContent, Mode=TwoWay}"/>
+
+				<!-- usual Minimize - Maximize/Restore and Close buttons -->
 				<TemplatedControl Template="{StaticResource CustomWindowButtonsTemplate}"/>
 			</StackPanel>
 		</ControlTemplate>
 	</np:CustomWindow.ButtonsAreaTemplate>
+	
+	
 	<TextBox HorizontalAlignment="Center"
 			 VerticalAlignment="Center"
 			 Width="200"
