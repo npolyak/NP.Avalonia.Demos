@@ -3,9 +3,6 @@
 				 xmlns:np="https://np.com/visuals"
 				 x:Class="NP.Demos.CustomWindowCompleteHeaderChangeSample.MainWindow"
 				 Classes="PlainCustomWindow"
-				 CustomHeaderIcon="/Assets/LinuxIcon.png"
-				 HeaderHeight="50"
-				 Title="Plain Custom Window Sample" 
 				 BorderThickness="1"
 				 BorderBrush="Black"
 				 HeaderSeparatorHeight="3"
@@ -21,7 +18,6 @@
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="Auto"/>
-					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
 				<Border Background="Aquamarine"
 						CornerRadius="5,5,0,0"
