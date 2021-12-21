@@ -12,19 +12,16 @@
 				 HeaderContent="{DynamicResource TheViewModel}">
 	<np:CustomWindow.HeaderContentTemplate>
 		<DataTemplate>
-			<TextBox Width="120"
-					 Text="{Binding Text, Mode=TwoWay}"
-					 ScrollViewer.VerticalScrollBarVisibility="Disabled"
+			<TextBox Text="{Binding Text, Mode=TwoWay}"
+					 Width="120"
 					 Height="25"/>
 		</DataTemplate>
 	</np:CustomWindow.HeaderContentTemplate>
 	<np:CustomWindow.Resources>
 		<local:MyTestViewModel x:Key="TheViewModel"/>
 	</np:CustomWindow.Resources>
-	<Grid DataContext="{StaticResource TheViewModel}">
-		<TextBlock HorizontalAlignment="Center"
-				   VerticalAlignment="Center"
-				   Text="{Binding Text}"
-				   FontSize="34"/>
-	</Grid>
+	<TextBlock HorizontalAlignment="Center"
+			   VerticalAlignment="Center"
+			   Text="{Binding Text, Source={StaticResource TheViewModel}}"
+			   FontSize="34"/>
 </np:CustomWindow>

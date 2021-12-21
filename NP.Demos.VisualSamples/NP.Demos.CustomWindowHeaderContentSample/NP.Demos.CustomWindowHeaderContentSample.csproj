@@ -15,6 +15,6 @@
     <AvaloniaResource Include="Assets\LinuxIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.4" />
+    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.9" />
   </ItemGroup>
 </Project>
