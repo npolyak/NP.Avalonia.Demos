@@ -14,11 +14,13 @@ namespace NP.Demos.WPFCallActionBehaviorSample
             InitializeComponent();
         }
 
+        // Turns window background red
         public void MakeWindowBackgroundRed()
         {
             Background = new SolidColorBrush(Colors.Red);
         }
 
+        // opens a dialog
         public void OpenDialog()
         {
             Window dialogWindow =
