@@ -174,3 +174,6 @@
 /NativeEmbeddedSample/obj
 /NativeEmbeddedSample
 /NP.Demos.VisualSamples/NP.Demos.CustomWindowResizeBug/dlls
+/CustomBehaviors/NP.Demos.WPFCallActionBehaviorSample/.vs/NP.Demos.WPFCallActionBehaviorSample
+/CustomBehaviors/NP.Demos.WPFCallActionBehaviorSample/bin/Debug/net5.0-windows
+/CustomBehaviors/NP.Demos.WPFCallActionBehaviorSample/obj
