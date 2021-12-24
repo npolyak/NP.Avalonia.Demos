@@ -1,0 +1,24 @@
+﻿<Window x:Class="NP.Demos.DragBehaviorSample.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.Demos.DragBehaviorSample"
+        Title="Main Window"
+        Width="400"
+        Height="300">
+    <Grid ColumnDefinitions="*, *">
+		<Ellipse Width="30"
+				 Height="30"
+				 Fill="Pink"
+				 HorizontalAlignment="Center"
+				 VerticalAlignment="Center"
+				 local:DragBehavior.IsSet="True"/>
+
+		<Ellipse Width="30"
+				 Height="30"
+				 Fill="Blue"
+				 Grid.Column="1"
+				 HorizontalAlignment="Center"
+				 VerticalAlignment="Center"
+				 local:DragBehavior.IsSet="True"/>
+    </Grid>
+</Window>
