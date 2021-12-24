@@ -28,61 +28,76 @@ namespace NP.Demos.DragBehaviorSample
             );
         #endregion IsSet Attached Avalonia Property
 
-
-        #region StartPointerLocation Attached Avalonia Property
-        private static Point GetStartPointerLocation(IControl obj)
+        public static Point GetShift(IControl control)
         {
-            return obj.GetValue(StartPointerLocationProperty);
+            TranslateTransform translateTransform = (TranslateTransform) control.RenderTransform!;
+            return new Point(translateTransform.X, translateTransform.Y);
         }
 
-        private static void SetStartPointerLocation(IControl obj, Point value)
+        public static void SetShift(IControl control, Point shift)
         {
-            obj.SetValue(StartPointerLocationProperty, value);
+            TranslateTransform translateTransform = (TranslateTransform)control.RenderTransform!;
+
+            translateTransform.X = shift.X;
+            translateTransform.Y = shift.Y;
         }
 
-        private static readonly AttachedProperty<Point> StartPointerLocationProperty =
+        #region InitialPointerLocation Attached Avalonia Property
+        private static Point GetInitialPointerLocation(IControl obj)
+        {
+            return obj.GetValue(InitialPointerLocationProperty);
+        }
+
+        private static void SetInitialPointerLocation(IControl obj, Point value)
+        {
+            obj.SetValue(InitialPointerLocationProperty, value);
+        }
+
+        private static readonly AttachedProperty<Point> InitialPointerLocationProperty =
             AvaloniaProperty.RegisterAttached<DragBehavior, IControl, Point>
             (
-                "StartPointerLocation"
+                "InitialPointerLocation"
             );
-        #endregion StartPointerLocation Attached Avalonia Property
+        #endregion InitialPointerLocation Attached Avalonia Property
 
 
-        #region StartControlPosition Attached Avalonia Property
-        private static Point GetStartControlPosition(IControl obj)
+        #region InitialDragShift Attached Avalonia Property
+        public static Point GetInitialDragShift(IControl obj)
         {
-            return obj.GetValue(StartControlPositionProperty);
+            return obj.GetValue(InitialDragShiftProperty);
         }
 
-        private static void SetStartControlPosition(IControl obj, Point value)
+        public static void SetInitialDragShift(IControl obj, Point value)
         {
-            obj.SetValue(StartControlPositionProperty, value);
+            obj.SetValue(InitialDragShiftProperty, value);
         }
 
-        private static readonly AttachedProperty<Point> StartControlPositionProperty =
+        public static readonly AttachedProperty<Point> InitialDragShiftProperty =
             AvaloniaProperty.RegisterAttached<DragBehavior, IControl, Point>
             (
-                "StartControlPosition"
+                "InitialDragShift"
             );
-        #endregion StartControlPosition Attached Avalonia Property
-
+        #endregion InitialDragShift Attached Avalonia Property
 
         static DragBehavior()
         {
             IsSetProperty.Changed.Subscribe(OnIsSetChanged);
         }
 
+        // set the PointerPressed handler when 
         private static void OnIsSetChanged(AvaloniaPropertyChangedEventArgs<bool> args)
         {
             IControl control = (IControl) args.Sender;
 
             if (args.NewValue.Value == true)
             {
+                // connect the pointer pressed event handler
                 control.RenderTransform = new TranslateTransform();
                 control.PointerPressed += Control_PointerPressed;
             }
             else
             {
+                // disconnect the pointer pressed event handler
                 control.RenderTransform = null;
                 control.PointerPressed -= Control_PointerPressed;
             }
@@ -98,60 +113,82 @@ namespace NP.Demos.DragBehaviorSample
             return e.GetPosition(GetWindow(control));
         }
 
+        // start drag by pressing the point on draggable control
         private static void Control_PointerPressed(object? sender, PointerPressedEventArgs e)
         {
             IControl control = (IControl)sender!;
+
+            // capture the pointer on the control
+            // meaning - the mouse pointer will be producing the
+            // pointer events on the control
+            // even if it is not directly above the control
             e.Pointer.Capture(control);
 
-            Window w = GetWindow(control);
-
+            // calculate the drag-initial pointer position within the window
             Point currentPointerPositionInWindow = GetCurrentPointerPositionInWindow(control, e);
             
-            SetStartPointerLocation(control, currentPointerPositionInWindow);
+            // record the drag-initial pointer position within the window
+            SetInitialPointerLocation(control, currentPointerPositionInWindow);
 
-            Point startControlPosition = 
-                new Point
-                (
-                    (control.RenderTransform as TranslateTransform)!.X,
-                    (control.RenderTransform as TranslateTransform)!.Y);
+            Point startControlPosition = GetShift(control);
 
-            SetStartControlPosition(control, startControlPosition);
+            // record the drag-initial shift of the control
+            SetInitialDragShift(control, startControlPosition);
 
+            // add handler to do the shift and 
+            // other processing on PointerMoved
+            // and PointerReleased events. 
             control.PointerMoved += Control_PointerMoved;
             control.PointerReleased += Control_PointerReleased;
         }
 
+        // update the shift when pointer is moved
+        private static void Control_PointerMoved(object? sender, PointerEventArgs e)
+        {
+            IControl control = (IControl)sender!;
+            // Shift control to the current position
+            ShiftControl(control, e);
+        }
+
+
+        // Drag operation ends when the pointer is released. 
         private static void Control_PointerReleased(object? sender, PointerReleasedEventArgs e)
         {
             IControl control = (IControl)sender!;
 
+            // release the capture
             e.Pointer.Capture(null);
 
             ShiftControl(control, e);
+
+            // disconnect the handlers 
             control.PointerMoved -= Control_PointerMoved;
             control.PointerReleased -= Control_PointerReleased;
         }
 
-        private static void Control_PointerMoved(object? sender, PointerEventArgs e)
-        {
-            IControl control = (IControl)sender!;
-            ShiftControl(control, e);
-        }
 
+        // modifies the shift on the control during the drag
+        // this essentially moves the control
         private static void ShiftControl(IControl control, PointerEventArgs e)
         {
+            // get the current pointer location
             Point currentPointerPosition = GetCurrentPointerPositionInWindow(control, e);
 
-            Point startPointerPosition = GetStartPointerLocation(control);
+            // get the pointer location when Drag operation was started
+            Point startPointerPosition = GetInitialPointerLocation(control);
 
+            // diff is how far the pointer shifted
             Point diff = currentPointerPosition - startPointerPosition;
 
-            Point startControlPosition = GetStartControlPosition(control);
+            // get the original shift when the drag operation started
+            Point startControlPosition = GetInitialDragShift(control);
 
+            // get the resulting shift as the sum of 
+            // pointer shift during the drag and the original shift
             Point shift = diff + startControlPosition;
 
-            (control.RenderTransform as TranslateTransform).X = shift.X;
-            (control.RenderTransform as TranslateTransform).Y = shift.Y;
+            // set the shift on the control
+            SetShift(control, shift);
         }
     }
 }
