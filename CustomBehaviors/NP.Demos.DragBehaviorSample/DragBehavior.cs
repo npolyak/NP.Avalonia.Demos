@@ -28,13 +28,13 @@ namespace NP.Demos.DragBehaviorSample
             );
         #endregion IsSet Attached Avalonia Property
 
-        public static Point GetShift(IControl control)
+        private static Point GetShift(IControl control)
         {
             TranslateTransform translateTransform = (TranslateTransform) control.RenderTransform!;
             return new Point(translateTransform.X, translateTransform.Y);
         }
 
-        public static void SetShift(IControl control, Point shift)
+        private static void SetShift(IControl control, Point shift)
         {
             TranslateTransform translateTransform = (TranslateTransform)control.RenderTransform!;
 

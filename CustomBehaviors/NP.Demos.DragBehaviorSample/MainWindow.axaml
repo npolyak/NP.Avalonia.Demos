@@ -13,12 +13,12 @@
 				 VerticalAlignment="Center"
 				 local:DragBehavior.IsSet="True"/>
 
-		<Ellipse Width="30"
-				 Height="30"
-				 Fill="Blue"
-				 Grid.Column="1"
-				 HorizontalAlignment="Center"
-				 VerticalAlignment="Center"
-				 local:DragBehavior.IsSet="True"/>
+		<Rectangle Width="30"
+				   Height="30"
+				   Fill="Blue"
+				   Grid.Column="1"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center"
+				   local:DragBehavior.IsSet="True"/>
     </Grid>
 </Window>
