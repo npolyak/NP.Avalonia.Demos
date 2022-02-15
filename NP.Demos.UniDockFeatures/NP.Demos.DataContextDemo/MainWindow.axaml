@@ -32,18 +32,6 @@
 			  <TextBlock Text="Hello World"/>
           </np:DockItem>
         </np:StackDockGroup>
-
-        <!-- Tabbed group at the bottom -->
-        <np:TabbedDockGroup>
-          <np:DockItem Header="Tab1"
-					   DockDataContextBinding="{Binding Source={StaticResource MyTestString}}">
-			  <TextBlock Text="{Binding Path=DockDataContext, 
-					                  RelativeSource={RelativeSource AncestorType=np:IDockDataContextContainer}}"/>
-          </np:DockItem>
-          <np:DockItem Header="Tab2">
-            <TextBlock Text="Tab2 is here"/>
-          </np:DockItem>
-        </np:TabbedDockGroup>
       </np:StackDockGroup>
     </np:RootDockGroup>
   </Grid>
