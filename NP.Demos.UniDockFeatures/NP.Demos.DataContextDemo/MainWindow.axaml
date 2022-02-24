@@ -3,6 +3,7 @@
         x:Class="NP.Demos.DataContextDemo.MainWindow"
         Title="NP.Demos.DataContextDemo"
         xmlns:np="https://np.com/visuals"
+		xmlns:local="clr-namespace:NP.Demos.DataContextDemo"
         Width="600"
         Height="400"
         np:DockAttachedProperties.DockChildWindowOwner="{Binding RelativeSource={RelativeSource Self}}"
@@ -10,22 +11,21 @@
     <Window.Resources>
         <ResourceDictionary>
             <np:DockManager x:Key="TheDockManager"/>
-
-            <x:String x:Key="MyTestString">This is a test string!!!</x:String>
+			<local:TestViewModel x:Key="TheViewModel"
+								 Header="The is the Header"
+								 Content="This is a test content"/>
         </ResourceDictionary>
     </Window.Resources>
     <Grid RowDefinitions="*, Auto"
           Margin="5">
         <!-- top level group should reference the dock manager-->
         <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}">
-            <!-- Second Level group arranges the top and the bottom parts 
-           vertically-->
             <np:StackDockGroup TheOrientation="Vertical">
                 <!-- top group arranges two top Dock Panes horizontally-->
                 <np:StackDockGroup TheOrientation="Horizontal">
-                    <np:DockItem Header="Hi"
-                                 DockDataContextBinding="{Binding Source={StaticResource MyTestString}}">
-                        <TextBlock Text="{Binding Path=DockDataContext, 
+                    <np:DockItem Header="{Binding Path=DockDataContext.Header, RelativeSource={RelativeSource Self}}"
+                                 DockDataContextBinding="{Binding Source={StaticResource TheViewModel}}">
+                        <TextBlock Text="{Binding Path=DockDataContext.Content, 
                                                   RelativeSource={RelativeSource AncestorType=np:IDockDataContextContainer}}"/>
                     </np:DockItem>
                     <np:DockItem Header="Hello">
