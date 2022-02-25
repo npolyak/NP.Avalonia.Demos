@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.DefaultLayoutSaveDemo.MainWindow"
+        Title="NP.Demos.DefaultLayoutSaveDemo"
+        xmlns:np="https://np.com/visuals"
+		xmlns:local="clr-namespace:NP.Demos.DefaultLayoutSaveDemo"
+        Width="600"
+        Height="400"
+        np:DockAttachedProperties.DockChildWindowOwner="{Binding RelativeSource={RelativeSource Self}}"
+        np:DockAttachedProperties.TheDockManager="{DynamicResource TheDockManager}">
+	<Window.Resources>
+		<np:DockManager x:Key="TheDockManager"/>
+	</Window.Resources>
+    <Grid RowDefinitions="*, Auto"
+          Margin="10">
+        <!-- top level group should reference the dock manager-->
+        <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}">
+            <np:StackDockGroup TheOrientation="Vertical">
+                <!-- top group arranges two top Dock Panes horizontally-->
+                <np:StackDockGroup TheOrientation="Horizontal">
+					<np:DockItem Header="Hi">
+						<TextBlock Text="Hi World"/>
+					</np:DockItem>
+                    <np:DockItem Header="Hello">
+                        <TextBlock Text="Hello World"/>
+                    </np:DockItem>
+                </np:StackDockGroup>
+				<np:DockItem Header="Ciao">
+					<TextBlock Text="Ciao Mondo"/>
+				</np:DockItem>
+            </np:StackDockGroup>
+        </np:RootDockGroup>
+		<Button x:Name="SaveLayoutButton"
+				Content="Save Layout"
+				Margin="0,5"
+				Grid.Row="1"
+				HorizontalAlignment="Right"/>
+	</Grid>
+</Window>
