@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:np="https://np.com/visuals"
 		xmlns:local="clr-namespace:NP.Demos.AdvancedDataGridDemo"
-		Width="1000"
+		Width="685"
 		Height="500"
         x:Class="NP.Demos.AdvancedDataGridDemo.MainWindow"
         Title="NP.Demos.AdvancedDataGridDemo">
