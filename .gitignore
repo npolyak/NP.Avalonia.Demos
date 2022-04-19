@@ -187,6 +187,6 @@
 /CustomBehaviors/NP.Demos.DragBehaviorSample/bin/Debug
 /CustomBehaviors/NP.Demos.DragBehaviorSample/obj
 /ConsileAppForLinuxSubsystemDebuggingDemo/.vs/ConsileAppForLinuxSubsystemDebuggingDemo
-/ConsileAppForLinuxSubsystemDebuggingDemo/bin/Debug/net6.0
-/ConsileAppForLinuxSubsystemDebuggingDemo/obj
-/ConsileAppForLinuxSubsystemDebuggingDemo/ConsileAppForLinuxSubsystemDebuggingDemo.csproj.user
+/ConsoleAppForLinuxSubsystemDebuggingDemo/.vs
+/ConsoleAppForLinuxSubsystemDebuggingDemo/bin/Debug/net6.0
+/ConsoleAppForLinuxSubsystemDebuggingDemo/obj

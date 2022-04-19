@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsileAppForLinuxSubsystemDebuggingDemo", "ConsileAppForLinuxSubsystemDebuggingDemo.csproj", "{31AA2487-496B-48B8-9FA4-24171D755B1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForLinuxSubsystemDebuggingDemo", "ConsoleAppForLinuxSubsystemDebuggingDemo.csproj", "{31AA2487-496B-48B8-9FA4-24171D755B1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
