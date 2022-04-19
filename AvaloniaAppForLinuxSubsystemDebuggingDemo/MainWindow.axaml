@@ -1,0 +1,11 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaAppForLinuxSubsystemDebuggingDemo.MainWindow"
+        Title="AvaloniaAppForLinuxSubsystemDebuggingDemo"
+		Width="500"
+		Height="300">
+	<Button x:Name="TestDebuggingButton"
+			Content="Test Debugging"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center" />
+</Window>
