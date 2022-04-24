@@ -8,6 +8,10 @@ if (isLinux)
 {
     Console.WriteLine("Yes, it is Linux!!!");
 }
+else
+{
+    Console.WriteLine("No, it is not Linux");
+}
 
 if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
 {
