@@ -1,11 +1,11 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:np="https://np.com/visuals"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:np="https://np.com/visuals"
 		xmlns:local="clr-namespace:NP.Demos.AdvancedDataGridDemo"
 		Width="685"
 		Height="500"
-        x:Class="NP.Demos.AdvancedDataGridDemo.MainWindow"
-        Title="NP.Demos.AdvancedDataGridDemo">
+		x:Class="NP.Demos.AdvancedDataGridDemo.MainWindow"
+		Title="NP.Demos.AdvancedDataGridDemo">
 	<Window.Resources>
 		<local:DemoProducts x:Key="TheDemoProducts"/>
 	</Window.Resources>
@@ -23,14 +23,15 @@
 			</Button.Flyout>
 		</Button>
 		<DataGrid x:Name="TheDataGrid"
-				  Classes="WithColumnFilters"
+				  Classes="WithColumnFilters Removable"
 				  CanUserReorderColumns="True"
-			      CanUserResizeColumns="True"
+				  CanUserResizeColumns="True"
 				  HorizontalAlignment="Left"
 				  Grid.Row="1"
-			      np:DataGridFilteringBehavior.DataGridFilterTextBoxClasses="DataGridFilterTextBox"
+				  np:DataGridFilteringBehavior.DataGridFilterTextBoxClasses="DataGridFilterTextBox"
 				  np:DataGridFilteringBehavior.RowDataType="{x:Type local:Product}"
-				  np:DataGridCollectionViewBehavior.ItemsSource="{StaticResource TheDemoProducts}">
+				  np:DataGridCollectionViewBehavior.ItemsSource="{StaticResource TheDemoProducts}"
+			>
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="Product Name"
 									np:DataGridColumnManipulationBehavior.CanRemoveColumn="False"
