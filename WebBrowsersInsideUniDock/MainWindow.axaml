@@ -3,6 +3,7 @@
         xmlns:np="https://np.com/visuals"
 		xmlns:local="clr-namespace:NP.WebBrowsersInsideUniDock"
         x:Class="NP.WebBrowsersInsideUniDock.MainWindow"
+		np:DockAttachedProperties.TheDockManager="{DynamicResource TheDockManager}"
 		Width="800"
 		Height="600"
         Title="NP.WebBrowsersInsideUniDock">
