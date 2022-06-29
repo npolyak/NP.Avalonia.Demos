@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Include="CefGlue.Avalonia" Version="91.4472.29" />
+    <PackageReference Include="NP.Avalonia.UniDock" Version="1.0.32" />
+    <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ReloadingWebUserControl.axaml.cs">
+      <DependentUpon>ReloadingWebUserControl.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

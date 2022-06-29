@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:np="https://np.com/visuals"
+		xmlns:local="clr-namespace:NP.WebBrowsersInsideUniDock"
+        x:Class="NP.WebBrowsersInsideUniDock.MainWindow"
+		np:DockAttachedProperties.TheDockManager="{DynamicResource TheDockManager}"
+		Width="800"
+		Height="600"
+        Title="NP.WebBrowsersInsideUniDock">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="avares://NP.Avalonia.Visuals/Themes/Geometries.axaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<DataTemplate x:Key="ReloadingDataTemplate">
+				<local:ReloadingWebUserControl/>
+			</DataTemplate>
+			<np:DockManager x:Key="TheDockManager"/>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Grid RowDefinitions="*, Auto"
+		  HorizontalAlignment="Stretch"
+		  VerticalAlignment="Stretch"
+		  Margin="10">
+		<np:RootDockGroup np:DockAttachedProperties.TheDockManager="{StaticResource TheDockManager}">
+			<np:StackDockGroup DockId="DocumentGroup" 
+							   IsStableGroup="True" 
+							   AutoInvisible="False"/>
+		</np:RootDockGroup>
+		<StackPanel Orientation="Horizontal"
+					Margin="0,0,0,0"
+					Grid.Row="1"
+					HorizontalAlignment="Right">
+			<Button x:Name="AddButton"
+					Content="Add"
+					Margin="10,5"/>
+			<Button x:Name="SaveButton"
+					Content="Save"
+					Margin="10,5"/>
+
+			<Button x:Name="RestoreButton"
+					Content="Restore"
+					Margin="10,5"/>
+		</StackPanel>
+	</Grid>
+</Window>
