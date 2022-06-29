@@ -1,0 +1,20 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:np="https://np.com/visuals">
+	<DataTemplate x:Key="ReceiveTextView">
+		<Grid>
+			<Control.Styles>
+				<StyleInclude Source="avares://NP.Avalonia.Visuals/Themes/ThemeStyles.axaml"/>
+			</Control.Styles>
+			<np:LabeledControl Text="The Received Text is:"
+							   HorizontalAlignment="Center"
+							   VerticalAlignment="Center"
+							   Margin="10">
+				<ControlTemplate>
+					<TextBlock Text="{Binding Path=Text, Mode=OneWay}" 
+							   FontWeight="Bold"/>
+				</ControlTemplate>
+			</np:LabeledControl>
+		</Grid>
+	</DataTemplate>
+</ResourceDictionary>

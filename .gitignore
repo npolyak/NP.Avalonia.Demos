@@ -186,3 +186,17 @@
 /CustomBehaviors/NP.Demos.DragBehaviorSample/.vs
 /CustomBehaviors/NP.Demos.DragBehaviorSample/bin/Debug
 /CustomBehaviors/NP.Demos.DragBehaviorSample/obj
+/Gidon/Tests/TestPlugins/Services/MockAuthentication/bin/Debug/net6.0
+/Gidon/Tests/TestPlugins/Services/MockAuthentication/obj
+/Gidon/Tests/TestPlugins/Services/TextService/bin/Debug/net6.0
+/Gidon/Tests/TestPlugins/Services/TextService/obj
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/Authentication/AuthenticationViewModelPlugin/bin/Debug/net6.0
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/Authentication/AuthenticationViewModelPlugin/obj
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/EnterText/EnterTextViewModelPlugin/bin/Debug/net6.0
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/EnterText/EnterTextViewModelPlugin/obj
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/ReceiveText/ReceiveTextViewModelPlugin/bin/Debug/net6.0
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/ReceiveText/ReceiveTextViewModelPlugin/obj
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/SecurityTest/SecurityTextViewModelPlugin/bin/Debug/net6.0
+/Gidon/Tests/TestPlugins/ViewViewModelPlugins/SecurityTest/SecurityTextViewModelPlugin/obj
+/Gidon/Tests/TestServiceInterfaces/bin/Debug/net6.0
+/Gidon/Tests/TestServiceInterfaces/obj

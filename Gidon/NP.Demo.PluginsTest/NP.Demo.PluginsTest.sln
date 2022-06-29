@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NP.Demo.PluginsTest", "NP.Demo.PluginsTest.csproj", "{49279A6F-C9BC-4EFF-BBBB-72789599A46C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestsAndMocks", "TestsAndMocks", "{3F4F748E-8DCC-4AEA-A17E-6B4ADAB5692C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{785D3B13-3DA1-426B-A249-88E69C3A1929}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MockAuthentication", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\Services\MockAuthentication\MockAuthentication.csproj", "{5007AEAF-0F04-41CD-8388-C704E8C221E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextService", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\Services\TextService\TextService.csproj", "{B5C83C13-3670-4093-AB64-676802B92019}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestServiceInterfaces", "..\..\..\NP.Avalonia.Gidon\Tests\TestServiceInterfaces\TestServiceInterfaces.csproj", "{B07DFED9-2301-418D-9727-8DEB8F50CC5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{D37A7043-31F8-4988-B4E7-E0337F1A0ADB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ViewViewModelPlugins", "ViewViewModelPlugins", "{79D02822-53A9-4106-A6EE-27DEE4DD0AB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationViewModelPlugin", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\ViewViewModelPlugins\Authentication\AuthenticationViewModelPlugin\AuthenticationViewModelPlugin.csproj", "{6FB05A55-9656-478D-92A0-F14D53F36219}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{B9CCFFB5-9132-47F4-86C3-7968666E0AEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationViewPlugin", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\ViewViewModelPlugins\Authentication\AuthenticationView\AuthenticationViewPlugin.csproj", "{604FBE8E-38C4-4C6C-BC4A-7BC0751D4C3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EnterText", "EnterText", "{810759F8-6499-4598-9622-4B7C5726E71D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReceiveText", "ReceiveText", "{83B48655-18AE-4576-B5FD-0E35F99FEFBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnterTextViewModelPlugin", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\ViewViewModelPlugins\EnterText\EnterTextViewModelPlugin\EnterTextViewModelPlugin.csproj", "{A4195A47-7E82-44A9-9D9F-F9E091CD3843}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnterTextViewPlugin", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\ViewViewModelPlugins\EnterText\EnterTextViewPlugin\EnterTextViewPlugin.csproj", "{995F37EE-629F-46E7-B14E-26495A731542}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiveTextViewModelPlugin", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\ViewViewModelPlugins\ReceiveText\ReceiveTextViewModelPlugin\ReceiveTextViewModelPlugin.csproj", "{AE5AA6E8-3528-4AD6-924F-958251CBDD7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiveTextViewPlugin", "..\..\..\NP.Avalonia.Gidon\Tests\TestPlugins\ViewViewModelPlugins\ReceiveText\ReceiveTextViewPlugin\ReceiveTextViewPlugin.csproj", "{0709CC3F-6F53-4B3C-8865-46B42A966AA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49279A6F-C9BC-4EFF-BBBB-72789599A46C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49279A6F-C9BC-4EFF-BBBB-72789599A46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49279A6F-C9BC-4EFF-BBBB-72789599A46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49279A6F-C9BC-4EFF-BBBB-72789599A46C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5007AEAF-0F04-41CD-8388-C704E8C221E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5007AEAF-0F04-41CD-8388-C704E8C221E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5007AEAF-0F04-41CD-8388-C704E8C221E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5007AEAF-0F04-41CD-8388-C704E8C221E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C83C13-3670-4093-AB64-676802B92019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C83C13-3670-4093-AB64-676802B92019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C83C13-3670-4093-AB64-676802B92019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C83C13-3670-4093-AB64-676802B92019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B07DFED9-2301-418D-9727-8DEB8F50CC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07DFED9-2301-418D-9727-8DEB8F50CC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07DFED9-2301-418D-9727-8DEB8F50CC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07DFED9-2301-418D-9727-8DEB8F50CC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB05A55-9656-478D-92A0-F14D53F36219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB05A55-9656-478D-92A0-F14D53F36219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB05A55-9656-478D-92A0-F14D53F36219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB05A55-9656-478D-92A0-F14D53F36219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604FBE8E-38C4-4C6C-BC4A-7BC0751D4C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604FBE8E-38C4-4C6C-BC4A-7BC0751D4C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604FBE8E-38C4-4C6C-BC4A-7BC0751D4C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604FBE8E-38C4-4C6C-BC4A-7BC0751D4C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4195A47-7E82-44A9-9D9F-F9E091CD3843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4195A47-7E82-44A9-9D9F-F9E091CD3843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4195A47-7E82-44A9-9D9F-F9E091CD3843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4195A47-7E82-44A9-9D9F-F9E091CD3843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{995F37EE-629F-46E7-B14E-26495A731542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995F37EE-629F-46E7-B14E-26495A731542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995F37EE-629F-46E7-B14E-26495A731542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995F37EE-629F-46E7-B14E-26495A731542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5AA6E8-3528-4AD6-924F-958251CBDD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5AA6E8-3528-4AD6-924F-958251CBDD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5AA6E8-3528-4AD6-924F-958251CBDD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5AA6E8-3528-4AD6-924F-958251CBDD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0709CC3F-6F53-4B3C-8865-46B42A966AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0709CC3F-6F53-4B3C-8865-46B42A966AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0709CC3F-6F53-4B3C-8865-46B42A966AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0709CC3F-6F53-4B3C-8865-46B42A966AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{785D3B13-3DA1-426B-A249-88E69C3A1929} = {D37A7043-31F8-4988-B4E7-E0337F1A0ADB}
+		{5007AEAF-0F04-41CD-8388-C704E8C221E1} = {785D3B13-3DA1-426B-A249-88E69C3A1929}
+		{B5C83C13-3670-4093-AB64-676802B92019} = {785D3B13-3DA1-426B-A249-88E69C3A1929}
+		{B07DFED9-2301-418D-9727-8DEB8F50CC5B} = {3F4F748E-8DCC-4AEA-A17E-6B4ADAB5692C}
+		{D37A7043-31F8-4988-B4E7-E0337F1A0ADB} = {3F4F748E-8DCC-4AEA-A17E-6B4ADAB5692C}
+		{79D02822-53A9-4106-A6EE-27DEE4DD0AB7} = {D37A7043-31F8-4988-B4E7-E0337F1A0ADB}
+		{6FB05A55-9656-478D-92A0-F14D53F36219} = {B9CCFFB5-9132-47F4-86C3-7968666E0AEB}
+		{B9CCFFB5-9132-47F4-86C3-7968666E0AEB} = {79D02822-53A9-4106-A6EE-27DEE4DD0AB7}
+		{604FBE8E-38C4-4C6C-BC4A-7BC0751D4C3B} = {B9CCFFB5-9132-47F4-86C3-7968666E0AEB}
+		{810759F8-6499-4598-9622-4B7C5726E71D} = {79D02822-53A9-4106-A6EE-27DEE4DD0AB7}
+		{83B48655-18AE-4576-B5FD-0E35F99FEFBD} = {79D02822-53A9-4106-A6EE-27DEE4DD0AB7}
+		{A4195A47-7E82-44A9-9D9F-F9E091CD3843} = {810759F8-6499-4598-9622-4B7C5726E71D}
+		{995F37EE-629F-46E7-B14E-26495A731542} = {810759F8-6499-4598-9622-4B7C5726E71D}
+		{AE5AA6E8-3528-4AD6-924F-958251CBDD7F} = {83B48655-18AE-4576-B5FD-0E35F99FEFBD}
+		{0709CC3F-6F53-4B3C-8865-46B42A966AA3} = {83B48655-18AE-4576-B5FD-0E35F99FEFBD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98497725-4038-46B9-910E-2BADC6FDC7E4}
+	EndGlobalSection
+EndGlobal
