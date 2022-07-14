@@ -200,3 +200,7 @@
 /Gidon/Tests/TestPlugins/ViewViewModelPlugins/SecurityTest/SecurityTextViewModelPlugin/obj
 /Gidon/Tests/TestServiceInterfaces/bin/Debug/net6.0
 /Gidon/Tests/TestServiceInterfaces/obj
+/ConsoleAppForLinuxSubsystemDebuggingDemo/.vs
+/ConsoleAppForLinuxSubsystemDebuggingDemo/bin/Debug/net6.0
+/ConsoleAppForLinuxSubsystemDebuggingDemo/obj
+/ConsoleAppForLinuxSubsystemDebuggingDemo/ConsoleAppForLinuxSubsystemDebuggingDemo.csproj.user

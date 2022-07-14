@@ -6,6 +6,7 @@
 	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <ApplicationIcon />
     <StartupObject />
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <AvaloniaXaml Remove="PlatformSpecific\**" />
@@ -17,8 +18,8 @@
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.10" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.10" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.14" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.14" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Condition="'$(TargetFramework)'=='net5.0-Windows'" Include="PlatformSpecific\WinFormsControl\WinFormsControl.csproj" />
