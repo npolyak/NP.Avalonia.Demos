@@ -3,7 +3,10 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using NP.Avalonia.UniDockService;
+using NP.Concepts.Behaviors;
+using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 
 namespace NP.Demos.UsingViewModelsDemo
@@ -28,6 +31,11 @@ namespace NP.Demos.UsingViewModelsDemo
             _uniDockService.DockItemsViewModels = 
                 new ObservableCollection<DockItemViewModelBase>();
 
+            _uniDockService.DockItemRemovedEvent += _uniDockService_DockItemRemovedEvent;
+
+            _uniDockService.DockItemSelectionChangedEvent += _uniDockService_DockItemSelectionChangedEvent;
+
+
             // set the Click handlers on the AddTab, Save and Restore buttons
 
             Button addTabButton = this.FindControl<Button>("AddTabButton");
@@ -38,6 +46,39 @@ namespace NP.Demos.UsingViewModelsDemo
 
             Button restoreButton = this.FindControl<Button>("RestoreButton");
             restoreButton.Click += RestoreButton_Click;
+        }
+
+        private void _uniDockService_DockItemSelectionChangedEvent(DockItemViewModelBase itemVm)
+        {
+            string str = $"{itemVm.DockId} {itemVm.IsSelected}";
+            Console.Write(str);
+        }
+
+        private void _uniDockService_DockItemRemovedEvent(DockItemViewModelBase removedItemVm)
+        {
+            string str = $"{removedItemVm.DockId} {removedItemVm.IsSelected}";
+            Console.Write(str);
+        }
+
+        private void OnItemRemoved(DockItemViewModelBase dockItemVM)
+        {
+            dockItemVM.PropertyChanged -= DockItemVM_PropertyChanged;
+        }
+
+        private void OnItemAdded(DockItemViewModelBase dockItemVM)
+        {
+            dockItemVM.PropertyChanged += DockItemVM_PropertyChanged;
+        }
+
+        private void DockItemVM_PropertyChanged(object? sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(DockItemViewModelBase.IsSelected))
+            {
+                DockItemViewModelBase dockItemVM = (DockItemViewModelBase)sender!;
+                string str = $"{dockItemVM.DockId} {dockItemVM.IsSelected}";
+
+                Console.Write(str);
+            }
         }
 
         private int _tabNumber = 1;
@@ -84,8 +125,17 @@ namespace NP.Demos.UsingViewModelsDemo
             // restore the view models
             _uniDockService.RestoreViewModelsFromFile(VMSerializationFileName);
 
+            _tabNumber = _uniDockService.DockItemsViewModels.Max(vm => GetTabNumber(vm.DockId));
+
+            _tabNumber++;
+
             // select the first tab.
             _uniDockService.DockItemsViewModels?.FirstOrDefault()?.Select();
+        }
+
+        int GetTabNumber(string str)
+        {
+            return int.Parse(str.Split("_").Last());
         }
 
         private void InitializeComponent()

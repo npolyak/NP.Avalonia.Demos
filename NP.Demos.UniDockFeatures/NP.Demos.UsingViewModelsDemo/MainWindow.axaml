@@ -24,24 +24,9 @@
     <!-- top level group should reference the dock manager-->
     <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}"
                       Grid.Row="1">
-      <!-- Second Level group arranges the top and the bottom parts 
-           vertically-->
-      <np:StackDockGroup TheOrientation="Vertical">
-        <!-- top group arranges two top Dock Panes horizontally-->
-        <np:StackDockGroup TheOrientation="Horizontal"
-                           IsStableGroup="True">
-          <np:DockItem Header="Hi">
-            <TextBlock Text="Hi World!"/>
-          </np:DockItem>
-          <np:DockItem Header="Hello">
-            <TextBlock Text="Hello World!"/>
-          </np:DockItem>
-        </np:StackDockGroup>
-
         <!-- Tabbed group at the bottom -->
         <np:TabbedDockGroup IsStableGroup="True"
                             DockId="Tabs"/>
-      </np:StackDockGroup>
     </np:RootDockGroup>
     <StackPanel Orientation="Horizontal"
                 Grid.Row="2"
