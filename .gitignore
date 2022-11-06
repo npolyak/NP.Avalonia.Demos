@@ -207,3 +207,6 @@
 /HostingDemos/HostingWinFormsDemo/.vs
 /HostingDemos/HostingWinFormsDemo/MyWinFormsControl/bin/Debug
 /HostingDemos/HostingWinFormsDemo/MyWinFormsControl/obj/Debug
+/HostingDemos/HostingWpfControlDemo/.vs
+/HostingDemos/HostingWpfControlDemo/WpfControlToHost/bin/Debug/net6.0-windows
+/HostingDemos/HostingWpfControlDemo/WpfControlToHost/obj
