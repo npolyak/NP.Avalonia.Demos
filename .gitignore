@@ -204,3 +204,6 @@
 /ConsoleAppForLinuxSubsystemDebuggingDemo/bin/Debug/net6.0
 /ConsoleAppForLinuxSubsystemDebuggingDemo/obj
 /ConsoleAppForLinuxSubsystemDebuggingDemo/ConsoleAppForLinuxSubsystemDebuggingDemo.csproj.user
+/HostingDemos/HostingWinFormsDemo/.vs
+/HostingDemos/HostingWinFormsDemo/MyWinFormsControl/bin/Debug
+/HostingDemos/HostingWinFormsDemo/MyWinFormsControl/obj/Debug
