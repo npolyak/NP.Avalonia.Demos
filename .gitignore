@@ -224,3 +224,5 @@
 /HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WpfControl/bin/Debug/net6.0-windows
 /HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WpfControl/obj
 *.user
+/HostingDemos/HostingWpfControlWithIoCyDemo/bin/Debug/net6.0-windows/Plugins/ViewPlugins/WinVisuals
+/HostingDemos/HostingWpfControlWithIoCyDemo/HostingWpfControlWithIoCyDemo/bin/Debug/net6.0-windows/Plugins/ViewPlugins/WinControl
