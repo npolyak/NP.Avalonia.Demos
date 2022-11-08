@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostWithIoC", "HostWithIoC\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinVisuals", "Windows\WinVisuals\WinVisuals.csproj", "{99135E5C-2980-4F66-9CED-BF64ED53342B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControl", "Windows\WpfControl\WpfControl.csproj", "{C4BDACE5-173A-44F9-BA97-9509FAA0CA0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{99135E5C-2980-4F66-9CED-BF64ED53342B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99135E5C-2980-4F66-9CED-BF64ED53342B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99135E5C-2980-4F66-9CED-BF64ED53342B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4BDACE5-173A-44F9-BA97-9509FAA0CA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4BDACE5-173A-44F9-BA97-9509FAA0CA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4BDACE5-173A-44F9-BA97-9509FAA0CA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4BDACE5-173A-44F9-BA97-9509FAA0CA0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D4339BC6-2E80-420D-8262-FA048F2166FD} = {075D95D4-C0E2-4BEE-9D77-09F404FD7555}
 		{99135E5C-2980-4F66-9CED-BF64ED53342B} = {C9E48092-4F0E-4CFF-B212-814F97A4532A}
+		{C4BDACE5-173A-44F9-BA97-9509FAA0CA0C} = {C9E48092-4F0E-4CFF-B212-814F97A4532A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35732A8D-BE6D-464A-8C47-6D4DFF6133A8}

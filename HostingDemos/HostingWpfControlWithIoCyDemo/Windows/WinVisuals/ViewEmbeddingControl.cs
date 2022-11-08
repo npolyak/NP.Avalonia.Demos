@@ -2,13 +2,16 @@
 using Avalonia.Controls;
 using Avalonia.Metadata;
 using Avalonia.Platform;
+using Interfaces;
+using NP.Utilities.Attributes;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms.Integration;
 
 namespace WinVisuals
 {
-    public class ViewEmbeddingControl : NativeControlHost
+    [Implements(typeof(IEmbedder))]
+    public class ViewEmbeddingControl : NativeControlHost, IEmbedder
     {
         #region NativeObject Styled Avalonia Property
         [Content]

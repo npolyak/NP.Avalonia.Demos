@@ -217,3 +217,10 @@
 /HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/bin/Debug/net6.0-windows
 /HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/obj/Debug/net6.0-windows/Avalonia
 /HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/obj/Debug/net6.0-windows
+/HostingDemos/HostingWpfControlWithIoCyDemo/MultiPlatform/Interfaces/bin/Debug/net6.0
+/HostingDemos/HostingWpfControlWithIoCyDemo/MultiPlatform/Interfaces/obj/Debug/net6.0
+/HostingDemos/HostingWpfControlWithIoCyDemo/MultiPlatform/Interfaces/obj
+/HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/obj
+/HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WpfControl/bin/Debug/net6.0-windows
+/HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WpfControl/obj
+*.user
