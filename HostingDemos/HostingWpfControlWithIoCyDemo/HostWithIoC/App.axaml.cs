@@ -14,7 +14,7 @@ namespace HostWithIoC
             (
                 "Plugins/Services",
                 "Plugins/ViewModelPlugins",
-        "Plugins/ViewPlugins");
+                "Plugins/ViewPlugins");
 
         public static IoCContainer TheContainer => ThePluginManager.TheContainer;
 

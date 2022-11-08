@@ -9,7 +9,7 @@ namespace HostWithIoC
         {
             InitializeComponent();
 
-            IEmbedder viewEmbedder = App.TheContainer.Resolve<IEmbedder>("EmbeddingView");
+            IEmbedder viewEmbedder = App.TheContainer.Resolve<IEmbedder>();
 
             if (viewEmbedder != null)
             {

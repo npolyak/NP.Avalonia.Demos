@@ -14,7 +14,7 @@
 		<None Remove=".gitignore" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="xcopy &quot;$(OutDir)&quot; &quot;$(SolutionDir)\bin\$(Configuration)\net6.0-windows\Plugins\ViewPlugins\$(ProjectName)\&quot; /S /R /Y /I" />
+		<Exec Command="xcopy &quot;$(OutDir)&quot; &quot;$(SolutionDir)\HostWithIoC\bin\$(Configuration)\net6.0-windows\Plugins\ViewPlugins\$(ProjectName)\&quot; /S /R /Y /I" />
 	</Target>
 	<ItemGroup>
 		<PackageReference Include="Avalonia" Version="11.0.0-preview3" />
