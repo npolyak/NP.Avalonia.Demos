@@ -213,3 +213,7 @@
 /HostingDemos/HostingWpfControlWithBehaviorDemo/.vs
 /HostingDemos/HostingWpfControlWithBehaviorDemo/WpfControlToHost/bin/Debug/net6.0-windows
 /HostingDemos/HostingWpfControlWithBehaviorDemo/WpfControlToHost/obj
+/HostingDemos/HostingWpfControlWithIoCyDemo/.vs
+/HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/bin/Debug/net6.0-windows
+/HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/obj/Debug/net6.0-windows/Avalonia
+/HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/obj/Debug/net6.0-windows

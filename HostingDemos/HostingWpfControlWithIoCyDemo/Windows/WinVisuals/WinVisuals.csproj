@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+		<!--Avalonia doesen't support TrimMode=link currently,but we are working on that https://github.com/AvaloniaUI/Avalonia/issues/6892 -->
+		<TrimMode>copyused</TrimMode>
+		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove=".gitignore" />
+	</ItemGroup>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy &quot;$(OutDir)&quot; &quot;$(SolutionDir)\bin\$(Configuration)\net6.0-windows\Plugins\ViewPlugins\$(ProjectName)\&quot; /S /R /Y /I" />
+	</Target>
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="11.0.0-preview3" />
+		<PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview3" />
+		<!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+		<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.0-preview3" />
+		<PackageReference Include="XamlNameReferenceGenerator" Version="1.4.2" />
+	</ItemGroup>
+</Project>
