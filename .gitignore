@@ -210,3 +210,6 @@
 /HostingDemos/HostingWpfControlDemo/.vs
 /HostingDemos/HostingWpfControlDemo/WpfControlToHost/bin/Debug/net6.0-windows
 /HostingDemos/HostingWpfControlDemo/WpfControlToHost/obj
+/HostingDemos/HostingWpfControlWithBehaviorDemo/.vs
+/HostingDemos/HostingWpfControlWithBehaviorDemo/WpfControlToHost/bin/Debug/net6.0-windows
+/HostingDemos/HostingWpfControlWithBehaviorDemo/WpfControlToHost/obj
