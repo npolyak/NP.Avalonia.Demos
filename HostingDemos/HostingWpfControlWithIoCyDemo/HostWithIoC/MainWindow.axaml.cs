@@ -9,16 +9,18 @@ namespace HostWithIoC
         {
             InitializeComponent();
 
-            IEmbedder viewEmbedder = App.TheContainer.Resolve<IEmbedder>();
+            object wpfView = App.TheContainer.Resolve<object>("WpfPlugin");
+            NativeEmbedder.WindowsNativeObject = wpfView;
 
-            if (viewEmbedder != null)
-            {
-                object wpfView = App.TheContainer.Resolve<object>("WpfPlugin");
 
-                viewEmbedder.NativeObject = wpfView;
+            //if (viewEmbedder != null)
+            //{
+            //    object wpfView = App.TheContainer.Resolve<object>("WpfPlugin");
 
-                this.Content = viewEmbedder;
-            }
+            //    viewEmbedder.NativeObject = wpfView;
+
+            //    this.Content = viewEmbedder;
+            //}
         }
     }
 }

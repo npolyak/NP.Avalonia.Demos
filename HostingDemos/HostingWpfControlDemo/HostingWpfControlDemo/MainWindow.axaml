@@ -5,6 +5,6 @@
         x:Class="HostingWinFormsDemo.MainWindow"
         Title="HostingWinFormsDemo">
 	<Grid x:Name="RootPanel">
-		
+		<ContentControl x:Name="MyContentControl"/>
 	</Grid>
 </Window>

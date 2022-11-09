@@ -24,5 +24,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\MultiPlatform\Interfaces\Interfaces.csproj" />
+		<ProjectReference Include="..\Windows\WinVisuals\WinVisuals.csproj" />
 	</ItemGroup>
 </Project>
