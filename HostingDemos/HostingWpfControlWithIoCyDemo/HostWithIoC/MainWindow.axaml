@@ -6,9 +6,7 @@
         x:Class="HostWithIoC.MainWindow"
         Title="HostWithIoC">
 	<Grid>
-		<winVisuals:NativeEmbeddingControl x:Name="NativeEmbedder"
-										   HorizontalAlignment="Stretch"
-										   VerticalAlignment="Stretch">
+		<winVisuals:NativeEmbeddingControl x:Name="NativeEmbedder">
 			<winVisuals:NativeEmbeddingControl.DefaultObject>
 				<Grid>
 					<TextBlock Text="No implementation for this platform"
