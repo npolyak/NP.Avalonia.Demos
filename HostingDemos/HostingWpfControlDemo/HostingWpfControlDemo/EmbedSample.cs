@@ -3,6 +3,7 @@ using Avalonia.Platform;
 using System.Runtime.InteropServices;
 using WpfControlToHost;
 using System.Windows.Forms.Integration;
+using ViewModels;
 
 namespace HostingWinFormsDemo
 {
@@ -13,6 +14,8 @@ namespace HostingWinFormsDemo
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 MyWpfUserControl myControl = new MyWpfUserControl();
+
+                myControl.DataContext = new ClickCounterViewModel();
 
                 ElementHost elementHost = new ElementHost();
 

@@ -1,10 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Metadata;
 using Avalonia.Platform;
 using Avalonia.Styling;
-using Interfaces;
-using NP.Utilities.Attributes;
 using System;
 using System.Runtime.InteropServices;
 #if WINDOWS

@@ -8,8 +8,9 @@ namespace HostingWinFormsDemo
         {
             InitializeComponent();
 
-            MyContentControl.Content = new EmbedSample();
-            //RootPanel.Children.Add(new EmbedSample());
+            EmbedSample embedSample = new EmbedSample();
+
+            MyContentControl.Content = embedSample;
         }
     }
 }
