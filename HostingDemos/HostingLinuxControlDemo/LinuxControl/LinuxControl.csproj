@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
 		<TargetFramework>net6.0</TargetFramework>
@@ -6,8 +6,8 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Avalonia" Version="11.0.0-preview3" />
-		<PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview3" />
+		<PackageReference Include="Avalonia" Version="11.0.0-preview4" />
+		<PackageReference Include="Avalonia.X11" Version="11.0.0-preview4" />
 		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
 	</ItemGroup>
 	<ItemGroup>
