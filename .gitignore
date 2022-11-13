@@ -229,3 +229,8 @@
 /HostingDemos/HostingWpfControlWithIoCyDemo/Windows/WinVisuals/bin/Debug/net6.0
 /HostingDemos/HostingWpfControlDemo/ViewModels/obj
 /HostingDemos/HostingWpfControlDemo/ViewModels/bin/Debug/net6.0
+/HostingDemos/HostingLinuxControlDemo/.vs
+/HostingDemos/HostingLinuxControlDemo/LinuxControl/bin/Debug/net6.0
+/HostingDemos/HostingLinuxControlDemo/LinuxControl/obj
+/HostingDemos/HostingLinuxControlDemo/ViewModels/bin/Debug/net6.0
+/HostingDemos/HostingLinuxControlDemo/ViewModels/obj
