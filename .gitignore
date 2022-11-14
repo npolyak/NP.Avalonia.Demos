@@ -234,3 +234,7 @@
 /HostingDemos/HostingLinuxControlDemo/LinuxControl/obj
 /HostingDemos/HostingLinuxControlDemo/ViewModels/bin/Debug/net6.0
 /HostingDemos/HostingLinuxControlDemo/ViewModels/obj
+/HostingDemos/HostingWindowsAndLinuxControlDemo/.vs
+/HostingDemos/HostingWindowsAndLinuxControlDemo/LinuxControl/bin/Debug/net6.0
+/HostingDemos/HostingWindowsAndLinuxControlDemo/LinuxControl/obj
+/HostingDemos/HostingWindowsAndLinuxControlDemo/ViewModels/bin/Debug/net6.0
