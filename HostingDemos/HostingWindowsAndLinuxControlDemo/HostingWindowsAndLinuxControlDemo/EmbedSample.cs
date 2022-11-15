@@ -1,12 +1,12 @@
 ﻿using Avalonia.Controls;
-using Avalonia.Controls.Platform;
 using Avalonia.Platform;
-using Avalonia.X11.Interop;
-using Gtk;
-using LinuxControl;
-using System;
 using System.Runtime.InteropServices;
+
+#if WINDOWS
+using System.Windows.Forms.Integration;
 using ViewModels;
+using WpfControl;
+#endif 
 
 namespace HostingWinFormsDemo
 {
@@ -14,10 +14,24 @@ namespace HostingWinFormsDemo
     {
         protected override IPlatformHandle CreateNativeControlCore(IPlatformHandle parent)
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                return LinuxControl.LinuxView.Create();
+#if WINDOWS
+                MyWpfUserControl control = new MyWpfUserControl();
+                control.DataContext = new ClickCounterViewModel();
+
+                ElementHost host = new ElementHost{ Child = control };
+
+                return new PlatformHandle(host.Handle, "Ctrl");
+#endif
             }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+#if !WINDOWS
+                return LinuxControl.LinuxView.Create();
+#endif
+            }
+
             return base.CreateNativeControlCore(parent);
         }
     }

@@ -238,3 +238,6 @@
 /HostingDemos/HostingWindowsAndLinuxControlDemo/LinuxControl/bin/Debug/net6.0
 /HostingDemos/HostingWindowsAndLinuxControlDemo/LinuxControl/obj
 /HostingDemos/HostingWindowsAndLinuxControlDemo/ViewModels/bin/Debug/net6.0
+/HostingDemos/HostingWindowsAndLinuxControlDemo/ViewModels/obj
+/HostingDemos/HostingWindowsAndLinuxControlDemo/WpfControl/bin/Debug/net6.0-windows
+/HostingDemos/HostingWindowsAndLinuxControlDemo/WpfControl/obj

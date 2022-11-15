@@ -77,6 +77,16 @@ namespace LinuxControl
             _vm.IncreaseNumberClicks();
         }
 
+        public static INativeControlHostDestroyableControlHandle Create()
+        {
+            return GtkInteropHelper.RunOnGlibThread(() =>
+            {
+                LinuxView linuxView = new LinuxView();
+
+                return new ControlWrapper(linuxView);
+            }).Result;
+        }
+
         class ControlWrapper : INativeControlHostDestroyableControlHandle
         {
             private readonly IntPtr _widget;
@@ -101,14 +111,5 @@ namespace LinuxControl
             }
         }
 
-        public static INativeControlHostDestroyableControlHandle Create()
-        {
-            return GtkInteropHelper.RunOnGlibThread(() =>
-            {
-                LinuxView linuxView = new LinuxView();
-
-                return new ControlWrapper(linuxView);
-            }).Result;
-        }
     }
 }
