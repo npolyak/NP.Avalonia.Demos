@@ -241,3 +241,14 @@
 /HostingDemos/HostingWindowsAndLinuxControlDemo/ViewModels/obj
 /HostingDemos/HostingWindowsAndLinuxControlDemo/WpfControl/bin/Debug/net6.0-windows
 /HostingDemos/HostingWindowsAndLinuxControlDemo/WpfControl/obj
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/.vs
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/LinuxControl/bin/Debug/net6.0
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/LinuxControl/obj
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/PolyFills/bin/Debug
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/PolyFills/obj
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/ViewModels/bin/Debug/net6.0
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/ViewModels/obj
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/Visuals/bin/Debug/net6.0
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/Visuals/obj
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/WpfControl/bin/Debug/net6.0-windows
+/HostingDemos/SimplifiedHostingMultiplePlatformsControlsDemo/WpfControl/obj
