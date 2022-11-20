@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="NP.Utilities" Version="1.0.13" />
+		<PackageReference Include="NP.Utilities" Version="1.0.14" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\Core\PolyFills\PolyFills.csproj" />
