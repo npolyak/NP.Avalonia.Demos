@@ -1,11 +1,6 @@
 using Avalonia.Controls;
-using PolyFills;
-
-#if WINDOWS
-using WpfControl;
-#else 
-using LinuxControl;
-#endif
+using Avalonia.Platform;
+using Visuals;
 
 namespace HostingWinFormsDemo
 {
@@ -15,17 +10,13 @@ namespace HostingWinFormsDemo
         {
             InitializeComponent();
 
+            App.Container.CompleteConfiguration();
+
             NativeEmbeddingControl embedSample = new NativeEmbeddingControl();
 
-#if WINDOWS
-            MyWpfUserControl control = new MyWpfUserControl();
+            var handle = App.Container.Resolve<IPlatformHandle?>("ThePlatformHandle");
 
-            control.DataContext = new ViewModels.ClickCounterViewModel();
-
-            embedSample.Handle = HandleBuilder.BuildHandle(control);
-#else // Linux
-            embedSample.Handle = HandleBuilder.BuildObjAndHandle(() => new LinuxView());
-#endif
+            embedSample.Handle = handle;
 
             MyContentControl.Content = embedSample;
         }

@@ -36,6 +36,8 @@ namespace PolyFills
                 {
                     Gtk.Window win = new Gtk.Window(WindowType.Toplevel);
 
+                    win.DestroyEvent += Win_DestroyEvent;
+                    win.Destroyed += Win_Destroyed;
                     win.Add(widget);
                     win.Show();
                 }
@@ -44,6 +46,16 @@ namespace PolyFills
             }
 
             return null;
+        }
+
+        private static void Win_DestroyEvent(object o, DestroyEventArgs args)
+        {
+           
+        }
+
+        private static void Win_Destroyed(object? sender, EventArgs e)
+        {
+            
         }
 #endif
 
@@ -66,10 +78,12 @@ namespace PolyFills
                 return null;
             }
 #else // Linux
-            return GtkInteropHelper.RunOnGlibThread(() =>
+            IPlatformHandle? handle = GtkInteropHelper.RunOnGlibThread(() =>
             {
                 return CreateHandleImpl(obj);
             }).Result;
+
+            return handle;
 #endif
         }
 
@@ -80,13 +94,15 @@ namespace PolyFills
 
             return BuildHandle(obj);
 #else // Linux
-            return GtkInteropHelper.RunOnGlibThread(() =>
+            IPlatformHandle? handle = GtkInteropHelper.RunOnGlibThread(() =>
             {
                 object obj = objBuilder();
                 ControlWrapper controlWrapper = CreateHandleImpl(obj);
 
                 return controlWrapper;
             }).Result;
+
+            return handle;
 #endif
         }
     }

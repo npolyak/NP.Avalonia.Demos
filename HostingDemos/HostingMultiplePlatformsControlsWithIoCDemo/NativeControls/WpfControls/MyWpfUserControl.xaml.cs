@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfControl
+namespace WpfControls
 {
     /// <summary>
     /// Interaction logic for MyWpfUserControl.xaml

@@ -1,12 +1,8 @@
-﻿using Avalonia.Controls.Platform;
-using Avalonia.Platform;
-using Avalonia.X11.Interop;
-using Gtk;
-using PolyFills;
+﻿using Gtk;
 using System;
 using ViewModels;
 
-namespace LinuxControl
+namespace LinuxControls
 {
     public class LinuxView : Grid
     {

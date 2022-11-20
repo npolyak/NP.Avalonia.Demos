@@ -2,7 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Platform;
 
-namespace HostingWinFormsDemo
+namespace Visuals
 {
     public class NativeEmbeddingControl : NativeControlHost
     {
