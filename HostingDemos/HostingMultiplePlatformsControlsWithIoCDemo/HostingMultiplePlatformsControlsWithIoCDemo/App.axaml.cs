@@ -25,7 +25,7 @@ namespace HostingWinFormsDemo
 
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
 
-            //Container.CompleteConfiguration();
+            Container.CompleteConfiguration();
 
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {

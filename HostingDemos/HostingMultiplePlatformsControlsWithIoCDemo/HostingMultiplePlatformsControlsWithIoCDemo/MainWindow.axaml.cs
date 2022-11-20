@@ -10,8 +10,6 @@ namespace HostingWinFormsDemo
         {
             InitializeComponent();
 
-            App.Container.CompleteConfiguration();
-
             NativeEmbeddingControl embedSample = new NativeEmbeddingControl();
 
             var handle = App.Container.Resolve<IPlatformHandle?>("ThePlatformHandle");
