@@ -301,3 +301,6 @@
 /HostingDemos/HostingNativeDemo/ViewModels/obj
 /HostingDemos/HostingNativeDemo/WpfControl/bin/Debug/net6.0-windows
 /HostingDemos/HostingNativeDemo/WpfControl/obj
+/HostingDemos/HostingWindowsProcessDemo/.vs
+/HostingDemos/HostingWindowsProcessDemo/WpfApp/bin/Debug/net6.0-windows
+/HostingDemos/HostingWindowsProcessDemo/WpfApp/obj

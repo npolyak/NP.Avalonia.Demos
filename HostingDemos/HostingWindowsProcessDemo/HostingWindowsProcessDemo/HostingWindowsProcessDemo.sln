@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33020.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "..\WpfApp\WpfApp.csproj", "{CDE13057-E716-4FBE-993E-0F88E81E8E14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostingWindowsProcessDemo", "HostingWindowsProcessDemo.csproj", "{8E9DFECB-0359-4545-891C-D2EE23EE0B39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDE13057-E716-4FBE-993E-0F88E81E8E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDE13057-E716-4FBE-993E-0F88E81E8E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDE13057-E716-4FBE-993E-0F88E81E8E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE13057-E716-4FBE-993E-0F88E81E8E14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534B2FD9-2C24-4A95-B7A7-2A122FF3365F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534B2FD9-2C24-4A95-B7A7-2A122FF3365F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534B2FD9-2C24-4A95-B7A7-2A122FF3365F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534B2FD9-2C24-4A95-B7A7-2A122FF3365F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E9DFECB-0359-4545-891C-D2EE23EE0B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E9DFECB-0359-4545-891C-D2EE23EE0B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E9DFECB-0359-4545-891C-D2EE23EE0B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E9DFECB-0359-4545-891C-D2EE23EE0B39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35732A8D-BE6D-464A-8C47-6D4DFF6133A8}
+	EndGlobalSection
+EndGlobal
