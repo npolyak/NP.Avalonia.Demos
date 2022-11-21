@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinuxControls", "..\NativeC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfControls", "..\NativeControls\WpfControls\WpfControls.csproj", "{E5F4CC7C-E88E-4BE2-8863-7FC75E547E9E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostingMultiplePlatformsControlsWithIoCDemo", "HostingMultiplePlatformsControlsWithIoCDemo.csproj", "{8E97D0FC-6EF8-410A-96ED-C5626B7E6B08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostingNativeWithIoCDemo", "HostingNativeWithIoCDemo.csproj", "{8E97D0FC-6EF8-410A-96ED-C5626B7E6B08}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolyFills", "..\Core\PolyFills\PolyFills.csproj", "{F7429629-CA76-422E-A8B4-D900726CB149}"
 EndProject
