@@ -294,3 +294,10 @@
 /HostingDemos/HostingNativeWithIoCDemo/ViewModels/obj
 /HostingDemos/HostingNativeWithIoCDemo/Visuals/obj
 /HostingDemos/HostingNativeWithIoCDemo/WpfControl/obj
+/HostingDemos/HostingNativeDemo/.vs
+/HostingDemos/HostingNativeDemo/LinuxControl/bin/Debug/net6.0
+/HostingDemos/HostingNativeDemo/LinuxControl/obj
+/HostingDemos/HostingNativeDemo/ViewModels/bin/Debug/net6.0
+/HostingDemos/HostingNativeDemo/ViewModels/obj
+/HostingDemos/HostingNativeDemo/WpfControl/bin/Debug/net6.0-windows
+/HostingDemos/HostingNativeDemo/WpfControl/obj
