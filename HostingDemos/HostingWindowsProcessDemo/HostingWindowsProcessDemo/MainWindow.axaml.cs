@@ -19,7 +19,7 @@ namespace HostingWindowsProcessDemo
 
             await embeddedProcessWindow.StartProcess();
 
-            this.Content = embeddedProcessWindow;
+            WpfWindowPlacementPanel.Children.Add(embeddedProcessWindow);
         }
     }
 }

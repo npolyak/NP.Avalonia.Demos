@@ -4,5 +4,9 @@
 		Width="700"
 		Height="500"
         Title="HostingWindowsProcessDemo">
-    Welcome to Avalonia!
+	<Grid ColumnDefinitions="*,*">
+		<Grid x:Name="WpfWindowPlacementPanel">
+			
+		</Grid>
+	</Grid>
 </Window>
