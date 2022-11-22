@@ -55,7 +55,7 @@ namespace HostingWindowsProcessDemo
             style &= ~0x00080000;
             style &= ~0x00020000;
             style &= ~0x00040000;
-            style |= 0x40000000;
+            style |= 0x40000000; // child
 
             HandleRef handleRef =
                 new HandleRef(null, ProcessWindowHandle);
