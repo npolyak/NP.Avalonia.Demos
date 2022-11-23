@@ -304,3 +304,6 @@
 /HostingDemos/HostingWindowsProcessDemo/.vs
 /HostingDemos/HostingWindowsProcessDemo/WpfApp/bin/Debug/net6.0-windows
 /HostingDemos/HostingWindowsProcessDemo/WpfApp/obj
+/HostingDemos/HostingLinuxProcessDemo/.vs
+/HostingDemos/HostingLinuxProcessDemo/LinuxApp/bin/Debug/net6.0
+/HostingDemos/HostingLinuxProcessDemo/LinuxApp/obj

@@ -1,13 +1,8 @@
-﻿using Avalonia.Controls.Platform;
-using Avalonia.Platform;
-using Avalonia.X11.Interop;
-using Gtk;
-using System;
-using ViewModels;
+﻿using Gtk;
 
-namespace LinuxControl
+namespace LinuxApp
 {
-    public class LinuxView : Window
+    public class MainWindow : Window
     {
         private const string vmKey = "VM";
         ClickCounterViewModel _vm = new ClickCounterViewModel();
@@ -19,11 +14,9 @@ namespace LinuxControl
 
         public IntPtr ButtonHandle => _button.Handle;
 
-        public LinuxView() : base(WindowType.Toplevel) 
+        public MainWindow() : base(WindowType.Toplevel)
         {
             Gtk.Grid grid = new Gtk.Grid();
-
-
 
             grid.Visible = true;
             this.Add(grid);
@@ -64,8 +57,9 @@ namespace LinuxControl
 
             this.Show();
 
-            Xid = __Gtk.gdk_x11_window_get_xid(_button.Window.Handle);
+            Xid = GtkApi.gdk_x11_window_get_xid(_button.Window.Handle);
         }
+
 
         private void _vm_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
@@ -75,40 +69,6 @@ namespace LinuxControl
         private void Button_Clicked(object? sender, EventArgs e)
         {
             _vm.IncreaseNumberClicks();
-        }
-
-        class ControlWrapper : INativeControlHostDestroyableControlHandle
-        {
-            private readonly IntPtr _widget;
-
-            public IntPtr Handle { get; }
-
-            public ControlWrapper(LinuxView linuxView)
-            {
-                _widget = linuxView.ButtonHandle;
-                Handle = linuxView.Xid;
-            }
-
-            public string? HandleDescriptor => "XID";
-
-            public void Destroy()
-            {
-                LinuxControl.Glib.RunOnGlibThread(() =>
-                {
-                    __Gtk.gtk_widget_destroy(_widget);
-                    return 0;
-                }).Wait();
-            }
-        }
-
-        public static INativeControlHostDestroyableControlHandle Create()
-        {
-            return GtkInteropHelper.RunOnGlibThread(() =>
-            {
-                LinuxView linuxView = new LinuxView();
-
-                return new ControlWrapper(linuxView);
-            }).Result;
         }
     }
 }
