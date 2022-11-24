@@ -6,7 +6,13 @@
         Title="HostingWindowsProcessDemo">
 	<Grid ColumnDefinitions="*,*">
 		<Grid x:Name="WpfWindowPlacementPanel">
-			
+			<ContentControl x:Name="MyContentControl"
+							HorizontalAlignment="Stretch"
+							VerticalAlignment="Stretch"
+							HorizontalContentAlignment="Stretch"
+							VerticalContentAlignment="Stretch">
+
+			</ContentControl>
 		</Grid>
 	</Grid>
 </Window>

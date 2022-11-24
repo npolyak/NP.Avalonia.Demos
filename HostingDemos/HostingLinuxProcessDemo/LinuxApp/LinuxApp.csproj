@@ -11,4 +11,7 @@
 		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
 	</ItemGroup>
 
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="xcopy &quot;$(OutDir)&quot; &quot;$(SolutionDir)bin\$(Configuration)\net6.0\AppsToHost\$(ProjectName)\&quot; /S /R /Y /I" />
+	</Target>
 </Project>

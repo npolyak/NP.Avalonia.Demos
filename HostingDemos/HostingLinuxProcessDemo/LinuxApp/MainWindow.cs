@@ -8,11 +8,9 @@ namespace LinuxApp
         ClickCounterViewModel _vm = new ClickCounterViewModel();
         Gtk.Label _label = new Gtk.Label();
 
-        public IntPtr Xid { get; }
-
         Gtk.Button _button;
 
-        public IntPtr ButtonHandle => _button.Handle;
+        public Button TheButton { get; }
 
         public MainWindow() : base(WindowType.Toplevel)
         {
@@ -44,20 +42,18 @@ namespace LinuxApp
 
             box.Add(_label);
 
-            _button = new Gtk.Button("ClickMe!");
-            _button.Hexpand = true;
-            _button.Halign = Align.Center;
-            _button.Vexpand = true;
-            _button.Valign = Align.Center;
-            _button.Visible = true;
+            TheButton = new Gtk.Button("ClickMe!");
+            TheButton.Hexpand = true;
+            TheButton.Halign = Align.Center;
+            TheButton.Vexpand = true;
+            TheButton.Valign = Align.Center;
+            TheButton.Visible = true;
 
-            box.Add(_button);
+            box.Add(TheButton);
 
-            _button.Clicked += Button_Clicked;
+            TheButton.Clicked += Button_Clicked;
 
             this.Show();
-
-            Xid = GtkApi.gdk_x11_window_get_xid(_button.Window.Handle);
         }
 
 
