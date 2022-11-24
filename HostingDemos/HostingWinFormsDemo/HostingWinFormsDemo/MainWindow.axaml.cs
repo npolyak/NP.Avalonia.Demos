@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using Avalonia.Layout;
 
 namespace HostingWinFormsDemo
 {
@@ -8,7 +9,13 @@ namespace HostingWinFormsDemo
         {
             InitializeComponent();
 
-            RootPanel.Children.Add(new EmbedSample());
+            EmbedSample embedSample = new EmbedSample();
+
+            embedSample.HorizontalAlignment = HorizontalAlignment.Stretch;
+            embedSample.VerticalAlignment = VerticalAlignment.Stretch;
+
+            // connect the EmbedSample
+            MyContentControl.Content = new EmbedSample();
         }
     }
 }
