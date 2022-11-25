@@ -9,7 +9,7 @@ namespace HostingLinuxControlDemo
 {
     public class EmbedSample : NativeControlHost
     {
-        private IntPtr? Handle { get; set; }
+        private IntPtr? WidgetHandleToDestroy { get; set; }
 
         protected override IPlatformHandle CreateNativeControlCore(IPlatformHandle parent)
         {
@@ -20,9 +20,10 @@ namespace HostingLinuxControlDemo
                 {
                     LinuxView linuxView = new LinuxView();
 
-                    Handle = linuxView.Window.Handle;
+                    WidgetHandleToDestroy = linuxView.Handle;
 
-                    IntPtr xid = GtkApi.gdk_x11_window_get_xid(Handle.Value);
+                    // get Xid from Gdk window
+                    IntPtr xid = GtkApi.gdk_x11_window_get_xid(linuxView.Window.Handle);
 
                     return new PlatformHandle(xid, "Xid");
                 }).Result;
@@ -36,9 +37,9 @@ namespace HostingLinuxControlDemo
             {
                 GtkInteropHelper.RunOnGlibThread(() =>
                 {
-                    if (Handle != null)
+                    if (WidgetHandleToDestroy != null)
                     {
-                        GtkApi.gtk_widget_destroy(Handle.Value);
+                        GtkApi.gtk_widget_destroy(WidgetHandleToDestroy.Value);
                     }
                     return 0;
                 }).Wait();
