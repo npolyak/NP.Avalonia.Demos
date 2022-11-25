@@ -5,9 +5,9 @@ VisualStudioVersion = 17.4.33020.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostingWpfControlDemo", "HostingWpfControlDemo\HostingWpfControlDemo.csproj", "{9115F5E2-486A-4612-96CA-8B8B53A96327}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfControlToHost", "WpfControlToHost\WpfControlToHost.csproj", "{3F1CB263-1B7D-412A-B996-1B9316C4EB41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfControl", "WpfControl\WpfControl.csproj", "{3F1CB263-1B7D-412A-B996-1B9316C4EB41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{685B5FFE-BE3D-464B-9ABD-2D8E41599E67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{685B5FFE-BE3D-464B-9ABD-2D8E41599E67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

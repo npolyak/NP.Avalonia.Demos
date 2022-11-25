@@ -30,6 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
-    <ProjectReference Include="..\WpfControlToHost\WpfControlToHost.csproj" />
+    <ProjectReference Include="..\WpfControl\WpfControl.csproj" />
   </ItemGroup>
 </Project>
