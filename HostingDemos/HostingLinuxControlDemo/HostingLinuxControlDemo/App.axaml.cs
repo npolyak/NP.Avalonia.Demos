@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace HostingWinFormsDemo
+namespace HostingLinuxControlDemo
 {
     public partial class App : Application
     {

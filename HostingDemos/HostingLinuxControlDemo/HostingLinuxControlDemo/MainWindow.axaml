@@ -2,8 +2,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		Width="800"
 		Height="600"
-        x:Class="HostingWinFormsDemo.MainWindow"
-        Title="HostingWinFormsDemo">
+        x:Class="HostingLinuxControlDemo.MainWindow"
+        Title="HostingLinuxControlDemo">
 	<Grid x:Name="RootPanel">
 		<ContentControl x:Name="MyContentControl"/>
 	</Grid>

@@ -1,6 +1,6 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="HostingWinFormsDemo.App">
+             x:Class="HostingLinuxControlDemo.App">
     <Application.Styles>
         <SimpleTheme Mode="Light"/>
     </Application.Styles>

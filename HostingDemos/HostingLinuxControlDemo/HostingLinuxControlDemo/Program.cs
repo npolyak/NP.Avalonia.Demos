@@ -3,7 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
-namespace HostingWinFormsDemo
+namespace HostingLinuxControlDemo
 {
     internal class Program
     {

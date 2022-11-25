@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace HostingWinFormsDemo
+namespace HostingLinuxControlDemo
 {
     public partial class MainWindow : Window
     {

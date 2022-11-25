@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using System;
 
-namespace LinuxControl
+namespace HostingLinuxControlDemo
 {
     public static class GtkApi
     {

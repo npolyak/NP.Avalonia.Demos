@@ -13,17 +13,11 @@ namespace LinuxControl
         ClickCounterViewModel _vm = new ClickCounterViewModel();
         Gtk.Label _label = new Gtk.Label();
 
-        public IntPtr Xid { get; }
-
         Gtk.Button _button;
-
-        public IntPtr ButtonHandle => _button.Handle;
 
         public LinuxView() : base(WindowType.Toplevel) 
         {
             Gtk.Grid grid = new Gtk.Grid();
-
-
 
             grid.Visible = true;
             this.Add(grid);
@@ -63,8 +57,6 @@ namespace LinuxControl
             _button.Clicked += Button_Clicked;
 
             this.Show();
-
-            Xid = GtkApi.gdk_x11_window_get_xid(_button.Window.Handle);
         }
 
         private void _vm_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -75,40 +67,6 @@ namespace LinuxControl
         private void Button_Clicked(object? sender, EventArgs e)
         {
             _vm.IncreaseNumberClicks();
-        }
-
-        class ControlWrapper : INativeControlHostDestroyableControlHandle
-        {
-            private readonly IntPtr _windowHandle;
-
-            public IntPtr Handle { get; }
-
-            public ControlWrapper(LinuxView linuxView)
-            {
-                _windowHandle = linuxView.Handle;
-                Handle = linuxView.Xid;
-            }
-
-            public string? HandleDescriptor => "XID";
-
-            public void Destroy()
-            {
-                GtkInteropHelper.RunOnGlibThread(() =>
-                {
-                    GtkApi.gtk_widget_destroy(_windowHandle);
-                    return 0;
-                }).Wait();
-            }
-        }
-
-        public static IPlatformHandle Create()
-        {
-            return GtkInteropHelper.RunOnGlibThread(() =>
-            {
-                LinuxView linuxView = new LinuxView();
-
-                return new ControlWrapper(linuxView);
-            }).Result;
         }
     }
 }
