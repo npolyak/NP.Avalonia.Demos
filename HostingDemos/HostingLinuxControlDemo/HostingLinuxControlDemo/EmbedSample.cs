@@ -18,8 +18,10 @@ namespace HostingLinuxControlDemo
 
                 return GtkInteropHelper.RunOnGlibThread(() =>
                 {
+                    // create the linux view
                     LinuxView linuxView = new LinuxView();
 
+                    // store the widget handle for the window to destroy at the end
                     WidgetHandleToDestroy = linuxView.Handle;
 
                     // get Xid from Gdk window
@@ -39,6 +41,7 @@ namespace HostingLinuxControlDemo
                 {
                     if (WidgetHandleToDestroy != null)
                     {
+                        // destroy the widget handle of the window
                         GtkApi.gtk_widget_destroy(WidgetHandleToDestroy.Value);
                         WidgetHandleToDestroy = null;
                     }
