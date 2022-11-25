@@ -40,6 +40,7 @@ namespace HostingLinuxControlDemo
                     if (WidgetHandleToDestroy != null)
                     {
                         GtkApi.gtk_widget_destroy(WidgetHandleToDestroy.Value);
+                        WidgetHandleToDestroy = null;
                     }
                     return 0;
                 }).Wait();
