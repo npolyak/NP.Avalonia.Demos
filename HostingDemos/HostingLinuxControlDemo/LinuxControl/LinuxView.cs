@@ -1,7 +1,4 @@
-﻿using Avalonia.Controls.Platform;
-using Avalonia.Platform;
-using Avalonia.X11.Interop;
-using Gtk;
+﻿using Gtk;
 using System;
 using ViewModels;
 

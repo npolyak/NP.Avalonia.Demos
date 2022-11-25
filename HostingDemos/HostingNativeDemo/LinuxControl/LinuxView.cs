@@ -1,7 +1,4 @@
-﻿using Avalonia.Controls.Platform;
-using Avalonia.Platform;
-using Avalonia.X11.Interop;
-using Gtk;
+﻿using Gtk;
 using System;
 using ViewModels;
 
@@ -13,17 +10,11 @@ namespace LinuxControl
         ClickCounterViewModel _vm = new ClickCounterViewModel();
         Gtk.Label _label = new Gtk.Label();
 
-        public IntPtr Xid { get; }
-
         Gtk.Button _button;
 
-        public IntPtr ButtonHandle => _button.Handle;
-
-        public LinuxView() : base(WindowType.Toplevel) 
+        public LinuxView() : base(WindowType.Toplevel)
         {
             Gtk.Grid grid = new Gtk.Grid();
-
-            
 
             grid.Visible = true;
             this.Add(grid);
@@ -63,8 +54,6 @@ namespace LinuxControl
             _button.Clicked += Button_Clicked;
 
             this.Show();
-
-            Xid = GtkHelper.gdk_x11_window_get_xid(_button.Window.Handle);
         }
 
         private void _vm_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -76,40 +65,5 @@ namespace LinuxControl
         {
             _vm.IncreaseNumberClicks();
         }
-
-        public static INativeControlHostDestroyableControlHandle Create()
-        {
-            return GtkInteropHelper.RunOnGlibThread(() =>
-            {
-                LinuxView linuxView = new LinuxView();
-
-                return new ControlWrapper(linuxView);
-            }).Result;
-        }
-
-        class ControlWrapper : INativeControlHostDestroyableControlHandle
-        {
-            private readonly IntPtr _widget;
-
-            public IntPtr Handle { get; }
-
-            public ControlWrapper(LinuxView linuxView)
-            {
-                _widget = linuxView.ButtonHandle;
-                Handle = linuxView.Xid;
-            }
-
-            public string? HandleDescriptor => "XID";
-
-            public void Destroy()
-            {
-                GtkInteropHelper.RunOnGlibThread(() =>
-                {
-                    GtkHelper.gtk_widget_destroy(_widget);
-                    return 0;
-                }).Wait();
-            }
-        }
-
     }
 }
