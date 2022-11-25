@@ -32,6 +32,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LinuxControl\LinuxControl.csproj" />
-    <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
 </Project>

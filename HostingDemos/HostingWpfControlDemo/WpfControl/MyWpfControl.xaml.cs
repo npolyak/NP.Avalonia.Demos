@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace WpfControlToHost
+namespace WpfControl
 {
     /// <summary>
     /// Interaction logic for MyWpfUserControl.xaml
@@ -10,6 +10,8 @@ namespace WpfControlToHost
         public MyWpfUserControl()
         {
             InitializeComponent();
+
+            DataContext = new ClickCounterViewModel();
         }
     }
 }

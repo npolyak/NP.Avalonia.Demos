@@ -1,9 +1,8 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Platform;
 using System.Runtime.InteropServices;
-using WpfControlToHost;
+using WpfControl;
 using System.Windows.Forms.Integration;
-using ViewModels;
 
 namespace HostingWinFormsDemo
 {
@@ -13,10 +12,10 @@ namespace HostingWinFormsDemo
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
+                // create the WPF view
                 MyWpfUserControl myControl = new MyWpfUserControl();
 
-                myControl.DataContext = new ClickCounterViewModel();
-
+                // use ElementHost to produce a win32 Handle for embedding
                 ElementHost elementHost = new ElementHost();
 
                 elementHost.Child = myControl;
@@ -24,6 +23,19 @@ namespace HostingWinFormsDemo
                 return new PlatformHandle(elementHost.Handle, "Hndl");
             }
             return base.CreateNativeControlCore(parent);
+        }
+
+        protected override void DestroyNativeControlCore(IPlatformHandle control)
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                // destroy the win32 window
+                WinApi.DestroyWindow(control.Handle);
+
+                return;
+            }
+
+            base.DestroyNativeControlCore(control);
         }
     }
 }

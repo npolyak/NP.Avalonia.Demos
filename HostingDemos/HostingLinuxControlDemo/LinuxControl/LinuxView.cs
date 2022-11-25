@@ -64,7 +64,7 @@ namespace LinuxControl
 
             this.Show();
 
-            Xid = __Gtk.gdk_x11_window_get_xid(_button.Window.Handle);
+            Xid = GtkApi.gdk_x11_window_get_xid(_button.Window.Handle);
         }
 
         private void _vm_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -79,13 +79,13 @@ namespace LinuxControl
 
         class ControlWrapper : INativeControlHostDestroyableControlHandle
         {
-            private readonly IntPtr _widget;
+            private readonly IntPtr _windowHandle;
 
             public IntPtr Handle { get; }
 
             public ControlWrapper(LinuxView linuxView)
             {
-                _widget = linuxView.ButtonHandle;
+                _windowHandle = linuxView.Handle;
                 Handle = linuxView.Xid;
             }
 
@@ -93,15 +93,15 @@ namespace LinuxControl
 
             public void Destroy()
             {
-                LinuxControl.Glib.RunOnGlibThread(() =>
+                GtkInteropHelper.RunOnGlibThread(() =>
                 {
-                    __Gtk.gtk_widget_destroy(_widget);
+                    GtkApi.gtk_widget_destroy(_windowHandle);
                     return 0;
                 }).Wait();
             }
         }
 
-        public static INativeControlHostDestroyableControlHandle Create()
+        public static IPlatformHandle Create()
         {
             return GtkInteropHelper.RunOnGlibThread(() =>
             {
