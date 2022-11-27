@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace HostingNativeDemo
 {
+// Only compile the class when WINDOWS is defined.
 #if WINDOWS
     public static unsafe class WinApi
     {

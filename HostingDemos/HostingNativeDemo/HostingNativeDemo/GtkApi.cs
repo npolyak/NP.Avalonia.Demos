@@ -3,6 +3,7 @@ using System;
 
 namespace HostingNativeDemo
 {
+// Only compile the class when WINDOWS is not defined.
 #if !WINDOWS
     public static unsafe class GtkApi
     {
@@ -13,7 +14,7 @@ namespace HostingNativeDemo
         public static extern IntPtr gdk_x11_window_get_xid(IntPtr window);
 
         [DllImport(GtkName)]
-        // destroys the gtk window
+        // destroys the gtk window or widget
         public static extern void gtk_widget_destroy(IntPtr gtkWidget);
     }
 #endif
