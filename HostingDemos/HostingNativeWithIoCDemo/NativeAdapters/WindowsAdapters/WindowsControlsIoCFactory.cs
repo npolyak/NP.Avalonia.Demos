@@ -8,7 +8,7 @@ namespace WindowsAdapters
     [HasFactoryMethods]
     public static class WindowsControlsIoCFactory
     {
-        [FactoryMethod(typeof(IPlatformHandle), isSingleton: false, partKey: "ThePlatformHandle")]
+        [FactoryMethod(typeof(IPlatformHandle), partKey: "ThePlatformHandle")]
         public static IPlatformHandle? CreateView()
         {
             MyWpfUserControl control = new MyWpfUserControl();

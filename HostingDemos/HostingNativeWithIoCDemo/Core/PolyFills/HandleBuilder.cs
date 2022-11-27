@@ -1,6 +1,8 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Controls.Platform;
 using Avalonia.Platform;
+using HostingNativeDemo;
+
 #if WINDOWS
 using System.Windows.Forms.Integration;
 #else
@@ -13,7 +15,8 @@ namespace PolyFills
     public static class HandleBuilder
     {
 #if WINDOWS
-        public static IPlatformHandle FormToHandle(this System.Windows.Forms.Control control)
+        // create a IPlatformHandle from a form
+        private static IPlatformHandle FormToHandle(this System.Windows.Forms.Control control)
         {
             return new PlatformHandle(control.Handle, "CTRL");   
         }
@@ -68,6 +71,7 @@ namespace PolyFills
             }
             else if (obj is System.Windows.FrameworkElement el)
             {
+                // if wpf's framework element, wrap it within ElementHost
                 ElementHost elementHost = new ElementHost();
                 elementHost.Child = el;
 
@@ -87,6 +91,8 @@ namespace PolyFills
 #endif
         }
 
+        // calls objBuilder in the proper thread (in case of linux) and 
+        // returns the built object.
         public static IPlatformHandle? BuildObjAndHandle(Func<object> objBuilder)
         {
 #if WINDOWS
@@ -105,9 +111,25 @@ namespace PolyFills
             return handle;
 #endif
         }
+
+        public static void DestroyHandle(this IPlatformHandle? platformHandle)
+        {
+            if (platformHandle == null)
+            {
+                return;
+            }    
+#if WINDOWS
+            WinApi.DestroyWindow(platformHandle.Handle);
+#else // Linux
+            ((INativeControlHostDestroyableControlHandle)platformHandle).Destroy();
+#endif
+            return;
+        }
     }
 
 #if !WINDOWS
+    // Control wrapper stores the original widget's (or gkt window's) handle 
+    // to be destroyed when the window is released (instead of X11 handle)
     class ControlWrapper : INativeControlHostDestroyableControlHandle
     {
         private readonly IntPtr _widgetHandle;

@@ -11,8 +11,4 @@
       <GeneratePathProperty>False</GeneratePathProperty>
     </PackageReference>
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Core\PolyFills\PolyFills.csproj" />
-  </ItemGroup>
 </Project>

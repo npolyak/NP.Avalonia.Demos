@@ -11,4 +11,8 @@
     <PackageReference Include="Avalonia.X11" Version="11.0.0-preview4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PolyFills\PolyFills.csproj" />
+  </ItemGroup>
+
 </Project>

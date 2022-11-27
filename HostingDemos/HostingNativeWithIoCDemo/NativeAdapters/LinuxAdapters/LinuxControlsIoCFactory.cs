@@ -8,7 +8,7 @@ namespace LinuxAdapters
     [HasFactoryMethods]
     public static class LinuxControlsIoCFactory
     {
-        [FactoryMethod(typeof(IPlatformHandle), isSingleton: false, partKey: "ThePlatformHandle")]
+        [FactoryMethod(typeof(IPlatformHandle),  partKey: "ThePlatformHandle")]
         public static IPlatformHandle? CreateView()
         {
             return HandleBuilder.BuildObjAndHandle(() => new LinuxView());

@@ -9,19 +9,8 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 	</PropertyGroup>
-	<PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0-windows' ">
-		<UseWindowsForms>true</UseWindowsForms>
-		<UseWPF>true</UseWPF>
-	</PropertyGroup>
 	<ItemGroup>
 		<None Remove=".gitignore" />
-	</ItemGroup>
-	<ItemGroup>
-		<!--This helps with theme dll-s trimming.
-	If you will publish your application in self-contained mode with p:PublishTrimmed=true and it will use Fluent theme Default theme will be trimmed from the output and vice versa.
-	https://github.com/AvaloniaUI/Avalonia/issues/5593 -->
-		<TrimmableAssembly Include="Avalonia.Themes.Fluent" />
-		<TrimmableAssembly Include="Avalonia.Themes.Default" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Avalonia" Version="11.0.0-preview4" />
@@ -31,15 +20,11 @@
 		<PackageReference Include="NP.IoCy" Version="1.0.20" />
 		<PackageReference Include="XamlNameReferenceGenerator" Version="1.4.2" />
 	</ItemGroup>	
-	<ItemGroup Condition=" '$(TargetFramework)' != 'net6.0-windows' ">
-		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
-	</ItemGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0-windows' ">
 		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Core\PolyFills\PolyFills.csproj" />
 		<ProjectReference Include="..\Core\Visuals\Visuals.csproj" />
-		<ProjectReference Include="..\ViewModels\ViewModels.csproj" />
 	</ItemGroup>
 </Project>
