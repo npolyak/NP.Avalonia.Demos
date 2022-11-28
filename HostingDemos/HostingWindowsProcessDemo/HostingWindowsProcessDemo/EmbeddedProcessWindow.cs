@@ -11,25 +11,26 @@ namespace HostingWindowsProcessDemo
 {
     public class EmbeddedProcessWindow : NativeControlHost
     {
-        public string ProcessPath;
-        private Process _p;
+        public string ProcessPath { get; }
+        private Process? _p;
 
         public IntPtr ProcessWindowHandle { get; private set; }
 
         public EmbeddedProcessWindow(string processPath)
         {
             ProcessPath = processPath;
-
         }
 
         public async Task StartProcess()
         {
+            // start the process
             Process p = Process.Start(ProcessPath);
 
             _p = p;
 
             _p.Exited += _p_Exited;
 
+            // wait until p.MainWindowHandle is non-zero
             while (true)
             {
                 await Task.Delay(200);
@@ -38,17 +39,18 @@ namespace HostingWindowsProcessDemo
                     break;
             }
 
+            // set ProcessWindowHandle to the MainWindowHandle of the process
             ProcessWindowHandle = p.MainWindowHandle;
         }
 
         protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
         {
-            WinApi.SetParent(ProcessWindowHandle, ((Window) e.Root).PlatformImpl.Handle.Handle);
+            // modify the style of the child window
 
-
+            // get the old style of the child window
             long style = WinApi.GetWindowLongPtr(ProcessWindowHandle, -16);
 
-            // set the styles - remove the embedded window's frame and other attributes of
+            // modify the style of the ChildWindow - remove the embedded window's frame and other attributes of
             // a stand alone window. Add child flag
             style &= ~0x00010000;
             style &= ~0x00800000;
@@ -62,27 +64,30 @@ namespace HostingWindowsProcessDemo
             HandleRef handleRef =
                 new HandleRef(null, ProcessWindowHandle);
 
-
+            // set the new style of the schild window
             WinApi.SetWindowLongPtr(handleRef, -16, (IntPtr)style);
 
-            base.OnAttachedToVisualTree(e);
-        }
+            // set the parent of the ProcessWindowHandle to be the main window's handle
+            WinApi.SetParent(ProcessWindowHandle, ((Window)e.Root).PlatformImpl.Handle.Handle);
 
-        private void _p_Exited(object? sender, System.EventArgs e)
-        {
-           
+            base.OnAttachedToVisualTree(e);
         }
 
         protected override IPlatformHandle CreateNativeControlCore(IPlatformHandle parent)
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
+                // return the ProcessWindowHandle
                 return new PlatformHandle(ProcessWindowHandle, "ProcWinHandle");
             }
             else
             {
                 return base.CreateNativeControlCore(parent);
             }
+        }
+
+        private void _p_Exited(object? sender, System.EventArgs e)
+        {
 
         }
     }
