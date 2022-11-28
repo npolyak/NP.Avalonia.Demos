@@ -14,6 +14,7 @@
                     Content="ClickMe">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
+                        <!-- Call the method IncreaseNumberClicks() on the view model-->
                         <i:CallMethodAction TargetObject="{Binding}"
                                             MethodName="IncreaseNumberClicks" />
                     </i:EventTrigger>
