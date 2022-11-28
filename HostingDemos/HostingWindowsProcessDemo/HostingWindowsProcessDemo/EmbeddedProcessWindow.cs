@@ -48,6 +48,8 @@ namespace HostingWindowsProcessDemo
 
             long style = WinApi.GetWindowLongPtr(ProcessWindowHandle, -16);
 
+            // set the styles - remove the embedded window's frame and other attributes of
+            // a stand alone window. Add child flag
             style &= ~0x00010000;
             style &= ~0x00800000;
             style &= ~0x80000000;

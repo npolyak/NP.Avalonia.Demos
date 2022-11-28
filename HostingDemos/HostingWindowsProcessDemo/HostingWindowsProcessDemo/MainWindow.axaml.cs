@@ -4,7 +4,8 @@ namespace HostingWindowsProcessDemo
 {
     public partial class MainWindow : Window
     {
-        public const string ProcessPath = @"AppsToHost\WpfApp\WpfApp.exe";
+        public const string WpfAppProcessPath = @"AppsToHost\WpfApp\WpfApp.exe";
+
 
         public MainWindow()
         {
@@ -15,11 +16,12 @@ namespace HostingWindowsProcessDemo
 
         private async void MainWindow_Opened(object? sender, System.EventArgs e)
         {
-            var embeddedProcessWindow = new EmbeddedProcessWindow(ProcessPath);
+            var wpfAppEmbeddedProcessWindow = new EmbeddedProcessWindow(WpfAppProcessPath);
 
-            await embeddedProcessWindow.StartProcess();
+            await wpfAppEmbeddedProcessWindow.StartProcess();
 
-            WpfWindowPlacementPanel.Children.Add(embeddedProcessWindow);
+            WpfAppPlacementControl.Content = wpfAppEmbeddedProcessWindow;
+
         }
     }
 }
