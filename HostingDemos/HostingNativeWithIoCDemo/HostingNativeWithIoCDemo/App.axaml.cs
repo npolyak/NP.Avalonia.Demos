@@ -17,8 +17,10 @@ namespace HostingWinFormsDemo
 
         public override void OnFrameworkInitializationCompleted()
         {
+            // Assembly injection
             Container.InjectPluginsFromSubFolders($"Plugins{Path.DirectorySeparatorChar}Views");
 
+            // container creation
             Container.CompleteConfiguration();
 
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)

@@ -12,7 +12,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\Core\PolyFills\PolyFills.csproj" />
 		<ProjectReference Include="..\..\NativeControls\LinuxControls\LinuxControls.csproj" />
-		<ProjectReference Include="..\..\ViewModels\ViewModels.csproj" />
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">

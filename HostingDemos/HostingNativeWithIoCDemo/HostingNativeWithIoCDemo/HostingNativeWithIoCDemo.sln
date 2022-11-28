@@ -15,15 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolyFills", "..\Core\PolyFi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Visuals", "..\Core\Visuals\Visuals.csproj", "{2E0785C7-F70A-4B7F-BA8C-1B7A18B554D1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NativeAdapters", "..\NativeAdapters", "{11457DD2-18FE-432C-BDEF-4E1A5D7ED20F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NativeAdapters", "NativeAdapters", "{11457DD2-18FE-432C-BDEF-4E1A5D7ED20F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NativeControls", "..\NativeControls", "{AA399C05-E30A-49A9-BAAE-4EB5D82C2E8E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NativeControls", "NativeControls", "{AA399C05-E30A-49A9-BAAE-4EB5D82C2E8E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "..\Core", "{F77734A0-5AA0-42A7-96A0-7273F1C3C0B8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F77734A0-5AA0-42A7-96A0-7273F1C3C0B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinuxAdapters", "..\NativeAdapters\LinuxAdapters\LinuxAdapters.csproj", "{704CA869-72BB-4E6C-A459-E8307B698EAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinuxAdapters", "..\NativeAdapters\LinuxAdapters\LinuxAdapters.csproj", "{704CA869-72BB-4E6C-A459-E8307B698EAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAdapters", "..\NativeAdapters\WindowsAdapters\WindowsAdapters.csproj", "{8BD2BB89-2FDF-44A8-88AE-89CC870881E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsAdapters", "..\NativeAdapters\WindowsAdapters\WindowsAdapters.csproj", "{8BD2BB89-2FDF-44A8-88AE-89CC870881E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

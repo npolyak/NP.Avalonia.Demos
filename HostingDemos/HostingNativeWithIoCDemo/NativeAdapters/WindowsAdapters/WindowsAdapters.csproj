@@ -13,7 +13,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\Core\PolyFills\PolyFills.csproj" />
 		<ProjectReference Include="..\..\NativeControls\WpfControls\WpfControls.csproj" />
-		<ProjectReference Include="..\..\ViewModels\ViewModels.csproj" />
 	</ItemGroup>
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
