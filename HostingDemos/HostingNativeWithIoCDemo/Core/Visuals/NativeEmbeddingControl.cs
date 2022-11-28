@@ -26,14 +26,16 @@ namespace Visuals
         {
             if (Handle != null)
             {
+                // if handle property is not null, return it
                 return Handle;
             }
-
+         
             return base.CreateNativeControlCore(parent!);
         }
 
         protected override void DestroyNativeControlCore(IPlatformHandle? handle)
         {
+            // call extension method HandleBuilder.DestroyHandle() of PolyFill project
             handle.DestroyHandle();
         }
     }
