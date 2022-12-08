@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFrameworks>net6.0;net6.0-windows</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<!--Avalonia doesen't support TrimMode=link currently,but we are working on that https://github.com/AvaloniaUI/Avalonia/issues/6892 -->
+		<TrimMode>copyused</TrimMode>
+		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net6.0-windows' " >
+		<UseWindowsForms>true</UseWindowsForms>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove=".gitignore" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="11.0.0-preview4" />
+		<PackageReference Include="Avalonia.Desktop" Version="11.0.0-preview4" />
+		<!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+		<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.0-preview4" />
+		<PackageReference Condition=" '$(TargetFramework)' != 'net6.0-windows' " Include="GtkSharp" Version="3.24.24.38" />
+		<PackageReference Include="XamlNameReferenceGenerator" Version="1.4.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ViewModels\ViewModels.csproj" />
+		<ProjectReference Condition=" '$(TargetFramework)' != 'net6.0-windows' " Include="..\LinuxControl\LinuxControl.csproj" />
+		<ProjectReference Condition=" '$(TargetFramework)' == 'net6.0-windows' " Include="..\WpfControl\WpfControl.csproj" />
+	</ItemGroup>
+</Project>

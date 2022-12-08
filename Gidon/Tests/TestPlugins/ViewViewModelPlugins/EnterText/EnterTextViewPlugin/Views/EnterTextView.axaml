@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:np="https://np.com/visuals">
+	<DataTemplate x:Key="EnterTextView">
+		<Grid RowDefinitions="*, Auto">
+			<Control.Styles>
+				<StyleInclude Source="avares://NP.Avalonia.Visuals/Themes/ThemeStyles.axaml"/>
+			</Control.Styles>
+			<np:LabeledControl Text="Enter Text: ">
+				<ControlTemplate>
+					<TextBox Text="{Binding Path=Text, Mode=TwoWay}"
+							 Width="150"/>
+				</ControlTemplate>
+			</np:LabeledControl>
+			<Button Content="Send"
+					Grid.Row="1"
+					IsEnabled="{Binding Path=CanSendText}"
+					np:CallAction.TheEvent="{x:Static Button.ClickEvent}"
+					np:CallAction.MethodName="SendText"
+					HorizontalAlignment="Right"
+					VerticalAlignment="Center"
+					Margin="10"/>
+		</Grid>
+	</DataTemplate>
+</ResourceDictionary>

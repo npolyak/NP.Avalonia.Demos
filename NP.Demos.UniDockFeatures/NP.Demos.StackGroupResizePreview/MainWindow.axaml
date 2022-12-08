@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="NP.Demos.StableGroupDemo.MainWindow"
+        Title="NP.Demos.StableGroupDemo"
+        xmlns:np="https://np.com/visuals"
+        Width="600"
+        Height="400">
+  <Window.Resources>
+    <!-- Define the dock manager-->
+    <np:DockManager x:Key="TheDockManager"
+					ResizePreview="True"/>
+  </Window.Resources>
+  <Grid Margin="5">
+    <!-- top level group should reference the dock manager-->
+    <np:RootDockGroup TheDockManager="{StaticResource TheDockManager}">
+      <!-- Second Level group arranges the top and the bottom parts 
+           vertically-->
+      <np:StackDockGroup TheOrientation="Vertical">
+        <!-- top group arranges two top Dock Panes horizontally-->
+        <np:StackDockGroup TheOrientation="Horizontal">
+          <np:DockItem Header="Hi">
+            <TextBlock Text="Hi World!"/>
+          </np:DockItem>
+          <np:DockItem Header="Hello">
+            <TextBlock Text="Hello World!"/>
+          </np:DockItem>
+        </np:StackDockGroup>
+
+        <!-- Tabbed group at the bottom -->
+        <np:TabbedDockGroup>
+          <np:DockItem Header="Tab1">
+            <TextBlock Text="This is tab1"/>
+          </np:DockItem>
+          <np:DockItem Header="Tab2">
+            <TextBlock Text="Tab2 is here"/>
+          </np:DockItem>
+          <np:DockItem Header="Tab3">
+            <TextBlock Text="Finally - Tab3"/>
+          </np:DockItem>
+        </np:TabbedDockGroup>
+      </np:StackDockGroup>
+    </np:RootDockGroup>
+  </Grid>
+</Window>

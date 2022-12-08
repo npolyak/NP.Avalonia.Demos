@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="Gtk.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="GtkSharp" Version="3.24.24.38" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\ViewModels\ViewModels.csproj" />
+	</ItemGroup>
+</Project>
