@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using NP.IoCy;
+using NP.DependencyInjection.Interfaces;
 using System.IO;
 
 namespace HostingWinFormsDemo
@@ -13,15 +14,17 @@ namespace HostingWinFormsDemo
             AvaloniaXamlLoader.Load(this);
         }
 
-        public static IoCContainer Container { get; } = new IoCContainer();
+        public static IDependencyInjectionContainer? Container { get; private set; }
 
         public override void OnFrameworkInitializationCompleted()
         {
+            var containerBuilder = new ContainerBuilder();
+
             // Assembly injection
-            Container.InjectPluginsFromSubFolders($"Plugins{Path.DirectorySeparatorChar}Views");
+            containerBuilder.RegisterPluginsFromSubFolders($"Plugins{Path.DirectorySeparatorChar}Views");
 
             // container creation
-            Container.CompleteConfiguration();
+            Container = containerBuilder.Build();
 
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {

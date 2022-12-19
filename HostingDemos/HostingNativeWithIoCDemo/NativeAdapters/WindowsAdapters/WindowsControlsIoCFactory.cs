@@ -1,14 +1,14 @@
 ﻿using Avalonia.Platform;
-using NP.Utilities.Attributes;
+using NP.DependencyInjection.Attributes;
 using PolyFills;
 using WpfControls;
 
 namespace WindowsAdapters
 {
-    [HasFactoryMethods]
+    [HasRegisterMethods]
     public static class WindowsControlsIoCFactory
     {
-        [FactoryMethod(typeof(IPlatformHandle), partKey: "ClickCounterView")]
+        [RegisterMethod(typeof(IPlatformHandle), resolutionKey: "ClickCounterView")]
         public static IPlatformHandle? CreateView()
         {
             // create the Windows native WPF control

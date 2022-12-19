@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="NP.Utilities" Version="1.0.14" />
+	  <PackageReference Include="NP.DependencyInjection" Version="1.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>

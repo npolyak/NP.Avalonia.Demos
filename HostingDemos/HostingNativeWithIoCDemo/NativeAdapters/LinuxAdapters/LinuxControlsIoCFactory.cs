@@ -1,14 +1,14 @@
 ﻿using Avalonia.Platform;
 using LinuxControls;
-using NP.Utilities.Attributes;
+using NP.DependencyInjection.Attributes;
 using PolyFills;
 
 namespace LinuxAdapters
 {
-    [HasFactoryMethods]
+    [HasRegisterMethods]
     public static class LinuxControlsIoCFactory
     {
-        [FactoryMethod(typeof(IPlatformHandle),  partKey: "ClickCounterView")]
+        [RegisterMethod(typeof(IPlatformHandle),  resolutionKey: "ClickCounterView")]
         public static IPlatformHandle? CreateView()
         {
             // HandleBuilder.BuildObjAndHandle will run the LinuxView 
