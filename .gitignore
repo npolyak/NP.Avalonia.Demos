@@ -309,3 +309,9 @@
 /HostingDemos/HostingLinuxProcessDemo/LinuxApp/obj
 /HostingDemos/HostingWpfControlDemo/WpfControl/bin/Debug/net6.0-windows
 /HostingDemos/HostingWpfControlDemo/WpfControl/obj
+/CustomBehaviors/NP.Demos.WPFCallActionBehaviorSample/.vs/ProjectEvaluation
+/CustomBehaviors/NP.Demos.WPFCallActionBehaviorSample/bin/Debug/net6.0-windows
+/NP.Demos.AvaloniaBasicConcepts/NP.Demos.AttachedPropertySample/.vs/ProjectEvaluation
+/NP.Demos.UniDockIntroductionDemo/.vs
+/NP.MultiPlaformWindowDemo/.vs
+/NP.MultiPlaformWindowDemo/bin/Debug/net6.0

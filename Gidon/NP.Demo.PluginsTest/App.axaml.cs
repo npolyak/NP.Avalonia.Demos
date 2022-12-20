@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using NP.Avalonia.Gidon;
-using NP.IoCy;
+using NP.DependencyInjection.Interfaces;
 using NP.NLogAdapter;
 
 namespace NP.Demo.PluginsTest
@@ -23,7 +23,7 @@ namespace NP.Demo.PluginsTest
                 "Plugins/ViewPlugins");
 
         // the IoC container
-        public static IoCContainer TheContainer => ThePluginManager.TheContainer;
+        public static IDependencyInjectionContainer TheContainer => ThePluginManager.TheContainer;
 
         public App()
         {
