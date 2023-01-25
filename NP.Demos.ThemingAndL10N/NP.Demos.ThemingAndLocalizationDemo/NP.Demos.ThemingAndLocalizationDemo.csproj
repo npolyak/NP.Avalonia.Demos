@@ -18,7 +18,7 @@
     <AvaloniaResource Include="Images\USA.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.32" />
+    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.35" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ColorDictionaries\" />
