@@ -1,14 +1,14 @@
-﻿using NP.Utilities;
-using NP.Utilities.Attributes;
+﻿using NP.DependencyInjection.Attributes;
+using NP.Utilities;
 using NP.Utilities.BasicServices;
 using NP.Utilities.PluginUtils;
 
 namespace AuthenticationViewModelPlugin;
 
-[Implements(typeof(IPlugin), partKey: "AuthenticationVM", isSingleton: true)]
+[RegisterType(typeof(IPlugin), resolutionKey: "AuthenticationVM", isSingleton: true)]
 public class AuthenticationViewModel : VMBase, IPlugin
 {
-    [Part(typeof(IAuthenticationService))]
+    [Inject(typeof(IAuthenticationService))]
     // Authentication service that comes from the container
     public IAuthenticationService? TheAuthenticationService
     {

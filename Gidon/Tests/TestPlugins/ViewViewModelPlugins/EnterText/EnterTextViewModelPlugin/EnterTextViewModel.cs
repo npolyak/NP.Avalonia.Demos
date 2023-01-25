@@ -1,15 +1,15 @@
-﻿using NP.Utilities;
-using NP.Utilities.Attributes;
+﻿using NP.DependencyInjection.Attributes;
+using NP.Utilities;
 using NP.Utilities.PluginUtils;
 using TestServiceInterfaces;
 
 namespace EnterTextViewModelPlugin;
 
-[Implements(typeof(IPlugin), partKey: nameof(EnterTextViewModel), isSingleton: true)]
+[RegisterType(typeof(IPlugin), resolutionKey: nameof(EnterTextViewModel), isSingleton: true)]
 public class EnterTextViewModel : VMBase, IPlugin
 {
     // ITextService implementation
-    [Part(typeof(ITextService))]
+    [Inject(typeof(ITextService))]
     public ITextService? TheTextService { get; private set; }
 
     #region Text Property

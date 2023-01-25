@@ -1,17 +1,18 @@
-﻿using NP.Utilities;
+﻿using NP.DependencyInjection.Attributes;
+using NP.Utilities;
 using NP.Utilities.Attributes;
 using NP.Utilities.PluginUtils;
 using TestServiceInterfaces;
 
 namespace ReceiveTextViewModelPlugin;
 
-[Implements(typeof(IPlugin), partKey: nameof(ReceiveTextViewModel), isSingleton: true)]
+[RegisterType(typeof(IPlugin), resolutionKey: nameof(ReceiveTextViewModel), isSingleton: true)]
 public class ReceiveTextViewModel : VMBase, IPlugin
 {
     ITextService? _textService;
 
     // ITextService implementation
-    [Part(typeof(ITextService))]
+    [Inject(typeof(ITextService))]
     public ITextService? TheTextService
     {
         get => _textService;

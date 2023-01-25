@@ -1,14 +1,13 @@
-﻿using NP.Utilities;
-using NP.Utilities.Attributes;
+﻿using NP.DependencyInjection.Attributes;
+using NP.Utilities;
 using NP.Utilities.BasicServices;
-using System.Security;
 
 namespace MockAuthentication;
 
-[Implements(typeof(IAuthenticationService), IsSingleton = true)]
+[RegisterType(typeof(IAuthenticationService), isSingleton:true)]
 public class MockAuthenticationService : VMBase, IAuthenticationService
 {
-    [Part]
+    [Inject]
     private ILog? Log { get; set; }
 
     private string? _currentUserName;

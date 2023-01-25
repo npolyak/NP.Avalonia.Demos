@@ -1,9 +1,9 @@
-﻿using NP.Utilities.Attributes;
+﻿using NP.DependencyInjection.Attributes;
 using TestServiceInterfaces;
 
 namespace TextService
 {
-    [Implements(typeof(ITextService), IsSingleton = true)]
+    [RegisterType(typeof(ITextService), isSingleton:true)]
     public class TextService : ITextService
     {
         public event Action<string>? SentTextEvent;

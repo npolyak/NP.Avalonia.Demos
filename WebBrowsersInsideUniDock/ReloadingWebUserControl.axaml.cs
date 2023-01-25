@@ -26,7 +26,7 @@ namespace NP.WebBrowsersInsideUniDock
         #endregion Count Styled Avalonia Property
 
 
-        private AvaloniaCefBrowser browser = new();
+        private AvaloniaCefBrowser browser = new AvaloniaCefBrowser();
         public ReloadingWebUserControl()
         {
             _staticCount++;
