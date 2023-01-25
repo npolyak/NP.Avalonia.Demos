@@ -8,6 +8,4 @@
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NP.Avalonia.UniDock" Version="1.0.46" />
-  </ItemGroup>
-</Project>
+    <PackageReference Include="NP.Avalonia.UniDock" Version="1.0.4
