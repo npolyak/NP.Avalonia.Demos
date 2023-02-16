@@ -315,3 +315,8 @@
 /NP.Demos.UniDockIntroductionDemo/.vs
 /NP.MultiPlaformWindowDemo/.vs
 /NP.MultiPlaformWindowDemo/bin/Debug/net6.0
+/EmbeddingProblemOnLinux/WinHostingApp/.vs
+/EmbeddingProblemOnLinux/WinHostingApp/bin/Debug/net6.0
+/EmbeddingProblemOnLinux/WinHostingApp/obj
+/HostingDemos/HostingLinuxProcessDemo/WpfApp/bin/Debug/net6.0-windows
+/HostingDemos/HostingLinuxProcessDemo/WpfApp/obj

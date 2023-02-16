@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="500"
+		Height="300"
+        x:Class="WindowToEmbed.MainWindow"
+        Title="WindowToEmbed">
+	<StackPanel Orientation="Horizontal"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+		<TextBlock Text="Window Handle:   "
+				   VerticalAlignment="Center"/>
+		<TextBox Text="{Binding $parent[Window].WindowHandle}"
+				 IsReadOnly="True"/>
+	</StackPanel>
+</Window>
