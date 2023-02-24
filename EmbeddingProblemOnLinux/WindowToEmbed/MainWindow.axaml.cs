@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
+using System.IO;
 
 namespace WindowToEmbed
 {
@@ -26,6 +27,13 @@ namespace WindowToEmbed
             InitializeComponent();
 
             WindowHandle = (long) this.PlatformImpl.Handle.Handle;
+
+            using StreamWriter writer = new StreamWriter("MyFile.txt");
+
+            writer.WriteLine(WindowHandle);
+
+            writer.Flush();
+            writer.Close();
         }
     }
 }

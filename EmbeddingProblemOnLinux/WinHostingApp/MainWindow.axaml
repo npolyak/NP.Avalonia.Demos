@@ -27,7 +27,12 @@
                     Margin="10,10,5,5"
                     Padding="10,5"/>
         </Grid>
-
+        
+		<GridSplitter Background="Black"
+					  Width="5"
+					  VerticalAlignment="Stretch"
+					  Grid.Column="1"/>
+		
         <Decorator x:Name="HostingPanel"
                    Grid.Column="2">
 

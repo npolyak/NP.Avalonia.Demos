@@ -5,8 +5,8 @@ namespace HostingWindowsProcessDemo
     public partial class MainWindow : Window
     {
         // path to WpfApp.exe
-        public const string WpfAppProcessPath = @"AppsToHost\WpfApp\WpfApp.exe";
-
+        //public const string WpfAppProcessPath = @"AppsToHost\WpfApp\WpfApp.exe";
+        public const string WpfAppProcessPath = @"C:\Program Files\Notepad++\notepad++.exe";
         public MainWindow()
         {
             InitializeComponent();

@@ -35,15 +35,13 @@ namespace WinHostingApp
             AvaloniaXamlLoader.Load(this);
         }
 
-        EmbeddedHost _embeddedHost;
-
         public void Submit()
         {
             IntPtr handle = (IntPtr) nint.Parse(WindowHandleStr);
 
             Decorator hostingPanel = this.FindControl<Decorator>("HostingPanel");
 
-            hostingPanel.Child = (_embeddedHost = new EmbeddedHost(handle));
+            hostingPanel.Child = new EmbeddedHost(handle);
         }
     }
 }
