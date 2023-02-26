@@ -2,23 +2,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{b358dc8c-cd05-4c22-9d44-1083ef03a07f}</ProjectGuid>
-    <ProjectHome>
-    </ProjectHome>
-    <StartupFile>DotPyMatPlot.py</StartupFile>
+    <ProjectGuid>156199b3-2608-4a4a-9c33-0da920ec419b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>SinusoidPyMatPlot</Name>
-    <RootNamespace>SimplePyMatPlot</RootNamespace>
-    <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
-    <CommandLineArguments>
-    </CommandLineArguments>
-    <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>
-    </InterpreterId>
+    <Name>CommonPython</Name>
+    <RootNamespace>CommonPython</RootNamespace>
+    <InterpreterId>MSBuild|common_env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,13 +23,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Interpreter Include="common_env\">
+      <Id>common_env</Id>
+      <Version>3.11</Version>
+      <Description>common_env (Python 3.11 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\launchSettings.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="DotPyMatPlot.py" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
@@ -45,9 +44,5 @@
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
-  </Target>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <!-- copy to the server to register the topic -->
-    <Exec Command="xcopy &quot;$(OutDir)&quot; &quot;$(SolutionDir)\bin\$(Configuration)\net6.0\Apps\$(ProjectName)\&quot; /S /R /Y /I" />
   </Target>
 </Project>

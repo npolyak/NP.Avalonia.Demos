@@ -1,10 +1,5 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using NP.Avalonia.Visuals.Controls;
-using NP.Gidon.Messages;
-using System;
-using System.IO;
 
 namespace DockableAppImplantsDemo
 {
@@ -13,9 +8,9 @@ namespace DockableAppImplantsDemo
         public MainWindow()
         {
             InitializeComponent();
-//#if DEBUG
+#if DEBUG
             this.AttachDevTools();
-//#endif
+#endif
         }
 
         private void InitializeComponent()

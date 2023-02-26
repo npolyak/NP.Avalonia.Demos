@@ -28,7 +28,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self._line, = self._ax.plot(t, np.sin(t + time.time()))
 
 def main(argv):
-    sys.path.append(r'../../../Messages/NP.Gidon.PythonMessages')
+    sys.path.append(r'..\CommonPython\common_env\Lib\site-packages')
 
     import Messages_pb2 as messages
 
@@ -44,6 +44,8 @@ def main(argv):
     
     winhandle = int(app.winId())
     print(winhandle);
+
+    winInfo = messages.WindowInfo()
 
     if len(argv) > 0:
         app.unique_window_host_id = argv[0];

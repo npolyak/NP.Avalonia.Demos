@@ -322,3 +322,6 @@
 /HostingDemos/HostingLinuxProcessDemo/WpfApp/obj
 /Gidon/DockableAppsDemo/Apps/DotPyMatPlot/matplot_env
 /Gidon/NodejsConsoleApp1
+/Gidon/DockableAppsDemo/Apps/CommonPython/common_env/share/man/man1
+/Gidon/DockableAppsDemo/Apps/CommonPython/common_env/Scripts
+/Gidon/DockableAppsDemo/Apps/CommonPython/common_env/Lib/site-packages

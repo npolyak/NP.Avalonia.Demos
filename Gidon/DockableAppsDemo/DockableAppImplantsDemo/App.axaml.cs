@@ -11,7 +11,6 @@ using NP.Grpc.CommonRelayInterfaces;
 using NP.Grpc.RelayClient;
 using NP.Grpc.RelayServer;
 #endif
-using NP.GrpcConfig;
 using NP.IoCy;
 using NP.Protobuf;
 using System;
@@ -33,14 +32,9 @@ namespace DockableAppImplantsDemo
             IContainerBuilderWithMultiCells<Enum> containerBuilder = 
                 new ContainerBuilder<Enum>();
             containerBuilder.RegisterMultiCell(typeof(Enum), IoCKeys.Topics);
+            containerBuilder.RegisterType<IGrpcConfig, GrpcConfig>();
             containerBuilder.RegisterAttributedStaticFactoryMethodsFromClass(typeof(MessagesTopicsGetter));
-#if DEBUG
-            containerBuilder.RegisterSingletonType<IGrpcConfig, GrpcConfig>();
-            containerBuilder.RegisterSingletonType<IRelayServer, RelayServer>();
-            containerBuilder.RegisterSingletonType<IRelayClient, RelayClient>();
-#else
             containerBuilder.RegisterPluginsFromSubFolders("Plugins/Services");
-#endif
             IoCContainer = containerBuilder.Build();
 
             TheRelayServer = IoCContainer.Resolve<IRelayServer>();

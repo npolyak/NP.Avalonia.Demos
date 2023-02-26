@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{AE8F8A79-1
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "DotPyMatPlot", "..\Apps\DotPyMatPlot\DotPyMatPlot.pyproj", "{B358DC8C-CD05-4C22-9D44-1083EF03A07F}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SinusoidPyMatPlot", "..\Apps\SinusoidPyMatPlot\SinusoidPyMatPlot.pyproj", "{254FE6BF-60BA-435F-9470-1377F034C34A}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CommonPython", "..\Apps\CommonPython\CommonPython.pyproj", "{156199B3-2608-4A4A-9C33-0DA920EC419B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +25,18 @@ Global
 		{66DB4584-57CA-415E-9AF5-8C4A2BCDB2A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B358DC8C-CD05-4C22-9D44-1083EF03A07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B358DC8C-CD05-4C22-9D44-1083EF03A07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254FE6BF-60BA-435F-9470-1377F034C34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254FE6BF-60BA-435F-9470-1377F034C34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156199B3-2608-4A4A-9C33-0DA920EC419B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156199B3-2608-4A4A-9C33-0DA920EC419B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B358DC8C-CD05-4C22-9D44-1083EF03A07F} = {AE8F8A79-1EC3-4B85-A473-BE14667C065C}
+		{254FE6BF-60BA-435F-9470-1377F034C34A} = {AE8F8A79-1EC3-4B85-A473-BE14667C065C}
+		{156199B3-2608-4A4A-9C33-0DA920EC419B} = {AE8F8A79-1EC3-4B85-A473-BE14667C065C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BC5B230-6682-4616-B704-70A7A9117AD3}

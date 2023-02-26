@@ -24,14 +24,14 @@
 					<np:DockItemImplantedWindowHost.ProcessInitInfo>
 						<np:MultiPlatformProcessInitInfoWithMatcher UniqueWindowHostId="DotPlot" TheWindowHandleMatcher="{x:Static local:App.TheWindowHandleMatcher}">
 							<np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
-								<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../../Tests/Apps/DotPyMatPlot/" InsertIdx="1">
+								<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../Apps/DotPyMatPlot/" InsertIdx="1">
 									<np:ProcessInitInfo.Args>
 										<x:String>DotPyMatPlot.py</x:String>
 									</np:ProcessInitInfo.Args>
 								</np:ProcessInitInfo>
 							</np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
 							<np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
-								<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../../Tests/Apps/DotPyMatPlot/" InsertIdx="1">
+								<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../Apps/DotPyMatPlot/" InsertIdx="1">
 									<np:ProcessInitInfo.Args>
 										<x:String>DotPyMatPlot.py</x:String>
 									</np:ProcessInitInfo.Args>
@@ -50,14 +50,14 @@
 					<np:DockItemImplantedWindowHost.ProcessInitInfo>
 						<np:MultiPlatformProcessInitInfoWithMatcher UniqueWindowHostId="SinusoidPlot" TheWindowHandleMatcher="{x:Static local:App.TheWindowHandleMatcher}">
 							<np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
-								<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../../Tests/Apps/SinusoidPyMatPlot/" InsertIdx="1">
+								<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../Apps/SinusoidPyMatPlot/" InsertIdx="1">
 									<np:ProcessInitInfo.Args>
 										<x:String>SinusoidPyMatPlot.py</x:String>
 									</np:ProcessInitInfo.Args>
 								</np:ProcessInitInfo>
 							</np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
 							<np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
-								<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../../Tests/Apps/SinusoidPyMatPlot/" InsertIdx="1">
+								<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../Apps/SinusoidPyMatPlot/" InsertIdx="1">
 									<np:ProcessInitInfo.Args>
 										<x:String>SinusoidPyMatPlot.py</x:String>
 									</np:ProcessInitInfo.Args>
