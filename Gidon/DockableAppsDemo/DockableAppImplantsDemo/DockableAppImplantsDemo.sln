@@ -13,6 +13,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SinusoidPyMatPlot", "..\App
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CommonPython", "..\Apps\CommonPython\CommonPython.pyproj", "{156199B3-2608-4A4A-9C33-0DA920EC419B}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "HistogramPlot", "..\Apps\HistogramPlot\HistogramPlot.pyproj", "{DB04B8EC-4199-4070-A036-4F4CA2829976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,8 @@ Global
 		{254FE6BF-60BA-435F-9470-1377F034C34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{156199B3-2608-4A4A-9C33-0DA920EC419B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{156199B3-2608-4A4A-9C33-0DA920EC419B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB04B8EC-4199-4070-A036-4F4CA2829976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB04B8EC-4199-4070-A036-4F4CA2829976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +41,7 @@ Global
 		{B358DC8C-CD05-4C22-9D44-1083EF03A07F} = {AE8F8A79-1EC3-4B85-A473-BE14667C065C}
 		{254FE6BF-60BA-435F-9470-1377F034C34A} = {AE8F8A79-1EC3-4B85-A473-BE14667C065C}
 		{156199B3-2608-4A4A-9C33-0DA920EC419B} = {AE8F8A79-1EC3-4B85-A473-BE14667C065C}
+		{DB04B8EC-4199-4070-A036-4F4CA2829976} = {AE8F8A79-1EC3-4B85-A473-BE14667C065C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BC5B230-6682-4616-B704-70A7A9117AD3}
