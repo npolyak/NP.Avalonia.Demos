@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "NP.Demos.StocksAndOrdersViewModelsDemo": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}

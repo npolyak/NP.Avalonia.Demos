@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:utils="clr-namespace:NP.Utilities.PluginUtils;assembly=NP.Utilities"
+		xmlns:basicServices="clr-namespace:NP.Utilities.BasicServices;assembly=NP.Utilities"
+        xmlns:common="clr-namespace:Common;assembly=Common"
+		xmlns:np="https://np.com/visuals"
+		np:DockAttachedProperties.TheDockManager="{DynamicResource TheDockManager}"
+		xmlns:local="clr-namespace:DockableAppImplantsDemo"
+        x:Class="DockableAppImplantsDemo.MainWindow"
+        Title="Implanted Python Windows Test"
+	    Width="850"
+	    Height="400"
+		MinHeight="150">
+	<Window.Resources>
+		<np:DockManager x:Key="TheDockManager"/>
+	</Window.Resources>
+	<np:RootDockGroup TheDockManager="{StaticResource TheDockManager}">
+		<np:StackDockGroup TheOrientation="Horizontal">
+			<np:DockItem Header="Dot Plot">
+				<np:DockItemImplantedWindowHost	x:Name="TheWindowHostContainer1"
+												Margin="2"
+												HorizontalAlignment="Stretch"
+												VerticalAlignment="Stretch">
+					<np:DockItemImplantedWindowHost.ProcessInitInfo>
+						<np:MultiPlatformProcessInitInfoWithMatcher UniqueWindowHostId="DotPlot" TheWindowHandleMatcher="{x:Static local:App.TheWindowHandleMatcher}">
+							<np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
+								<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../../Tests/Apps/DotPyMatPlot/" InsertIdx="1">
+									<np:ProcessInitInfo.Args>
+										<x:String>DotPyMatPlot.py</x:String>
+									</np:ProcessInitInfo.Args>
+								</np:ProcessInitInfo>
+							</np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
+							<np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
+								<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../../Tests/Apps/DotPyMatPlot/" InsertIdx="1">
+									<np:ProcessInitInfo.Args>
+										<x:String>DotPyMatPlot.py</x:String>
+									</np:ProcessInitInfo.Args>
+								</np:ProcessInitInfo>
+							</np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
+						</np:MultiPlatformProcessInitInfoWithMatcher>
+					</np:DockItemImplantedWindowHost.ProcessInitInfo>
+				</np:DockItemImplantedWindowHost>
+			</np:DockItem>
+
+			<np:DockItem Header="Sinusoid">
+				<np:DockItemImplantedWindowHost x:Name="TheWindowHostContainer2"
+												Margin="2"
+												HorizontalAlignment="Stretch"
+												VerticalAlignment="Stretch">
+					<np:DockItemImplantedWindowHost.ProcessInitInfo>
+						<np:MultiPlatformProcessInitInfoWithMatcher UniqueWindowHostId="SinusoidPlot" TheWindowHandleMatcher="{x:Static local:App.TheWindowHandleMatcher}">
+							<np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
+								<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../../Tests/Apps/SinusoidPyMatPlot/" InsertIdx="1">
+									<np:ProcessInitInfo.Args>
+										<x:String>SinusoidPyMatPlot.py</x:String>
+									</np:ProcessInitInfo.Args>
+								</np:ProcessInitInfo>
+							</np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
+							<np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
+								<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../../Tests/Apps/SinusoidPyMatPlot/" InsertIdx="1">
+									<np:ProcessInitInfo.Args>
+										<x:String>SinusoidPyMatPlot.py</x:String>
+									</np:ProcessInitInfo.Args>
+								</np:ProcessInitInfo>
+							</np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
+						</np:MultiPlatformProcessInitInfoWithMatcher>
+					</np:DockItemImplantedWindowHost.ProcessInitInfo>
+				</np:DockItemImplantedWindowHost>
+			</np:DockItem>
+		</np:StackDockGroup>
+	</np:RootDockGroup>
+</Window>
