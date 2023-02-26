@@ -12,7 +12,8 @@
     <OutputPath>.</OutputPath>
     <Name>CommonPython</Name>
     <RootNamespace>CommonPython</RootNamespace>
-    <InterpreterId>MSBuild|common_env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,17 +23,6 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
-  <ItemGroup>
-    <Interpreter Include="common_env\">
-      <Id>common_env</Id>
-      <Version>3.11</Version>
-      <Description>common_env (Python 3.11 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
-  </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
   </ItemGroup>

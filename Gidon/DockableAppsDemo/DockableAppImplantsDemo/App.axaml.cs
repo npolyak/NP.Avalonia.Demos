@@ -1,16 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Avalonia.Threading;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using NP.Avalonia.Gidon;
 using NP.DependencyInjection.Interfaces;
 using NP.Gidon.Messages;
 using NP.Grpc.CommonRelayInterfaces;
-#if DEBUG
-using NP.Grpc.RelayClient;
-using NP.Grpc.RelayServer;
-#endif
 using NP.IoCy;
 using NP.Protobuf;
 using System;
