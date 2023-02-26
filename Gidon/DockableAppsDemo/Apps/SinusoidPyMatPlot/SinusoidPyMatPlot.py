@@ -28,7 +28,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self._line, = self._ax.plot(t, np.sin(t + time.time()))
 
 def main(argv):
-    sys.path.append(r'..\CommonPython\common_env\Lib\site-packages')
+    sys.path.append(r'..\CommonPython\env\Lib\site-packages')
 
     import Messages_pb2 as messages
 

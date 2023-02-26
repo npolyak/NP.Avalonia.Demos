@@ -34,7 +34,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         ax.set_ylabel('entry b')
 
 def main(argv):
-    sys.path.append(r'..\CommonPython\common_env\Lib\site-packages')
+    sys.path.append(r'..\CommonPython\env\Lib\site-packages')
 
     import Messages_pb2 as messages
 
