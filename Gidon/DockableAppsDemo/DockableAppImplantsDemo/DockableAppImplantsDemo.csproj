@@ -31,7 +31,7 @@
 		<PackageReference Include="NP.Grpc.RelayServer" Version="1.0.7" GeneratePathProperty="true">
 			<ExcludeAssets>All</ExcludeAssets>
 		</PackageReference>
-		<PackageReference Include="NP.Avalonia.Gidon" Version="0.99.15" />
+		<PackageReference Include="NP.Avalonia.Gidon" Version="0.99.16" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -69,33 +69,31 @@
 					</np:DockItemImplantedWindowHost>
 				</np:DockItem>
 			</np:StackDockGroup>
-			<np:StackDockGroup TheOrientation="Horizontal">
-				<np:DockItem Header="Histogram" DockId="Histogram">
-					<np:DockItemImplantedWindowHost x:Name="TheWindowHostContainer3"
-													Margin="2"
-													HorizontalAlignment="Stretch"
-													VerticalAlignment="Stretch">
-						<np:DockItemImplantedWindowHost.ProcessInitInfo>
-							<np:MultiPlatformProcessInitInfoWithMatcher UniqueWindowHostId="HistogramPlot" TheWindowHandleMatcher="{x:Static local:App.TheWindowHandleMatcher}">
-								<np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
-									<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../Apps/HistogramPlot/" InsertIdx="1">
-										<np:ProcessInitInfo.Args>
-											<x:String>HistogramPlot.py</x:String>
-										</np:ProcessInitInfo.Args>
-									</np:ProcessInitInfo>
-								</np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
-								<np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
-									<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../Apps/HistogramPlot/" InsertIdx="1">
-										<np:ProcessInitInfo.Args>
-											<x:String>HistogramPlot.py</x:String>
-										</np:ProcessInitInfo.Args>
-									</np:ProcessInitInfo>
-								</np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
-							</np:MultiPlatformProcessInitInfoWithMatcher>
-						</np:DockItemImplantedWindowHost.ProcessInitInfo>
-					</np:DockItemImplantedWindowHost>
-				</np:DockItem>
-			</np:StackDockGroup>
+			<np:DockItem Header="Histogram" DockId="Histogram">
+				<np:DockItemImplantedWindowHost x:Name="TheWindowHostContainer3"
+												Margin="2"
+												HorizontalAlignment="Stretch"
+												VerticalAlignment="Stretch">
+					<np:DockItemImplantedWindowHost.ProcessInitInfo>
+						<np:MultiPlatformProcessInitInfoWithMatcher UniqueWindowHostId="HistogramPlot" TheWindowHandleMatcher="{x:Static local:App.TheWindowHandleMatcher}">
+							<np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
+								<np:ProcessInitInfo ExePath="pythonw" WorkingDir="../../../../Apps/HistogramPlot/" InsertIdx="1">
+									<np:ProcessInitInfo.Args>
+										<x:String>HistogramPlot.py</x:String>
+									</np:ProcessInitInfo.Args>
+								</np:ProcessInitInfo>
+							</np:MultiPlatformProcessInitInfoWithMatcher.WindowsProcInitInfo>
+							<np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
+								<np:ProcessInitInfo ExePath="python3" WorkingDir="../../../../Apps/HistogramPlot/" InsertIdx="1">
+									<np:ProcessInitInfo.Args>
+										<x:String>HistogramPlot.py</x:String>
+									</np:ProcessInitInfo.Args>
+								</np:ProcessInitInfo>
+							</np:MultiPlatformProcessInitInfoWithMatcher.LinuxProcInitInfo>
+						</np:MultiPlatformProcessInitInfoWithMatcher>
+					</np:DockItemImplantedWindowHost.ProcessInitInfo>
+				</np:DockItemImplantedWindowHost>
+			</np:DockItem>
 		</np:StackDockGroup>
 	</np:RootDockGroup>
 </Window>
