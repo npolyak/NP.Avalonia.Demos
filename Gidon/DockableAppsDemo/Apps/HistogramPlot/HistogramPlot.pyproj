@@ -6,7 +6,7 @@
     <ProjectHome>
     </ProjectHome>
     <StartupFile>HistogramPlot.py</StartupFile>
-    <SearchPath>..\..\..\Messages\NP.Gidon.PythonMessages</SearchPath>
+    <SearchPath>..\CommonPython\env\Lib\site-packages</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>SinusoidPyMatPlot</Name>
