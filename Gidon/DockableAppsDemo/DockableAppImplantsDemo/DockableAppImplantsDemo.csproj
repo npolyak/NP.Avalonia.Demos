@@ -19,7 +19,7 @@
 		<None Remove=".gitignore" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
+		<PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -37,7 +37,7 @@
 		<RelayServerFiles Include="$(PkgNP_Grpc_RelayServer)\lib\net6.0\**\*.*" />
 	</ItemGroup>
 
-	<Target Name="CopyClientPluginFromNugetPackage" AfterTargets="Build" >
+	<Target Name="CopyClientPluginFromNugetPackage" AfterTargets="Build">
 		<PropertyGroup>
 			<ClientPluginFolder>$(TargetDir)\Plugins\Services\NP.Grpc.RelayClient</ClientPluginFolder>
 		</PropertyGroup>
@@ -45,7 +45,7 @@
 		<Copy SourceFiles="@(RelayClientFiles)" DestinationFolder="$(ClientPluginFolder)\%(RecursiveDir)" />
 	</Target>
 
-	<Target Name="CopyServerPluginFromNugetPackage" AfterTargets="Build" >
+	<Target Name="CopyServerPluginFromNugetPackage" AfterTargets="Build">
 		<PropertyGroup>
 			<ServerPluginFolder>$(TargetDir)\Plugins\Services\NP.Grpc.RelayServer</ServerPluginFolder>
 		</PropertyGroup>
