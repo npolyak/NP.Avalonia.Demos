@@ -14,6 +14,7 @@ import sys;
 class ApplicationWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
+        # create QWidget, its layout and canvas for the figure
         self._main = QtWidgets.QWidget()
         self.setCentralWidget(self._main)
         layout = QtWidgets.QVBoxLayout(self._main)
@@ -21,17 +22,23 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         canvas = FigureCanvas()
         layout.addWidget(canvas)
 
-        np.random.seed(19680801)  # seed the random number generator.
+        # generate data for the plot
+        np.random.seed(19680801) 
         data = {'a': np.arange(50),
                 'c': np.random.randint(0, 50, 50),
                 'd': np.random.randn(50)}
         data['b'] = data['a'] + 10 * np.random.randn(50)
         data['d'] = np.abs(data['d']) * 100
+        #end generate data for the plot
 
-        ax = canvas.figure.subplots()
-        ax.scatter('a', 'b', c='c', s='d', data=data)
-        ax.set_xlabel('entry a')
-        ax.set_ylabel('entry b')
+        # create plot
+        plt = canvas.figure.subplots()
+        #paint the dots 
+        plt.scatter('a', 'b', c='c', s='d', data=data)
+
+        #set the names of the axes of the plot
+        plt.set_xlabel('entry a')
+        plt.set_ylabel('entry b')
 
 def main(argv):
     sys.path.append(r'..\CommonPython\env\Lib\site-packages')
@@ -44,21 +51,29 @@ def main(argv):
     if not qapp:
         qapp = QtWidgets.QApplication(sys.argv)
 
+    #create and show the window
     app = ApplicationWindow()
     app.show()
     app.activateWindow()
     
+    # get the handle of the window
     winhandle = int(app.winId())
     print(winhandle);
 
+    # argument means that the Python program is started from the C# code
     if len(argv) > 0:
-        app.unique_window_host_id = argv[0];
+        app.unique_window_host_id = argv[0]; #unique window host id
 
+        #create Relay Client
         broadcastingClient = BroadcastingRelayClient("localhost", 5051)
 
+        # connect the relay client to the server
         broadcastingClient.connect_if_needed()
 
+        # create the WindowInfo object containing the UniqueWindowHostId and the WindowHandle
         winInfo = messages.WindowInfo(WindowHandle=winhandle, UniqueWindowHostId=app.unique_window_host_id)
+
+        #publish the WindowInfo object to the Relay Server
         broadcastingClient.broadcast_object(winInfo, "WindowInfoTopic", 1)
 
     app.raise_()
