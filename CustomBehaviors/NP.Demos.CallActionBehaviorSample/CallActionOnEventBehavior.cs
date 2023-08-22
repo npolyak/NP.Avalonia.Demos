@@ -9,18 +9,18 @@ namespace NP.Demos.CallActionBehaviorSample
     public class CallActionOnEventBehavior
     {
         #region TheEvent Attached Avalonia Property
-        public static RoutedEvent GetTheEvent(IControl obj)
+        public static RoutedEvent GetTheEvent(Control obj)
         {
             return obj.GetValue(TheEventProperty);
         }
 
-        public static void SetTheEvent(IControl obj, RoutedEvent value)
+        public static void SetTheEvent(Control obj, RoutedEvent value)
         {
             obj.SetValue(TheEventProperty, value);
         }
 
         public static readonly AttachedProperty<RoutedEvent> TheEventProperty =
-            AvaloniaProperty.RegisterAttached<CallActionOnEventBehavior, IControl, RoutedEvent>
+            AvaloniaProperty.RegisterAttached<CallActionOnEventBehavior, Control, RoutedEvent>
             (
                 "TheEvent"
             );
@@ -28,18 +28,18 @@ namespace NP.Demos.CallActionBehaviorSample
 
 
         #region TargetObject Attached Avalonia Property
-        public static object GetTargetObject(IControl obj)
+        public static object GetTargetObject(Control obj)
         {
             return obj.GetValue(TargetObjectProperty);
         }
 
-        public static void SetTargetObject(IControl obj, object value)
+        public static void SetTargetObject(Control obj, object value)
         {
             obj.SetValue(TargetObjectProperty, value);
         }
 
         public static readonly AttachedProperty<object> TargetObjectProperty =
-            AvaloniaProperty.RegisterAttached<CallActionOnEventBehavior, IControl, object>
+            AvaloniaProperty.RegisterAttached<CallActionOnEventBehavior, Control, object>
             (
                 "TargetObject"
             );
@@ -47,18 +47,18 @@ namespace NP.Demos.CallActionBehaviorSample
 
 
         #region MethodToCall Attached Avalonia Property
-        public static string GetMethodToCall(IControl obj)
+        public static string GetMethodToCall(Control obj)
         {
             return obj.GetValue(MethodToCallProperty);
         }
 
-        public static void SetMethodToCall(IControl obj, string value)
+        public static void SetMethodToCall(Control obj, string value)
         {
             obj.SetValue(MethodToCallProperty, value);
         }
 
         public static readonly AttachedProperty<string> MethodToCallProperty =
-            AvaloniaProperty.RegisterAttached<CallActionOnEventBehavior, IControl, string>
+            AvaloniaProperty.RegisterAttached<CallActionOnEventBehavior, Control, string>
             (
                 "MethodToCall"
             );
@@ -71,7 +71,7 @@ namespace NP.Demos.CallActionBehaviorSample
 
         private static void OnEventChanged(AvaloniaPropertyChangedEventArgs<RoutedEvent> args)
         {
-            IControl el = (IControl) args.Sender;
+            Control el = (Control) args.Sender;
 
             RoutedEvent? oldRoutedEvent = args.OldValue.Value as RoutedEvent;
 
@@ -96,7 +96,7 @@ namespace NP.Demos.CallActionBehaviorSample
         // TargetObject
         private static void HandleRoutedEvent(object sender, RoutedEventArgs e)
         {
-            IControl el = (IControl)sender;
+            Control el = (Control)sender;
 
             // if TargetObject is not set, use DataContext as the target object
             object? targetObject = GetTargetObject(el) ?? el.DataContext;
