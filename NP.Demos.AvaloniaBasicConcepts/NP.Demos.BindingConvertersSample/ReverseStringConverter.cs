@@ -7,7 +7,7 @@ namespace NP.Demos.BindingConvertersSample
 {
     public class ReverseStringConverter : IValueConverter
     {
-        private static string? ReverseStr(object value)
+        private static string? ReverseStr(object? value)
         {
             if (value is string str)
             {
@@ -17,12 +17,12 @@ namespace NP.Demos.BindingConvertersSample
             return null;
         }
 
-        public object? Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
         {
             return ReverseStr(value);
         }
 
-        public object? ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
         {
             return ReverseStr(value);
         }
