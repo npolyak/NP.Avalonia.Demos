@@ -1,7 +1,8 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="NP.Demos.XamlGenericsSamples.App">
-    <Application.Styles>
-        <FluentTheme Mode="Light"/>
-    </Application.Styles>
+             x:Class="NP.Demos.XamlGenericsSamples.App"
+			 RequestedThemeVariant="Default">
+	<Application.Styles>
+		<FluentTheme/>
+	</Application.Styles>
 </Application>
