@@ -29,7 +29,8 @@
              Grid.Row="3"
              HorizontalAlignment="Right"
              VerticalAlignment="Center"
-             Command="{Binding Path=SetStatus}"
-             CommandParameter="True"/>
+			 IsEnabled="true"
+             Command="{Binding Path=SetStatusCmd}"
+             CommandParameter="true"/>
   </Grid>
 </Window>
