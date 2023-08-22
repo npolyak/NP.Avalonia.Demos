@@ -10,7 +10,7 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-		<Grid local:CallActionOnEventBehavior.TheEvent="{x:Static InputElement.PointerLeaveEvent}"
+		<Grid local:CallActionOnEventBehavior.TheEvent="{x:Static InputElement.PointerExitedEvent}"
 			  local:CallActionOnEventBehavior.TargetObject="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}}"
 			  local:CallActionOnEventBehavior.MethodToCall="RestoreBackground"					
 			  HorizontalAlignment="Center"
@@ -18,7 +18,7 @@
 			  Width="50"
 			  Height="50">
 			<Border Background="Yellow"
-					local:CallActionOnEventBehavior.TheEvent="{x:Static InputElement.PointerEnterEvent}"
+					local:CallActionOnEventBehavior.TheEvent="{x:Static InputElement.PointerEnteredEvent}"
 					local:CallActionOnEventBehavior.TargetObject="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}}"
 					local:CallActionOnEventBehavior.MethodToCall="MakeWindowBackgroundRed"				
 					HorizontalAlignment="Stretch"
@@ -29,7 +29,7 @@
                 Grid.Column="1"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-				local:CallActionOnEventBehavior.TheEvent="{x:Static InputElement.PointerEnterEvent}"
+				local:CallActionOnEventBehavior.TheEvent="{x:Static InputElement.PointerEnteredEvent}"
                 local:CallActionOnEventBehavior.TargetObject="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}}"
                 local:CallActionOnEventBehavior.MethodToCall="OpenDialog"
                 Width="50"
