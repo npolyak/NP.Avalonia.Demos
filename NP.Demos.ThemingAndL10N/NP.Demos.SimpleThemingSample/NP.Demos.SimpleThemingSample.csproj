@@ -14,11 +14,10 @@
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.35" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="ColorThemes\DarkResources.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <PackageReference Include="Avalonia" Version="11.0.4" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.4" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.0.4" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.4" />
+    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.38" />
   </ItemGroup>
 </Project>
