@@ -1,12 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Assets\LinuxIcon.jpg" />
-    <None Remove="nuget.config" />
   </ItemGroup>
   <ItemGroup>
     <AvaloniaResource Include="Assets\LinuxIcon.jpg" />
