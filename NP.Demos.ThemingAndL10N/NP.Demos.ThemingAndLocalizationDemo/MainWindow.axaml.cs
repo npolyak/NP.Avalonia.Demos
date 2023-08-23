@@ -116,8 +116,8 @@ namespace NP.Demos.ThemingAndLocalizationDemo
 
         private void ButtonError_Click(object sender, RoutedEventArgs e)
         {
-            string? message = _languageThemeLoader?.GetResource<string>("NotEnoughMemory");
-            string? closeWindowStr = _languageThemeLoader?.GetResource<string>("CloseWindowMessage"); ;
+            string? message = _languageThemeLoader?.GetResource<string>("NotEnoughMemory", null);
+            string? closeWindowStr = _languageThemeLoader?.GetResource<string>("CloseWindowMessage", null);
 
             var window = CreateSampleWindow(message, closeWindowStr);
 
