@@ -21,7 +21,7 @@ namespace NP.Demos.SimpleThemingSample
 #endif
             // find the theme loader by its name
             _themeLoader =
-                Application.Current.Resources.GetThemeLoader("ColorThemeLoader")!;
+            Application.Current.Resources.GetThemeLoader("ColorThemeLoader")!;
 
             // set the handler for lightButton's click event
             Button lightButton = this.FindControl<Button>("LightButton");
