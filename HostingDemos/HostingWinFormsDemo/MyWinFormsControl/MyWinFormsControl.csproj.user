@@ -6,4 +6,9 @@
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="MyControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
