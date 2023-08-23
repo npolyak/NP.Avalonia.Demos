@@ -5,9 +5,9 @@ using System;
 
 namespace Dependency2Proj
 {
-    public class GreenButton : Button, IStyleable
+    public class GreenButton : Button//, IStyleable
     {
-        Type IStyleable.StyleKey => typeof(Button);
+        //Type IStyleable.StyleKey => typeof(Button);
 
         public GreenButton()
         {
@@ -15,5 +15,8 @@ namespace Dependency2Proj
             Width = 30;
             Height = 30;
         }
+
+        // Use the style for Button
+        protected override Type StyleKeyOverride => typeof(Button);
     }
 }

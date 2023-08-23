@@ -5,9 +5,9 @@ using System;
 
 namespace Dependency1Proj
 {
-    public class RedButton : Button, IStyleable
+    public class RedButton : Button//, IStyleable
     {
-        Type IStyleable.StyleKey => typeof(Button);
+        //Type IStyleable.StyleKey => typeof(Button);
 
         public RedButton()
         {
@@ -15,5 +15,8 @@ namespace Dependency1Proj
             Width = 30;
             Height = 30;
         }
+
+        // Use the style for Button
+        protected override Type StyleKeyOverride => typeof(Button);
     }
 }

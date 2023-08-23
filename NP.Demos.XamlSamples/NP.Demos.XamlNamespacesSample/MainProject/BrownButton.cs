@@ -6,9 +6,9 @@ using System;
 
 namespace NP.Demos.XamlNamespacesSample
 {
-    public class BrownButton : Button, IStyleable
+    public class BrownButton : Button//, IStyleable
     {
-        Type IStyleable.StyleKey => typeof(Button);
+        //Type IStyleable.StyleKey => typeof(Button);
 
         public BrownButton()
         {
@@ -16,5 +16,8 @@ namespace NP.Demos.XamlNamespacesSample
             Width = 30;
             Height = 30;
         }
+
+        // Use the style for Button
+        protected override Type StyleKeyOverride => typeof(Button);
     }
 }
