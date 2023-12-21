@@ -1,4 +1,4 @@
 # NP.Avalonia.Demos
-#Note, this project is deprecated - please, use [NP.Ava.Demos](https://github.com/npolyak/NP.Ava.Visuals) for demos that run under latest and greatest Avalonia 11. 
+# Note, this project is deprecated - please, use [NP.Ava.Demos](https://github.com/npolyak/NP.Ava.Visuals) for demos that run under latest and greatest Avalonia 11. 
 
 Demos related to AvaloniaUI
