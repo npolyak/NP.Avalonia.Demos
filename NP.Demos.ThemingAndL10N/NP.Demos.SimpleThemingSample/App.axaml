@@ -1,7 +1,14 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:np="https://np.com/visuals"
-             x:Class="NP.Demos.SimpleThemingSample.App">
+             xmlns:np="clr-namespace:NP.Avalonia.Visuals.ThemingAndL10N;assembly=NP.Avalonia.Visuals"
+             x:Class="NP.Demos.SimpleThemingSample.App"
+			 RequestedThemeVariant="Default">
+<!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->			 
+    <Application.Styles>
+        <!--<FluentTheme/>-->
+		<StyleInclude Source="avares://Avalonia.Themes.Fluent/FluentTheme.xaml"/>
+    </Application.Styles>
+	
   <Application.Resources>
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
@@ -18,8 +25,8 @@
   </Application.Resources>
 
   <!-- Default Avalonia Styles -->
-  <Application.Styles>
-    <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseDark.xaml"/>
-    <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/>
-  </Application.Styles>
+	<!--  <Application.Styles> -->
+   <!--  <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseDark.xaml"/> -->
+	<!--   <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml"/> -->
+	<!-- </Application.Styles> -->
 </Application>

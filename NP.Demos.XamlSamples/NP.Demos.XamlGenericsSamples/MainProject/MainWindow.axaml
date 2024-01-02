@@ -55,7 +55,7 @@
 				</Grid.DataContext>
 				<TextBlock Text="List of ValuesContainer Generics Sample:"
 						   FontWeight="Bold"/>
-				<ItemsControl Items="{Binding}"
+				<ItemsControl ItemsSource="{Binding}"
 							  Grid.Row="1">
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>
@@ -96,7 +96,7 @@
 				</Grid.DataContext>
 				<TextBlock Text="Dictionary of ValuesContainer Generics Sample:"
 						   FontWeight="Bold"/>
-				<ItemsControl Items="{Binding}"
+				<ItemsControl ItemsSource="{Binding}"
 							  Grid.Row="1">
 					<ItemsControl.ItemTemplate>
 						<DataTemplate>

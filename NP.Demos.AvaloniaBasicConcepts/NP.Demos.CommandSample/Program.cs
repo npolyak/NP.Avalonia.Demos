@@ -1,4 +1,5 @@
 using Avalonia;
+using Avalonia.ReactiveUI;
 
 namespace NP.Demos.CommandSample
 {
@@ -14,6 +15,7 @@ namespace NP.Demos.CommandSample
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
+                .UseReactiveUI()
                 .LogToTrace();
     }
 }

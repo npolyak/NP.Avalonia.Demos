@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
@@ -18,11 +18,29 @@
     <AvaloniaResource Include="Images\USA.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NP.Avalonia.Visuals" Version="1.0.35" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="ColorDictionaries\" />
     <Folder Include="LanguageDictionaries\" />
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+	  <PackageReference Include="Avalonia" Version="11.0.4" />
+	  <PackageReference Include="Avalonia.Desktop" Version="11.0.4" />
+	  <PackageReference Include="Avalonia.Diagnostics" Version="11.0.4" />
+	  <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.4" />
+	  <PackageReference Include="System.Reactive" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="NP.Avalonia.Visuals">
+      <HintPath>..\..\Libraries\NP.Avalonia.Visuals.dll</HintPath>
+    </Reference>
+    <Reference Include="NP.Concepts.Behaviors">
+      <HintPath>..\..\Libraries\NP.Concepts.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="NP.Utilities">
+      <HintPath>..\..\Libraries\NP.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="NP.ViewModelInterfaces">
+      <HintPath>..\..\Libraries\NP.ViewModelInterfaces.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

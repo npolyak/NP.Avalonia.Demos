@@ -1,4 +1,6 @@
-﻿namespace NP.Demos.ItemsPresenterSample
+﻿using Avalonia.Controls.Presenters;
+
+namespace NP.Demos.ItemsPresenterSample
 {
     // very simple view model
     public class PersonViewModel

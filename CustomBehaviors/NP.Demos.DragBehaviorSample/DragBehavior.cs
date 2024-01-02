@@ -11,30 +11,30 @@ namespace NP.Demos.DragBehaviorSample
     public class DragBehavior
     {
         #region IsSet Attached Avalonia Property
-        public static bool GetIsSet(IControl obj)
+        public static bool GetIsSet(Control obj)
         {
             return obj.GetValue(IsSetProperty);
         }
 
-        public static void SetIsSet(IControl obj, bool value)
+        public static void SetIsSet(Control obj, bool value)
         {
             obj.SetValue(IsSetProperty, value);
         }
 
         public static readonly AttachedProperty<bool> IsSetProperty =
-            AvaloniaProperty.RegisterAttached<DragBehavior, IControl, bool>
+            AvaloniaProperty.RegisterAttached<DragBehavior, Control, bool>
             (
                 "IsSet"
             );
         #endregion IsSet Attached Avalonia Property
 
-        private static Point GetShift(IControl control)
+        private static Point GetShift(Control control)
         {
             TranslateTransform translateTransform = (TranslateTransform) control.RenderTransform!;
             return new Point(translateTransform.X, translateTransform.Y);
         }
 
-        private static void SetShift(IControl control, Point shift)
+        private static void SetShift(Control control, Point shift)
         {
             TranslateTransform translateTransform = (TranslateTransform)control.RenderTransform!;
 
@@ -43,18 +43,18 @@ namespace NP.Demos.DragBehaviorSample
         }
 
         #region InitialPointerLocation Attached Avalonia Property
-        private static Point GetInitialPointerLocation(IControl obj)
+        private static Point GetInitialPointerLocation(Control obj)
         {
             return obj.GetValue(InitialPointerLocationProperty);
         }
 
-        private static void SetInitialPointerLocation(IControl obj, Point value)
+        private static void SetInitialPointerLocation(Control obj, Point value)
         {
             obj.SetValue(InitialPointerLocationProperty, value);
         }
 
         private static readonly AttachedProperty<Point> InitialPointerLocationProperty =
-            AvaloniaProperty.RegisterAttached<DragBehavior, IControl, Point>
+            AvaloniaProperty.RegisterAttached<DragBehavior, Control, Point>
             (
                 "InitialPointerLocation"
             );
@@ -62,18 +62,18 @@ namespace NP.Demos.DragBehaviorSample
 
 
         #region InitialDragShift Attached Avalonia Property
-        public static Point GetInitialDragShift(IControl obj)
+        public static Point GetInitialDragShift(Control obj)
         {
             return obj.GetValue(InitialDragShiftProperty);
         }
 
-        public static void SetInitialDragShift(IControl obj, Point value)
+        public static void SetInitialDragShift(Control obj, Point value)
         {
             obj.SetValue(InitialDragShiftProperty, value);
         }
 
         public static readonly AttachedProperty<Point> InitialDragShiftProperty =
-            AvaloniaProperty.RegisterAttached<DragBehavior, IControl, Point>
+            AvaloniaProperty.RegisterAttached<DragBehavior, Control, Point>
             (
                 "InitialDragShift"
             );
@@ -87,7 +87,7 @@ namespace NP.Demos.DragBehaviorSample
         // set the PointerPressed handler when 
         private static void OnIsSetChanged(AvaloniaPropertyChangedEventArgs<bool> args)
         {
-            IControl control = (IControl) args.Sender;
+            Control control = (Control) args.Sender;
 
             if (args.NewValue.Value == true)
             {
@@ -103,12 +103,12 @@ namespace NP.Demos.DragBehaviorSample
             }
         }
 
-        private static Window GetWindow(IControl control)
+        private static Window GetWindow(Control control)
         {
             return control.GetVisualAncestors().OfType<Window>().FirstOrDefault()!;
         }
 
-        public static Point GetCurrentPointerPositionInWindow(IControl control, PointerEventArgs e)
+        public static Point GetCurrentPointerPositionInWindow(Control control, PointerEventArgs e)
         {
             return e.GetPosition(GetWindow(control));
         }
@@ -116,7 +116,7 @@ namespace NP.Demos.DragBehaviorSample
         // start drag by pressing the point on draggable control
         private static void Control_PointerPressed(object? sender, PointerPressedEventArgs e)
         {
-            IControl control = (IControl)sender!;
+            Control control = (Control)sender!;
 
             // capture the pointer on the control
             // meaning - the mouse pointer will be producing the
@@ -145,7 +145,7 @@ namespace NP.Demos.DragBehaviorSample
         // update the shift when pointer is moved
         private static void Control_PointerMoved(object? sender, PointerEventArgs e)
         {
-            IControl control = (IControl)sender!;
+            Control control = (Control)sender!;
             // Shift control to the current position
             ShiftControl(control, e);
         }
@@ -154,7 +154,7 @@ namespace NP.Demos.DragBehaviorSample
         // Drag operation ends when the pointer is released. 
         private static void Control_PointerReleased(object? sender, PointerReleasedEventArgs e)
         {
-            IControl control = (IControl)sender!;
+            Control control = (Control)sender!;
 
             // release the capture
             e.Pointer.Capture(null);
@@ -169,7 +169,7 @@ namespace NP.Demos.DragBehaviorSample
 
         // modifies the shift on the control during the drag
         // this essentially moves the control
-        private static void ShiftControl(IControl control, PointerEventArgs e)
+        private static void ShiftControl(Control control, PointerEventArgs e)
         {
             // get the current pointer location
             Point currentPointerPosition = GetCurrentPointerPositionInWindow(control, e);

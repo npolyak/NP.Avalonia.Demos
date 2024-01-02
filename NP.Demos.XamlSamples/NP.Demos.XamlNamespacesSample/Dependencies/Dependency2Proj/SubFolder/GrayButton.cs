@@ -5,9 +5,9 @@ using System;
 
 namespace Dependency2Proj.SubFolder
 {
-    public class GrayButton : Button, IStyleable
+    public class GrayButton : Button//, IStyleable
     {
-        Type IStyleable.StyleKey => typeof(Button);
+        //Type IStyleable.StyleKey => typeof(Button);
 
         public GrayButton()
         {
@@ -15,5 +15,8 @@ namespace Dependency2Proj.SubFolder
             Width = 30;
             Height = 30;
         }
+
+        // Use the style for Button
+        protected override Type StyleKeyOverride => typeof(Button);
     }
 }

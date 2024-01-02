@@ -1,4 +1,4 @@
-﻿// (c) Nick Polyak 2021 - http://awebpros.com/
+﻿// (c) Nick Polyak 2021
 // License: MIT License (https://opensource.org/licenses/MIT)
 //
 // short overview of copyright rules:

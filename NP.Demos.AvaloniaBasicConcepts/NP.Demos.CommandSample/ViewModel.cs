@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using ReactiveUI;
+using System.ComponentModel;
+using System.Reactive;
 
 namespace NP.Demos.CommandSample
 {
@@ -74,9 +76,18 @@ namespace NP.Demos.CommandSample
         /// <summary>
         /// Set the Status to whatever 'status' is passed
         /// </summary>
-        public void SetStatus(bool status)
+        public void SetStatus(string status)
         {
-            Status = status;
+            bool parm = bool.Parse(status);
+            Status = parm;
         }
+
+        public ViewModel()
+        {
+            SetStatusCmd = ReactiveCommand.Create<string>(SetStatus);
+        }
+
+        public ReactiveCommand<string, Unit> SetStatusCmd { get; }
+
     }
 }
