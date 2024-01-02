@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:NP.DataGridFilteringDemo"
+        xmlns:np="https://np.com/visuals"
+        x:Class="NP.DataGridFilteringDemo.MainWindow"
+        Title="NP.DataGridFilteringDemo"
+        x:Name="Root"
+		Width="500"
+		Height="400">
+	<Window.Styles>
+		<Style Selector="TextBox.DataGridFilterTextBox">
+			<Setter Property="Background"
+					Value="Black"/>
+			<Setter Property="Foreground"
+					Value="White"/>
+			<Setter Property="CaretBrush"
+					Value="White"/>
+		</Style>
+	</Window.Styles>
+	<Grid RowDefinitions="*,Auto"	
+		  Margin="15">
+		<DataGrid Classes="WithColumnFilters NonRemovable"
+				  CanUserReorderColumns="True"
+			      CanUserResizeColumns="True"
+			      np:DataGridFilteringBehavior.DataGridFilterTextBoxClasses="DataGridFilterTextBox"
+				  np:DataGridFilteringBehavior.RowDataType="{x:Type local:Person}"
+				  np:DataGridCollectionViewBehavior.ItemsSource="{Binding $parent[Window].ThePeople}">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="FirstName"
+									np:DataGridFilteringBehavior.FilterPropName="FirstName"
+									Binding="{Binding Path=FirstName}"/>
+				<DataGridTextColumn Header="FirstName (Disabled Filtering)"
+									Binding="{Binding Path=FirstName}"/>
+				<DataGridTextColumn Header="LastName"
+									np:DataGridFilteringBehavior.FilterPropName="LastName"
+									Binding="{Binding Path=LastName}"/>
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
+</Window>
